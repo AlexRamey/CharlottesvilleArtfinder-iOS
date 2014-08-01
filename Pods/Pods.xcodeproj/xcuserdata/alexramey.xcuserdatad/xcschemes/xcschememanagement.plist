@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Charlottesville Artfinder-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Charlottesville Artfinder-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Charlottesville Artfinder-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Charlottesville Artfinder-MBCalendarKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Charlottesville Artfinder-MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Charlottesville Artfinder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3CF6D0D0F3E44499883B4BA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64B620592EBA4593AA40F3ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B9873AE814B4A92B7465704</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>784CED8B57404AE8A0836B60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D33E63184F7349BE8FD2F323</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2961D7F94BD41D08C920812</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

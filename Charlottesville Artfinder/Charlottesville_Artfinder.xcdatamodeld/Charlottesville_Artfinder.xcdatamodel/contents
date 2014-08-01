@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ARTEvent" representedClassName="ARTEvent" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd'T'HH:mm:ssZZZZZ"/>
+                <entry key="mappedKeyName" value="end.dateTime"/>
+            </userInfo>
+        </attribute>
+        <attribute name="eventDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spanEndDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd"/>
+                <entry key="mappedKeyName" value="end.date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="spanStartDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd"/>
+                <entry key="mappedKeyName" value="start.date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd'T'HH:mm:ssZZZZZ"/>
+                <entry key="mappedKeyName" value="start.dateTime"/>
+            </userInfo>
+        </attribute>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="summary"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="ARTVenue" representedClassName="ARTVenue" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="City"/>
+            </userInfo>
+        </attribute>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"/>
+            </userInfo>
+        </attribute>
+        <attribute name="deleted" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="isDeleted"/>
+            </userInfo>
+        </attribute>
+        <attribute name="emailAddress" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Email_Address"/>
+            </userInfo>
+        </attribute>
+        <attribute name="homepageURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Home_Page_URL"/>
+            </userInfo>
+        </attribute>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Image_URL"/>
+            </userInfo>
+        </attribute>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Latitude"/>
+            </userInfo>
+        </attribute>
+        <attribute name="localImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Longitude"/>
+            </userInfo>
+        </attribute>
+        <attribute name="organizationName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Organization_Name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="parseObjectID" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="objectId"/>
+            </userInfo>
+        </attribute>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Phone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="primaryCategory" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Primary_Category"/>
+            </userInfo>
+        </attribute>
+        <attribute name="secondaryCategory" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Secondary_Category"/>
+            </userInfo>
+        </attribute>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="State"/>
+            </userInfo>
+        </attribute>
+        <attribute name="streetAddress" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Street_Address"/>
+            </userInfo>
+        </attribute>
+        <attribute name="thumbnailData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"/>
+            </userInfo>
+        </attribute>
+        <attribute name="venueDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="zip" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="Zip"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <elements>
+        <element name="ARTEvent" positionX="-1820" positionY="-3510" width="128" height="178"/>
+        <element name="ARTVenue" positionX="-2007" positionY="-3510" width="128" height="343"/>
+    </elements>
+</model>

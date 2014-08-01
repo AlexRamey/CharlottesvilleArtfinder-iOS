@@ -1,0 +1,75 @@
+1. When accessing the thumbnailData and primaryCategory categories of ARTVenue objects, use [instance getThumbnailData] or [instance getPrimaryCategory], not instance.thumbnailData or instance.primaryCateogry.
+
+2. If you attempt to update the MBCalendarKit cocoa pod, be aware that I modified the CKCalendarView class by reimplementing this method:
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.events = [self.events sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        CKCalendarEvent *event1 = (CKCalendarEvent *)obj1;
+        CKCalendarEvent *event2 = (CKCalendarEvent *)obj2;
+        
+        if ([[[event1 info] objectForKey:@"EVENT_START_TIME"] caseInsensitiveCompare:@"All Day"] == NSOrderedSame && [[[event2 info] objectForKey:@"EVENT_START_TIME"] caseInsensitiveCompare:@"All Day"] == NSOrderedSame)
+        {
+            return NSOrderedSame;
+        }
+        else if ([[[event1 info] objectForKey:@"EVENT_START_TIME"] caseInsensitiveCompare:@"All Day"] == NSOrderedSame)
+        {
+            return NSOrderedDescending;
+        }
+        else if ([[[event2 info] objectForKey:@"EVENT_START_TIME"] caseInsensitiveCompare:@"All Day"] == NSOrderedSame)
+        {
+            return NSOrderedAscending;
+        }
+        else
+        {
+            return [event1.date compare:event2.date];
+        }
+    }];
+    
+    NSUInteger count = [[self events] count];
+    
+    if (count == 0) {
+        UITableViewCell *cell = [[self table] dequeueReusableCellWithIdentifier:@"noDataCell"];
+        [[cell textLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[cell textLabel] setTextColor:[UIColor colorWithWhite:0.2 alpha:0.8]];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        if ([indexPath row] == 1) {
+            [[cell textLabel] setText:NSLocalizedString(@"No Events", @"A label for a table with no events.")];
+        }
+        else
+        {
+            [[cell textLabel] setText:@""];
+        }
+        return cell;
+    }
+
+    CKTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    CKCalendarEvent *event = [[self events] objectAtIndex:[indexPath row]];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(4.0, 0.0, 250, 21)];
+    [titleLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:15]];
+    
+    UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(4, 22.0, 318, 21)];
+    [locationLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:12]];
+    
+    UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(255, 0.0, 64, 21)];
+    [timeLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    [timeLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    titleLabel.text = [event title];
+    locationLabel.text = [[event info] objectForKey:@"EVENT_LOCATION"];
+    timeLabel.text = [[event info] objectForKey:@"EVENT_START_TIME"];
+    
+    timeLabel.backgroundColor = event.color;
+    
+    [cell.contentView addSubview:titleLabel];
+    [cell.contentView addSubview:locationLabel];
+    [cell.contentView addSubview:timeLabel];
+    
+    return cell;
+}

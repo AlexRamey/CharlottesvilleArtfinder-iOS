@@ -1,0 +1,1027 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D0D94EA5196F38B0007567EF /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D0D94EA8196F38B0007567EF /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				D0D94EA9196F38C9007567EF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		9E26280CD0C14D258206D26C /* libPods-Charlottesville Artfinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61C70B12EE242BCA86C09D8 /* libPods-Charlottesville Artfinder.a */; };
+		D01FE8CE1985694C000DEBDC /* ARTDirectoryDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8CD1985694C000DEBDC /* ARTDirectoryDetailButton.m */; };
+		D01FE8D0198569C3000DEBDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01FE8CF198569C3000DEBDC /* QuartzCore.framework */; };
+		D01FE8D61985E231000DEBDC /* ARTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8D51985E231000DEBDC /* ARTMapViewController.m */; };
+		D01FE8D91985F443000DEBDC /* ARTAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8D81985F443000DEBDC /* ARTAnnotationView.m */; };
+		D01FE8DC1986ED02000DEBDC /* directions-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DB1986ED02000DEBDC /* directions-50.png */; };
+		D01FE8DE1986ED0E000DEBDC /* map_marker-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */; };
+		D01FE8E01986ED18000DEBDC /* phone1-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DF1986ED18000DEBDC /* phone1-50.png */; };
+		D01FE8E21986F5E5000DEBDC /* map_marker-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8E11986F5E5000DEBDC /* map_marker-25.png */; };
+		D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8E31986F5FA000DEBDC /* map_marker-32.png */; };
+		D01FE8E91987E8E3000DEBDC /* ARTEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */; };
+		D01FE9101989CB85000DEBDC /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D01FE90F1989CB85000DEBDC /* ReadMe */; };
+		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
+		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
+		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
+		D0210D54197FF4FA00568F53 /* cville_art_logo_icon_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */; };
+		D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */; };
+		D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */; };
+		D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */; };
+		D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */; };
+		D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */; };
+		D0210D5D197FF51600568F53 /* cvillartfinderlaunchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */; };
+		D0210D5E197FF51600568F53 /* cvillartfinderlaunchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */; };
+		D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */; };
+		D0210D64197FF5C800568F53 /* centercville.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D60197FF5C800568F53 /* centercville.png */; };
+		D0210D65197FF5C800568F53 /* currentlocation.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D61197FF5C800568F53 /* currentlocation.png */; };
+		D0210D66197FF5C800568F53 /* pca_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D62197FF5C800568F53 /* pca_banner.png */; };
+		D0210D6E197FF71700568F53 /* book-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D69197FF71700568F53 /* book-32.png */; };
+		D0210D6F197FF71700568F53 /* bus-48.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D6A197FF71700568F53 /* bus-48.png */; };
+		D0210D70197FF71700568F53 /* calendar-48.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D6B197FF71700568F53 /* calendar-48.png */; };
+		D0210D71197FF71700568F53 /* group-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D6C197FF71700568F53 /* group-32.png */; };
+		D0210D72197FF71700568F53 /* map_marker-48.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D6D197FF71700568F53 /* map_marker-48.png */; };
+		D0210D84197FF76400568F53 /* dancedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D7F197FF76400568F53 /* dancedefault.png */; };
+		D0210D85197FF76400568F53 /* gallerydefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D80197FF76400568F53 /* gallerydefault.png */; };
+		D0210D86197FF76400568F53 /* musicdefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D81197FF76400568F53 /* musicdefault.png */; };
+		D0210D87197FF76400568F53 /* theatredefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D82197FF76400568F53 /* theatredefault.png */; };
+		D0210D88197FF76400568F53 /* venuedefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D83197FF76400568F53 /* venuedefault.png */; };
+		D0210D91197FFB4700568F53 /* ARTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D90197FFB4700568F53 /* ARTTheme.m */; };
+		D0210D94197FFB8A00568F53 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D93197FFB8A00568F53 /* UIColor+Theme.m */; };
+		D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D991980007D00568F53 /* ARTURLCache.m */; };
+		D0210DAE198004F500568F53 /* dancemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DA8198004F500568F53 /* dancemarker.png */; };
+		D0210DAF198004F500568F53 /* gallerymarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DA9198004F500568F53 /* gallerymarker.png */; };
+		D0210DB0198004F500568F53 /* musicmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAA198004F500568F53 /* musicmarker.png */; };
+		D0210DB1198004F500568F53 /* parking.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAB198004F500568F53 /* parking.png */; };
+		D0210DB2198004F500568F53 /* theatremarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAC198004F500568F53 /* theatremarker.png */; };
+		D0210DB3198004F500568F53 /* venuemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAD198004F500568F53 /* venuemarker.png */; };
+		D0210DB6198005A100568F53 /* ARTLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DB5198005A100568F53 /* ARTLoadViewController.m */; };
+		D0210DB91980063300568F53 /* ARTObjectStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DB81980063300568F53 /* ARTObjectStore.m */; };
+		D0210DBC198006C900568F53 /* ARTParseRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DBB198006C900568F53 /* ARTParseRESTClient.m */; };
+		D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0210DC519814FBF00568F53 /* TransportationContentView.xib */; };
+		D0210DC9198155EE00568F53 /* ARTTransportationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DC8198155EE00568F53 /* ARTTransportationView.m */; };
+		D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DCB1981581400568F53 /* ARTTransportationViewController.m */; };
+		D0663DDF196ED83A0056DC9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DDE196ED83A0056DC9E /* Foundation.framework */; };
+		D0663DE1196ED83A0056DC9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */; };
+		D0663DE3196ED83A0056DC9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE2196ED83A0056DC9E /* UIKit.framework */; };
+		D0663DE5196ED83A0056DC9E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE4196ED83A0056DC9E /* CoreData.framework */; };
+		D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0663DE9196ED83A0056DC9E /* InfoPlist.strings */; };
+		D0663DED196ED83A0056DC9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0663DEC196ED83A0056DC9E /* main.m */; };
+		D0663DF1196ED83A0056DC9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0663DF0196ED83A0056DC9E /* AppDelegate.m */; };
+		D0663DF4196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0663DF2196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld */; };
+		D0663DF6196ED83A0056DC9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0663DF5196ED83A0056DC9E /* Images.xcassets */; };
+		D0663DFD196ED83B0056DC9E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DFC196ED83B0056DC9E /* XCTest.framework */; };
+		D0663DFE196ED83B0056DC9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DDE196ED83A0056DC9E /* Foundation.framework */; };
+		D0663DFF196ED83B0056DC9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE2196ED83A0056DC9E /* UIKit.framework */; };
+		D0663E00196ED83B0056DC9E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE4196ED83A0056DC9E /* CoreData.framework */; };
+		D0663E08196ED83B0056DC9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0663E06196ED83B0056DC9E /* InfoPlist.strings */; };
+		D0663E0A196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */; };
+		D0663E15196EDBAC0056DC9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663E14196EDBAC0056DC9E /* MapKit.framework */; };
+		D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EAC196F3ABF007567EF /* _ARTEvent.m */; };
+		D0D94EB4196F3ABF007567EF /* _ARTVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EAE196F3ABF007567EF /* _ARTVenue.m */; };
+		D0D94EB5196F3ABF007567EF /* ARTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EB0196F3ABF007567EF /* ARTEvent.m */; };
+		D0D94EB6196F3ABF007567EF /* ARTVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EB2196F3ABF007567EF /* ARTVenue.m */; };
+		D0DA55A119841B10006315BC /* ARTDirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA55A019841B10006315BC /* ARTDirectoryViewController.m */; };
+		D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA55A619842B01006315BC /* ARTVenueCell.m */; };
+		D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DA55AA198496F8006315BC /* VenueDetailView.xib */; };
+		D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA55AD19849A15006315BC /* ARTVenueDetailView.m */; };
+		D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA55B01984A563006315BC /* ARTVenueDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0663E01196ED83B0056DC9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0663DD3196ED83A0056DC9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0663DDA196ED83A0056DC9E;
+			remoteInfo = "Charlottesville Artfinder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5E375EC2A5449F49710EFBC /* Pods-Charlottesville Artfinder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charlottesville Artfinder.xcconfig"; path = "Pods/Pods-Charlottesville Artfinder.xcconfig"; sourceTree = "<group>"; };
+		D01FE8CC1985694C000DEBDC /* ARTDirectoryDetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTDirectoryDetailButton.h; sourceTree = "<group>"; };
+		D01FE8CD1985694C000DEBDC /* ARTDirectoryDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTDirectoryDetailButton.m; sourceTree = "<group>"; };
+		D01FE8CF198569C3000DEBDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D01FE8D41985E231000DEBDC /* ARTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTMapViewController.h; sourceTree = "<group>"; };
+		D01FE8D51985E231000DEBDC /* ARTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMapViewController.m; sourceTree = "<group>"; };
+		D01FE8D71985F443000DEBDC /* ARTAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAnnotationView.h; sourceTree = "<group>"; };
+		D01FE8D81985F443000DEBDC /* ARTAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAnnotationView.m; sourceTree = "<group>"; };
+		D01FE8DB1986ED02000DEBDC /* directions-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "directions-50.png"; sourceTree = "<group>"; };
+		D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-50.png"; sourceTree = "<group>"; };
+		D01FE8DF1986ED18000DEBDC /* phone1-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1-50.png"; sourceTree = "<group>"; };
+		D01FE8E11986F5E5000DEBDC /* map_marker-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-25.png"; sourceTree = "<group>"; };
+		D01FE8E31986F5FA000DEBDC /* map_marker-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-32.png"; sourceTree = "<group>"; };
+		D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventsViewController.h; sourceTree = "<group>"; };
+		D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsViewController.m; sourceTree = "<group>"; };
+		D01FE90F1989CB85000DEBDC /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
+		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
+		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon.png; sourceTree = "<group>"; };
+		D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon_ios7.png; sourceTree = "<group>"; };
+		D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon_settings.png; sourceTree = "<group>"; };
+		D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon_settings@2x.png"; sourceTree = "<group>"; };
+		D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon_spotlight@2x.png"; sourceTree = "<group>"; };
+		D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon@2x.png"; sourceTree = "<group>"; };
+		D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cvillartfinderlaunchimage-1136.png"; sourceTree = "<group>"; };
+		D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cvillartfinderlaunchimage.png; sourceTree = "<group>"; };
+		D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cvillartfinderlaunchimage@2x.png"; sourceTree = "<group>"; };
+		D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CAT_App_Icon.png; sourceTree = "<group>"; };
+		D0210D60197FF5C800568F53 /* centercville.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centercville.png; sourceTree = "<group>"; };
+		D0210D61197FF5C800568F53 /* currentlocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentlocation.png; sourceTree = "<group>"; };
+		D0210D62197FF5C800568F53 /* pca_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pca_banner.png; sourceTree = "<group>"; };
+		D0210D69197FF71700568F53 /* book-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-32.png"; sourceTree = "<group>"; };
+		D0210D6A197FF71700568F53 /* bus-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-48.png"; sourceTree = "<group>"; };
+		D0210D6B197FF71700568F53 /* calendar-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-48.png"; sourceTree = "<group>"; };
+		D0210D6C197FF71700568F53 /* group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-32.png"; sourceTree = "<group>"; };
+		D0210D6D197FF71700568F53 /* map_marker-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-48.png"; sourceTree = "<group>"; };
+		D0210D7F197FF76400568F53 /* dancedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dancedefault.png; sourceTree = "<group>"; };
+		D0210D80197FF76400568F53 /* gallerydefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallerydefault.png; sourceTree = "<group>"; };
+		D0210D81197FF76400568F53 /* musicdefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicdefault.png; sourceTree = "<group>"; };
+		D0210D82197FF76400568F53 /* theatredefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theatredefault.png; sourceTree = "<group>"; };
+		D0210D83197FF76400568F53 /* venuedefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venuedefault.png; sourceTree = "<group>"; };
+		D0210D8F197FFB4700568F53 /* ARTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTheme.h; sourceTree = "<group>"; };
+		D0210D90197FFB4700568F53 /* ARTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTheme.m; sourceTree = "<group>"; };
+		D0210D92197FFB8A00568F53 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		D0210D93197FFB8A00568F53 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		D0210D981980007D00568F53 /* ARTURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTURLCache.h; sourceTree = "<group>"; };
+		D0210D991980007D00568F53 /* ARTURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTURLCache.m; sourceTree = "<group>"; };
+		D0210DA8198004F500568F53 /* dancemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dancemarker.png; sourceTree = "<group>"; };
+		D0210DA9198004F500568F53 /* gallerymarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallerymarker.png; sourceTree = "<group>"; };
+		D0210DAA198004F500568F53 /* musicmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicmarker.png; sourceTree = "<group>"; };
+		D0210DAB198004F500568F53 /* parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parking.png; sourceTree = "<group>"; };
+		D0210DAC198004F500568F53 /* theatremarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theatremarker.png; sourceTree = "<group>"; };
+		D0210DAD198004F500568F53 /* venuemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venuemarker.png; sourceTree = "<group>"; };
+		D0210DB4198005A100568F53 /* ARTLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLoadViewController.h; sourceTree = "<group>"; };
+		D0210DB5198005A100568F53 /* ARTLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoadViewController.m; sourceTree = "<group>"; };
+		D0210DB71980063300568F53 /* ARTObjectStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTObjectStore.h; sourceTree = "<group>"; };
+		D0210DB81980063300568F53 /* ARTObjectStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTObjectStore.m; sourceTree = "<group>"; };
+		D0210DBA198006C900568F53 /* ARTParseRESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTParseRESTClient.h; sourceTree = "<group>"; };
+		D0210DBB198006C900568F53 /* ARTParseRESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTParseRESTClient.m; sourceTree = "<group>"; };
+		D0210DC519814FBF00568F53 /* TransportationContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransportationContentView.xib; sourceTree = "<group>"; };
+		D0210DC7198155EE00568F53 /* ARTTransportationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTransportationView.h; sourceTree = "<group>"; };
+		D0210DC8198155EE00568F53 /* ARTTransportationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationView.m; sourceTree = "<group>"; };
+		D0210DCA1981581400568F53 /* ARTTransportationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTransportationViewController.h; sourceTree = "<group>"; };
+		D0210DCB1981581400568F53 /* ARTTransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationViewController.m; sourceTree = "<group>"; };
+		D0663DDB196ED83A0056DC9E /* Charlottesville Artfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charlottesville Artfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0663DDE196ED83A0056DC9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0663DE2196ED83A0056DC9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0663DE4196ED83A0056DC9E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D0663DE8196ED83A0056DC9E /* Charlottesville Artfinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Charlottesville Artfinder-Info.plist"; sourceTree = "<group>"; };
+		D0663DEA196ED83A0056DC9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0663DEC196ED83A0056DC9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0663DEE196ED83A0056DC9E /* Charlottesville Artfinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Charlottesville Artfinder-Prefix.pch"; sourceTree = "<group>"; };
+		D0663DEF196ED83A0056DC9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0663DF0196ED83A0056DC9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0663DF3196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Charlottesville_Artfinder.xcdatamodel; sourceTree = "<group>"; };
+		D0663DF5196ED83A0056DC9E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0663DFB196ED83B0056DC9E /* Charlottesville ArtfinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Charlottesville ArtfinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0663DFC196ED83B0056DC9E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0663E05196ED83B0056DC9E /* Charlottesville ArtfinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Charlottesville ArtfinderTests-Info.plist"; sourceTree = "<group>"; };
+		D0663E07196ED83B0056DC9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Charlottesville_ArtfinderTests.m; sourceTree = "<group>"; };
+		D0663E14196EDBAC0056DC9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0D94EAB196F3ABF007567EF /* _ARTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ARTEvent.h; sourceTree = "<group>"; };
+		D0D94EAC196F3ABF007567EF /* _ARTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ARTEvent.m; sourceTree = "<group>"; };
+		D0D94EAD196F3ABF007567EF /* _ARTVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ARTVenue.h; sourceTree = "<group>"; };
+		D0D94EAE196F3ABF007567EF /* _ARTVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ARTVenue.m; sourceTree = "<group>"; };
+		D0D94EAF196F3ABF007567EF /* ARTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEvent.h; sourceTree = "<group>"; };
+		D0D94EB0196F3ABF007567EF /* ARTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEvent.m; sourceTree = "<group>"; };
+		D0D94EB1196F3ABF007567EF /* ARTVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTVenue.h; sourceTree = "<group>"; };
+		D0D94EB2196F3ABF007567EF /* ARTVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTVenue.m; sourceTree = "<group>"; };
+		D0DA559F19841B10006315BC /* ARTDirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTDirectoryViewController.h; sourceTree = "<group>"; };
+		D0DA55A019841B10006315BC /* ARTDirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTDirectoryViewController.m; sourceTree = "<group>"; };
+		D0DA55A519842B01006315BC /* ARTVenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTVenueCell.h; sourceTree = "<group>"; };
+		D0DA55A619842B01006315BC /* ARTVenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTVenueCell.m; sourceTree = "<group>"; };
+		D0DA55AA198496F8006315BC /* VenueDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueDetailView.xib; sourceTree = "<group>"; };
+		D0DA55AC19849A15006315BC /* ARTVenueDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTVenueDetailView.h; sourceTree = "<group>"; };
+		D0DA55AD19849A15006315BC /* ARTVenueDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTVenueDetailView.m; sourceTree = "<group>"; };
+		D0DA55AF1984A563006315BC /* ARTVenueDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTVenueDetailViewController.h; sourceTree = "<group>"; };
+		D0DA55B01984A563006315BC /* ARTVenueDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTVenueDetailViewController.m; sourceTree = "<group>"; };
+		F61C70B12EE242BCA86C09D8 /* libPods-Charlottesville Artfinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charlottesville Artfinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0663DD8196ED83A0056DC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01FE8D0198569C3000DEBDC /* QuartzCore.framework in Frameworks */,
+				D0663E15196EDBAC0056DC9E /* MapKit.framework in Frameworks */,
+				D0663DE1196ED83A0056DC9E /* CoreGraphics.framework in Frameworks */,
+				D0663DE5196ED83A0056DC9E /* CoreData.framework in Frameworks */,
+				D0663DE3196ED83A0056DC9E /* UIKit.framework in Frameworks */,
+				D0663DDF196ED83A0056DC9E /* Foundation.framework in Frameworks */,
+				9E26280CD0C14D258206D26C /* libPods-Charlottesville Artfinder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0663DF8196ED83B0056DC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0663DFD196ED83B0056DC9E /* XCTest.framework in Frameworks */,
+				D0663E00196ED83B0056DC9E /* CoreData.framework in Frameworks */,
+				D0663DFF196ED83B0056DC9E /* UIKit.framework in Frameworks */,
+				D0663DFE196ED83B0056DC9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D01FE8DA1986ECE1000DEBDC /* Button Images */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8DF1986ED18000DEBDC /* phone1-50.png */,
+				D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */,
+				D01FE8DB1986ED02000DEBDC /* directions-50.png */,
+			);
+			name = "Button Images";
+			sourceTree = "<group>";
+		};
+		D01FE8E51987E2EA000DEBDC /* Master View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA559F19841B10006315BC /* ARTDirectoryViewController.h */,
+				D0DA55A019841B10006315BC /* ARTDirectoryViewController.m */,
+				D0DA55A519842B01006315BC /* ARTVenueCell.h */,
+				D0DA55A619842B01006315BC /* ARTVenueCell.m */,
+			);
+			name = "Master View Controller";
+			sourceTree = "<group>";
+		};
+		D01FE8E61987E306000DEBDC /* Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA55AF1984A563006315BC /* ARTVenueDetailViewController.h */,
+				D0DA55B01984A563006315BC /* ARTVenueDetailViewController.m */,
+				D0DA55AC19849A15006315BC /* ARTVenueDetailView.h */,
+				D0DA55AD19849A15006315BC /* ARTVenueDetailView.m */,
+				D0DA55AA198496F8006315BC /* VenueDetailView.xib */,
+				D01FE8CC1985694C000DEBDC /* ARTDirectoryDetailButton.h */,
+				D01FE8CD1985694C000DEBDC /* ARTDirectoryDetailButton.m */,
+			);
+			name = "Detail View Controller";
+			sourceTree = "<group>";
+		};
+		D0210D3A197FED7300568F53 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */,
+				D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */,
+				D0210DB4198005A100568F53 /* ARTLoadViewController.h */,
+				D0210DB5198005A100568F53 /* ARTLoadViewController.m */,
+				D0210DBA198006C900568F53 /* ARTParseRESTClient.h */,
+				D0210DBB198006C900568F53 /* ARTParseRESTClient.m */,
+				D0210D981980007D00568F53 /* ARTURLCache.h */,
+				D0210D991980007D00568F53 /* ARTURLCache.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		D0210D42197FEDFE00568F53 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				D0210DB71980063300568F53 /* ARTObjectStore.h */,
+				D0210DB81980063300568F53 /* ARTObjectStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		D0210D45197FF02200568F53 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		D0210D46197FF39000568F53 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8DA1986ECE1000DEBDC /* Button Images */,
+				D0210DA7198004D500568F53 /* Markers */,
+				D0210D49197FF41800568F53 /* App Icons */,
+				D0210D4C197FF46700568F53 /* Defaults */,
+				D0210D4A197FF42700568F53 /* Launch Images */,
+				D0210D48197FF3E300568F53 /* Supporting Images */,
+				D0210D4B197FF45C00568F53 /* Tab Icons */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		D0210D48197FF3E300568F53 /* Supporting Images */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */,
+				D0210D60197FF5C800568F53 /* centercville.png */,
+				D0210D61197FF5C800568F53 /* currentlocation.png */,
+				D0210D62197FF5C800568F53 /* pca_banner.png */,
+			);
+			name = "Supporting Images";
+			sourceTree = "<group>";
+		};
+		D0210D49197FF41800568F53 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */,
+				D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */,
+				D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */,
+				D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */,
+				D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */,
+				D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */,
+			);
+			name = "App Icons";
+			sourceTree = "<group>";
+		};
+		D0210D4A197FF42700568F53 /* Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */,
+				D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */,
+				D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */,
+			);
+			name = "Launch Images";
+			sourceTree = "<group>";
+		};
+		D0210D4B197FF45C00568F53 /* Tab Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D69197FF71700568F53 /* book-32.png */,
+				D0210D6A197FF71700568F53 /* bus-48.png */,
+				D0210D6B197FF71700568F53 /* calendar-48.png */,
+				D0210D6C197FF71700568F53 /* group-32.png */,
+				D01FE8E11986F5E5000DEBDC /* map_marker-25.png */,
+				D01FE8E31986F5FA000DEBDC /* map_marker-32.png */,
+				D0210D6D197FF71700568F53 /* map_marker-48.png */,
+			);
+			name = "Tab Icons";
+			sourceTree = "<group>";
+		};
+		D0210D4C197FF46700568F53 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D7F197FF76400568F53 /* dancedefault.png */,
+				D0210D80197FF76400568F53 /* gallerydefault.png */,
+				D0210D81197FF76400568F53 /* musicdefault.png */,
+				D0210D82197FF76400568F53 /* theatredefault.png */,
+				D0210D83197FF76400568F53 /* venuedefault.png */,
+			);
+			name = Defaults;
+			sourceTree = "<group>";
+		};
+		D0210D89197FF93400568F53 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8D41985E231000DEBDC /* ARTMapViewController.h */,
+				D01FE8D51985E231000DEBDC /* ARTMapViewController.m */,
+				D01FE8D71985F443000DEBDC /* ARTAnnotationView.h */,
+				D01FE8D81985F443000DEBDC /* ARTAnnotationView.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		D0210D8A197FF93C00568F53 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8E61987E306000DEBDC /* Detail View Controller */,
+				D01FE8E51987E2EA000DEBDC /* Master View Controller */,
+			);
+			name = Directory;
+			sourceTree = "<group>";
+		};
+		D0210D8B197FF94300568F53 /* Transportation */ = {
+			isa = PBXGroup;
+			children = (
+				D0210DCA1981581400568F53 /* ARTTransportationViewController.h */,
+				D0210DCB1981581400568F53 /* ARTTransportationViewController.m */,
+				D0210DC7198155EE00568F53 /* ARTTransportationView.h */,
+				D0210DC8198155EE00568F53 /* ARTTransportationView.m */,
+				D0210DC519814FBF00568F53 /* TransportationContentView.xib */,
+			);
+			name = Transportation;
+			sourceTree = "<group>";
+		};
+		D0210D8C197FF95E00568F53 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */,
+				D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		D0210D8D197FF97A00568F53 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		D0210D8E197FFAF300568F53 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D8F197FFB4700568F53 /* ARTTheme.h */,
+				D0210D90197FFB4700568F53 /* ARTTheme.m */,
+				D0210D92197FFB8A00568F53 /* UIColor+Theme.h */,
+				D0210D93197FFB8A00568F53 /* UIColor+Theme.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		D0210DA7198004D500568F53 /* Markers */ = {
+			isa = PBXGroup;
+			children = (
+				D0210DA8198004F500568F53 /* dancemarker.png */,
+				D0210DA9198004F500568F53 /* gallerymarker.png */,
+				D0210DAA198004F500568F53 /* musicmarker.png */,
+				D0210DAB198004F500568F53 /* parking.png */,
+				D0210DAC198004F500568F53 /* theatremarker.png */,
+				D0210DAD198004F500568F53 /* venuemarker.png */,
+			);
+			name = Markers;
+			sourceTree = "<group>";
+		};
+		D0663DD2196ED83A0056DC9E = {
+			isa = PBXGroup;
+			children = (
+				D0663DE6196ED83A0056DC9E /* Charlottesville Artfinder */,
+				D0663E03196ED83B0056DC9E /* Charlottesville ArtfinderTests */,
+				D0663DDD196ED83A0056DC9E /* Frameworks */,
+				D0663DDC196ED83A0056DC9E /* Products */,
+				B5E375EC2A5449F49710EFBC /* Pods-Charlottesville Artfinder.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		D0663DDC196ED83A0056DC9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0663DDB196ED83A0056DC9E /* Charlottesville Artfinder.app */,
+				D0663DFB196ED83B0056DC9E /* Charlottesville ArtfinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0663DDD196ED83A0056DC9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8CF198569C3000DEBDC /* QuartzCore.framework */,
+				D0663E14196EDBAC0056DC9E /* MapKit.framework */,
+				D0663DDE196ED83A0056DC9E /* Foundation.framework */,
+				D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */,
+				D0663DE2196ED83A0056DC9E /* UIKit.framework */,
+				D0663DE4196ED83A0056DC9E /* CoreData.framework */,
+				D0663DFC196ED83B0056DC9E /* XCTest.framework */,
+				F61C70B12EE242BCA86C09D8 /* libPods-Charlottesville Artfinder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0663DE6196ED83A0056DC9E /* Charlottesville Artfinder */ = {
+			isa = PBXGroup;
+			children = (
+				D0210D8E197FFAF300568F53 /* Theme */,
+				D0210D46197FF39000568F53 /* Assets */,
+				D0210D8C197FF95E00568F53 /* Events */,
+				D0663E13196EDAF00056DC9E /* Delegate */,
+				D0210D8A197FF93C00568F53 /* Directory */,
+				D0210D89197FF93400568F53 /* Map */,
+				D0D94EAA196F3ABF007567EF /* Model */,
+				D0210D8D197FF97A00568F53 /* Social */,
+				D0210D42197FEDFE00568F53 /* Stores */,
+				D0210D45197FF02200568F53 /* Storyboard */,
+				D0210D8B197FF94300568F53 /* Transportation */,
+				D0210D3A197FED7300568F53 /* Utility */,
+				D0663DF5196ED83A0056DC9E /* Images.xcassets */,
+				D0663DE7196ED83A0056DC9E /* Supporting Files */,
+			);
+			path = "Charlottesville Artfinder";
+			sourceTree = "<group>";
+		};
+		D0663DE7196ED83A0056DC9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE90F1989CB85000DEBDC /* ReadMe */,
+				D0663DE8196ED83A0056DC9E /* Charlottesville Artfinder-Info.plist */,
+				D0663DE9196ED83A0056DC9E /* InfoPlist.strings */,
+				D0663DEC196ED83A0056DC9E /* main.m */,
+				D0663DEE196ED83A0056DC9E /* Charlottesville Artfinder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0663E03196ED83B0056DC9E /* Charlottesville ArtfinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */,
+				D0663E04196ED83B0056DC9E /* Supporting Files */,
+			);
+			path = "Charlottesville ArtfinderTests";
+			sourceTree = "<group>";
+		};
+		D0663E04196ED83B0056DC9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0663E05196ED83B0056DC9E /* Charlottesville ArtfinderTests-Info.plist */,
+				D0663E06196ED83B0056DC9E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0663E13196EDAF00056DC9E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D0663DEF196ED83A0056DC9E /* AppDelegate.h */,
+				D0663DF0196ED83A0056DC9E /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		D0D94EAA196F3ABF007567EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0663DF2196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld */,
+				D0D94EAB196F3ABF007567EF /* _ARTEvent.h */,
+				D0D94EAC196F3ABF007567EF /* _ARTEvent.m */,
+				D0D94EAD196F3ABF007567EF /* _ARTVenue.h */,
+				D0D94EAE196F3ABF007567EF /* _ARTVenue.m */,
+				D0D94EAF196F3ABF007567EF /* ARTEvent.h */,
+				D0D94EB0196F3ABF007567EF /* ARTEvent.m */,
+				D0D94EB1196F3ABF007567EF /* ARTVenue.h */,
+				D0D94EB2196F3ABF007567EF /* ARTVenue.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0663DDA196ED83A0056DC9E /* Charlottesville Artfinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0663E0D196ED83B0056DC9E /* Build configuration list for PBXNativeTarget "Charlottesville Artfinder" */;
+			buildPhases = (
+				1B683EC6B55B4A60981AB17E /* Check Pods Manifest.lock */,
+				D0663DD7196ED83A0056DC9E /* Sources */,
+				D0663DD8196ED83A0056DC9E /* Frameworks */,
+				D0663DD9196ED83A0056DC9E /* Resources */,
+				CF4B5659F84D404CADC04B79 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Charlottesville Artfinder";
+			productName = "Charlottesville Artfinder";
+			productReference = D0663DDB196ED83A0056DC9E /* Charlottesville Artfinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0663DFA196ED83B0056DC9E /* Charlottesville ArtfinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0663E10196ED83B0056DC9E /* Build configuration list for PBXNativeTarget "Charlottesville ArtfinderTests" */;
+			buildPhases = (
+				D0663DF7196ED83B0056DC9E /* Sources */,
+				D0663DF8196ED83B0056DC9E /* Frameworks */,
+				D0663DF9196ED83B0056DC9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0663E02196ED83B0056DC9E /* PBXTargetDependency */,
+			);
+			name = "Charlottesville ArtfinderTests";
+			productName = "Charlottesville ArtfinderTests";
+			productReference = D0663DFB196ED83B0056DC9E /* Charlottesville ArtfinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0663DD3196ED83A0056DC9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ART;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = HooApps;
+				TargetAttributes = {
+					D0663DFA196ED83B0056DC9E = {
+						TestTargetID = D0663DDA196ED83A0056DC9E;
+					};
+				};
+			};
+			buildConfigurationList = D0663DD6196ED83A0056DC9E /* Build configuration list for PBXProject "Charlottesville Artfinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0663DD2196ED83A0056DC9E;
+			productRefGroup = D0663DDC196ED83A0056DC9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0663DDA196ED83A0056DC9E /* Charlottesville Artfinder */,
+				D0663DFA196ED83B0056DC9E /* Charlottesville ArtfinderTests */,
+				D0D94EA5196F38B0007567EF /* Mogenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0663DD9196ED83A0056DC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */,
+				D01FE8E01986ED18000DEBDC /* phone1-50.png in Resources */,
+				D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D0210DB2198004F500568F53 /* theatremarker.png in Resources */,
+				D0210D5D197FF51600568F53 /* cvillartfinderlaunchimage.png in Resources */,
+				D01FE8E21986F5E5000DEBDC /* map_marker-25.png in Resources */,
+				D0210D65197FF5C800568F53 /* currentlocation.png in Resources */,
+				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
+				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
+				D0210DB3198004F500568F53 /* venuemarker.png in Resources */,
+				D0210D5E197FF51600568F53 /* cvillartfinderlaunchimage@2x.png in Resources */,
+				D0210D88197FF76400568F53 /* venuedefault.png in Resources */,
+				D0210D64197FF5C800568F53 /* centercville.png in Resources */,
+				D01FE8DC1986ED02000DEBDC /* directions-50.png in Resources */,
+				D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */,
+				D01FE8DE1986ED0E000DEBDC /* map_marker-50.png in Resources */,
+				D0210D54197FF4FA00568F53 /* cville_art_logo_icon_ios7.png in Resources */,
+				D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */,
+				D0210D87197FF76400568F53 /* theatredefault.png in Resources */,
+				D0210D6F197FF71700568F53 /* bus-48.png in Resources */,
+				D01FE9101989CB85000DEBDC /* ReadMe in Resources */,
+				D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */,
+				D0210DB0198004F500568F53 /* musicmarker.png in Resources */,
+				D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */,
+				D0663DF6196ED83A0056DC9E /* Images.xcassets in Resources */,
+				D0210D70197FF71700568F53 /* calendar-48.png in Resources */,
+				D0210D66197FF5C800568F53 /* pca_banner.png in Resources */,
+				D0210D85197FF76400568F53 /* gallerydefault.png in Resources */,
+				D0210DB1198004F500568F53 /* parking.png in Resources */,
+				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
+				D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */,
+				D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */,
+				D0210D6E197FF71700568F53 /* book-32.png in Resources */,
+				D0210D72197FF71700568F53 /* map_marker-48.png in Resources */,
+				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
+				D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */,
+				D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */,
+				D0210D71197FF71700568F53 /* group-32.png in Resources */,
+				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
+				D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0663DF9196ED83B0056DC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0663E08196ED83B0056DC9E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B683EC6B55B4A60981AB17E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF4B5659F84D404CADC04B79 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Charlottesville Artfinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D94EA9196F38C9007567EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Charlottesville\\ Artfinder/Charlottesville_Artfinder.xcdatamodeld/Charlottesville_Artfinder.xcdatamodel -O Charlottesville\\ Artfinder/Model --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0663DD7196ED83A0056DC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D94EB5196F3ABF007567EF /* ARTEvent.m in Sources */,
+				D0663DF1196ED83A0056DC9E /* AppDelegate.m in Sources */,
+				D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */,
+				D0210DC9198155EE00568F53 /* ARTTransportationView.m in Sources */,
+				D0663DED196ED83A0056DC9E /* main.m in Sources */,
+				D0210DB91980063300568F53 /* ARTObjectStore.m in Sources */,
+				D0D94EB4196F3ABF007567EF /* _ARTVenue.m in Sources */,
+				D0210DBC198006C900568F53 /* ARTParseRESTClient.m in Sources */,
+				D0210D94197FFB8A00568F53 /* UIColor+Theme.m in Sources */,
+				D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */,
+				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
+				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
+				D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */,
+				D0210D91197FFB4700568F53 /* ARTTheme.m in Sources */,
+				D01FE8D91985F443000DEBDC /* ARTAnnotationView.m in Sources */,
+				D01FE8E91987E8E3000DEBDC /* ARTEventsViewController.m in Sources */,
+				D0210DB6198005A100568F53 /* ARTLoadViewController.m in Sources */,
+				D01FE8D61985E231000DEBDC /* ARTMapViewController.m in Sources */,
+				D01FE8CE1985694C000DEBDC /* ARTDirectoryDetailButton.m in Sources */,
+				D0D94EB6196F3ABF007567EF /* ARTVenue.m in Sources */,
+				D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */,
+				D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */,
+				D0663DF4196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld in Sources */,
+				D0DA55A119841B10006315BC /* ARTDirectoryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0663DF7196ED83B0056DC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0663E0A196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0663E02196ED83B0056DC9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0663DDA196ED83A0056DC9E /* Charlottesville Artfinder */;
+			targetProxy = D0663E01196ED83B0056DC9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0663DE9196ED83A0056DC9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0663DEA196ED83A0056DC9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0663E06196ED83B0056DC9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0663E07196ED83B0056DC9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0663E0B196ED83B0056DC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0663E0C196ED83B0056DC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0663E0E196ED83B0056DC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5E375EC2A5449F49710EFBC /* Pods-Charlottesville Artfinder.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Charlottesville Artfinder/Charlottesville Artfinder-Prefix.pch";
+				INFOPLIST_FILE = "Charlottesville Artfinder/Charlottesville Artfinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0663E0F196ED83B0056DC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5E375EC2A5449F49710EFBC /* Pods-Charlottesville Artfinder.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Charlottesville Artfinder/Charlottesville Artfinder-Prefix.pch";
+				INFOPLIST_FILE = "Charlottesville Artfinder/Charlottesville Artfinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0663E11196ED83B0056DC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Charlottesville Artfinder.app/Charlottesville Artfinder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Charlottesville Artfinder/Charlottesville Artfinder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Charlottesville ArtfinderTests/Charlottesville ArtfinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0663E12196ED83B0056DC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Charlottesville Artfinder.app/Charlottesville Artfinder";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Charlottesville Artfinder/Charlottesville Artfinder-Prefix.pch";
+				INFOPLIST_FILE = "Charlottesville ArtfinderTests/Charlottesville ArtfinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		D0D94EA6196F38B0007567EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0D94EA7196F38B0007567EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0663DD6196ED83A0056DC9E /* Build configuration list for PBXProject "Charlottesville Artfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0663E0B196ED83B0056DC9E /* Debug */,
+				D0663E0C196ED83B0056DC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0663E0D196ED83B0056DC9E /* Build configuration list for PBXNativeTarget "Charlottesville Artfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0663E0E196ED83B0056DC9E /* Debug */,
+				D0663E0F196ED83B0056DC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0663E10196ED83B0056DC9E /* Build configuration list for PBXNativeTarget "Charlottesville ArtfinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0663E11196ED83B0056DC9E /* Debug */,
+				D0663E12196ED83B0056DC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D94EA8196F38B0007567EF /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D94EA6196F38B0007567EF /* Debug */,
+				D0D94EA7196F38B0007567EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0663DF2196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0663DF3196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodel */,
+			);
+			currentVersion = D0663DF3196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodel */;
+			name = Charlottesville_Artfinder.xcdatamodeld;
+			path = ../Charlottesville_Artfinder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D0663DD3196ED83A0056DC9E /* Project object */;
+}

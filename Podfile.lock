@@ -1,0 +1,50 @@
+PODS:
+  - AFNetworking (2.3.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.3.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.3.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.3.1)
+  - AFNetworking/Security (2.3.1)
+  - AFNetworking/Serialization (2.3.1)
+  - AFNetworking/UIKit (2.3.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Bolts (1.1.0)
+  - Facebook-iOS-SDK (3.16.1):
+    - Bolts
+  - MagicalRecord (2.3.0-beta.1)
+  - MBCalendarKit (1.0.1)
+
+DEPENDENCIES:
+  - AFNetworking (= 2.3.1)
+  - Facebook-iOS-SDK (= 3.16.1)
+  - MagicalRecord (from `git@github.com:magicalpanda/MagicalRecord.git`, tag `v2.3.0-beta.2`)
+  - MBCalendarKit (from `git@github.com:MosheBerman/MBCalendarKit.git`, tag `2.1.0`)
+
+EXTERNAL SOURCES:
+  MagicalRecord:
+    :git: git@github.com:magicalpanda/MagicalRecord.git
+    :tag: v2.3.0-beta.2
+  MBCalendarKit:
+    :git: git@github.com:MosheBerman/MBCalendarKit.git
+    :tag: 2.1.0
+
+SPEC CHECKSUMS:
+  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  Bolts: 91c2af8eae1d44e1dd75946a5b0ae04a43ea43e4
+  Facebook-iOS-SDK: 594f0e2398fe62b0a44b6f7ae113c7795cfabfa4
+  MagicalRecord: 1ae96754b1c1bc1cf551e3fdc7ea00d11039e139
+  MBCalendarKit: e157fdcb798a33a42721ebdfb90840cca97240c1
+
+COCOAPODS: 0.33.1
