@@ -33,6 +33,12 @@
 		D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8E31986F5FA000DEBDC /* map_marker-32.png */; };
 		D01FE8E91987E8E3000DEBDC /* ARTEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */; };
 		D01FE9101989CB85000DEBDC /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D01FE90F1989CB85000DEBDC /* ReadMe */; };
+		D01FE918198B380E000DEBDC /* ARTEventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */; };
+		D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */; };
+		D01FE921198C027D000DEBDC /* twitter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE920198C027D000DEBDC /* twitter-32.png */; };
+		D01FE923198C0286000DEBDC /* facebook-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE922198C0286000DEBDC /* facebook-32.png */; };
+		D01FE925198C0292000DEBDC /* speech_bubble-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE924198C0292000DEBDC /* speech_bubble-32.png */; };
+		D01FE929198C083F000DEBDC /* left_arrow-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE928198C083F000DEBDC /* left_arrow-32.png */; };
 		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
 		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
 		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
@@ -127,6 +133,14 @@
 		D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventsViewController.h; sourceTree = "<group>"; };
 		D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsViewController.m; sourceTree = "<group>"; };
 		D01FE90F1989CB85000DEBDC /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		D01FE916198B380E000DEBDC /* ARTEventsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventsDetailViewController.h; sourceTree = "<group>"; };
+		D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsDetailViewController.m; sourceTree = "<group>"; };
+		D01FE919198BE4D1000DEBDC /* ARTConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConnectViewController.h; sourceTree = "<group>"; };
+		D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConnectViewController.m; sourceTree = "<group>"; };
+		D01FE920198C027D000DEBDC /* twitter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-32.png"; sourceTree = "<group>"; };
+		D01FE922198C0286000DEBDC /* facebook-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-32.png"; sourceTree = "<group>"; };
+		D01FE924198C0292000DEBDC /* speech_bubble-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech_bubble-32.png"; sourceTree = "<group>"; };
+		D01FE928198C083F000DEBDC /* left_arrow-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow-32.png"; sourceTree = "<group>"; };
 		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
 		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
 		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -328,6 +342,10 @@
 		D0210D48197FF3E300568F53 /* Supporting Images */ = {
 			isa = PBXGroup;
 			children = (
+				D01FE928198C083F000DEBDC /* left_arrow-32.png */,
+				D01FE924198C0292000DEBDC /* speech_bubble-32.png */,
+				D01FE922198C0286000DEBDC /* facebook-32.png */,
+				D01FE920198C027D000DEBDC /* twitter-32.png */,
 				D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */,
 				D0210D60197FF5C800568F53 /* centercville.png */,
 				D0210D61197FF5C800568F53 /* currentlocation.png */,
@@ -422,15 +440,19 @@
 			children = (
 				D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */,
 				D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */,
+				D01FE916198B380E000DEBDC /* ARTEventsDetailViewController.h */,
+				D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */,
 			);
 			name = Events;
 			sourceTree = "<group>";
 		};
-		D0210D8D197FF97A00568F53 /* Social */ = {
+		D0210D8D197FF97A00568F53 /* Connect */ = {
 			isa = PBXGroup;
 			children = (
+				D01FE919198BE4D1000DEBDC /* ARTConnectViewController.h */,
+				D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */,
 			);
-			name = Social;
+			name = Connect;
 			sourceTree = "<group>";
 		};
 		D0210D8E197FFAF300568F53 /* Theme */ = {
@@ -502,7 +524,7 @@
 				D0210D8A197FF93C00568F53 /* Directory */,
 				D0210D89197FF93400568F53 /* Map */,
 				D0D94EAA196F3ABF007567EF /* Model */,
-				D0210D8D197FF97A00568F53 /* Social */,
+				D0210D8D197FF97A00568F53 /* Connect */,
 				D0210D42197FEDFE00568F53 /* Stores */,
 				D0210D45197FF02200568F53 /* Storyboard */,
 				D0210D8B197FF94300568F53 /* Transportation */,
@@ -667,7 +689,9 @@
 				D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */,
 				D0210D87197FF76400568F53 /* theatredefault.png in Resources */,
 				D0210D6F197FF71700568F53 /* bus-48.png in Resources */,
+				D01FE929198C083F000DEBDC /* left_arrow-32.png in Resources */,
 				D01FE9101989CB85000DEBDC /* ReadMe in Resources */,
+				D01FE921198C027D000DEBDC /* twitter-32.png in Resources */,
 				D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */,
 				D0210DB0198004F500568F53 /* musicmarker.png in Resources */,
 				D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */,
@@ -678,6 +702,7 @@
 				D0210DB1198004F500568F53 /* parking.png in Resources */,
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
 				D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */,
+				D01FE923198C0286000DEBDC /* facebook-32.png in Resources */,
 				D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */,
 				D0210D6E197FF71700568F53 /* book-32.png in Resources */,
 				D0210D72197FF71700568F53 /* map_marker-48.png in Resources */,
@@ -685,6 +710,7 @@
 				D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */,
 				D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */,
 				D0210D71197FF71700568F53 /* group-32.png in Resources */,
+				D01FE925198C0292000DEBDC /* speech_bubble-32.png in Resources */,
 				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
 				D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */,
 			);
@@ -760,6 +786,7 @@
 				D0D94EB4196F3ABF007567EF /* _ARTVenue.m in Sources */,
 				D0210DBC198006C900568F53 /* ARTParseRESTClient.m in Sources */,
 				D0210D94197FFB8A00568F53 /* UIColor+Theme.m in Sources */,
+				D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */,
 				D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */,
 				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
 				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
@@ -773,6 +800,7 @@
 				D0D94EB6196F3ABF007567EF /* ARTVenue.m in Sources */,
 				D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */,
 				D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */,
+				D01FE918198B380E000DEBDC /* ARTEventsDetailViewController.m in Sources */,
 				D0663DF4196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld in Sources */,
 				D0DA55A119841B10006315BC /* ARTDirectoryViewController.m in Sources */,
 			);

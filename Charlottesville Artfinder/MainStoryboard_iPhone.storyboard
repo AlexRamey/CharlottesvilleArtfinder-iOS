@@ -63,50 +63,113 @@
             </objects>
             <point key="canvasLocation" x="467" y="142"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="MGf-Ec-IKJ">
-            <objects>
-                <tableViewController id="rWm-1Q-Dsl" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oRz-YP-Gyd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vfn-JT-0zP">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vfn-JT-0zP" id="JWo-RL-Y3S">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="rWm-1Q-Dsl" id="4b3-4h-oKv"/>
-                            <outlet property="delegate" destination="rWm-1Q-Dsl" id="0YV-qe-Hth"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ei7-fG-VEv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6E-sZ-pGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1364" y="1461"/>
-        </scene>
-        <!--Navigation Controller - Social-->
+        <!--Navigation Controller - Connect-->
         <scene sceneID="7EX-Ii-VXB">
             <objects>
                 <navigationController definesPresentationContext="YES" id="5EU-ss-94D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="group-32.png" id="j08-d6-ZDA"/>
+                    <tabBarItem key="tabBarItem" title="Connect" image="group-32.png" id="j08-d6-ZDA"/>
+                    <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LGr-pD-VbJ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="aIR-2s-muh">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="rWm-1Q-Dsl" kind="relationship" relationship="rootViewController" id="evc-H8-dvI"/>
+                        <segue destination="8jd-gI-PUp" kind="relationship" relationship="rootViewController" id="qkd-Bj-yGm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZk-zM-seY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="924" y="1461"/>
+        </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="jxU-D4-ffA">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8jd-gI-PUp" customClass="ARTConnectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MQ4-vj-MJv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOT-bL-wWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bfn-ZB-eEh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOh-Qv-ujR">
+                                <rect key="frame" x="0.0" y="65" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-db-uyM">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OOh-Qv-ujR" secondAttribute="trailing" id="1Ax-DN-5vu"/>
+                            <constraint firstItem="OOh-Qv-ujR" firstAttribute="centerX" secondItem="7Ip-db-uyM" secondAttribute="centerX" id="AxY-e2-aov"/>
+                            <constraint firstItem="OOh-Qv-ujR" firstAttribute="centerY" secondItem="7Ip-db-uyM" secondAttribute="centerY" constant="8.5" id="IzF-8F-e3n"/>
+                            <constraint firstItem="lOT-bL-wWf" firstAttribute="top" secondItem="OOh-Qv-ujR" secondAttribute="bottom" constant="-1" id="JTv-Xm-4NO"/>
+                            <constraint firstItem="OOh-Qv-ujR" firstAttribute="top" secondItem="MQ4-vj-MJv" secondAttribute="bottom" constant="1" id="Yfc-Mu-ufu"/>
+                            <constraint firstItem="OOh-Qv-ujR" firstAttribute="leading" secondItem="Bfn-ZB-eEh" secondAttribute="leading" id="ufC-St-ZV6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pmn-h1-8vf">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="left_arrow-32.png" id="5SS-dC-y1L">
+                            <connections>
+                                <action selector="navigateBack:" destination="8jd-gI-PUp" id="Y6p-Ej-MGA"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="AoU-Kj-fRs">
+                            <rect key="frame" x="65" y="6" width="200" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="" image="facebook-32.png"/>
+                                <segment title="" image="twitter-32.png"/>
+                                <segment title="" image="speech_bubble-32.png"/>
+                            </segments>
+                            <connections>
+                                <action selector="selectionMade:" destination="8jd-gI-PUp" eventType="valueChanged" id="GPy-im-gkj"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="NdB-cF-fwG">
+                            <connections>
+                                <action selector="aboutSelected:" destination="8jd-gI-PUp" id="Af0-2L-htr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="7Ip-db-uyM" id="aqV-EL-oQF"/>
+                        <outlet property="segmentedControl" destination="AoU-Kj-fRs" id="RNV-zO-HbA"/>
+                        <outlet property="webView" destination="OOh-Qv-ujR" id="sEr-pf-qpP"/>
+                        <segue destination="Q7n-uo-lme" kind="push" identifier="ConnectToAbout" id="0lG-tm-1Z2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rik-Eq-sPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="1450"/>
+        </scene>
+        <!--View Controller - About PCA-->
+        <scene sceneID="3S7-ba-r8Y">
+            <objects>
+                <viewController id="Q7n-uo-lme" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dsX-kM-H78"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZv-5n-Fh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dWf-zM-BWX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About PCA" id="6tZ-Cj-hnI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1A-yp-NFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="1450"/>
         </scene>
         <!--Navigation Controller - Events-->
         <scene sceneID="zzJ-cP-vsq">
@@ -153,11 +216,31 @@
                     <navigationItem key="navigationItem" title="Events" id="Hew-tE-KHb"/>
                     <connections>
                         <outlet property="containerView" destination="VUa-aV-6ug" id="XGN-KO-M3J"/>
+                        <segue destination="c8a-3d-yV8" kind="push" id="iUb-kB-gpK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwT-1Y-UrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1364" y="793"/>
+        </scene>
+        <!--Events Detail View Controller - Event Details-->
+        <scene sceneID="2FO-iY-RyJ">
+            <objects>
+                <viewController id="c8a-3d-yV8" customClass="ARTEventsDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rcy-Sy-T3I"/>
+                        <viewControllerLayoutGuide type="bottom" id="bya-xZ-BKR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D0Z-Le-lGM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Event Details" id="lu2-pt-40x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tQ-k2-kgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="793"/>
         </scene>
         <!--Navigation Controller - Transportation-->
         <scene sceneID="z5U-AX-mp1">
@@ -446,8 +529,12 @@
         <image name="calendar-48.png" width="30" height="30"/>
         <image name="centercville.png" width="62" height="62"/>
         <image name="currentlocation.png" width="48" height="48"/>
+        <image name="facebook-32.png" width="32" height="32"/>
         <image name="group-32.png" width="32" height="32"/>
+        <image name="left_arrow-32.png" width="32" height="32"/>
         <image name="map_marker-32.png" width="32" height="32"/>
+        <image name="speech_bubble-32.png" width="32" height="32"/>
+        <image name="twitter-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
