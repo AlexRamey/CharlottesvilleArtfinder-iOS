@@ -14,6 +14,8 @@
 
 +(UIColor *)ARTGreen;
 
++(UIColor *)ARTDarkGreen;
+
 +(UIColor *)ARTIndigo;
 
 +(UIColor *)ARTOrange;

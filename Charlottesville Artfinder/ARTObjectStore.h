@@ -14,6 +14,8 @@
 
 @property (nonatomic) ARTParseRESTClient* parseClient;
 @property (nonatomic) ARTGoogleCalendarClient* googleClient;
+@property (nonatomic, readonly) NSUInteger venueCount;
+@property (nonatomic, readonly) NSUInteger eventCount;
 
 +(ARTObjectStore *)sharedStore;
 

@@ -67,7 +67,7 @@
     
     if (!data)
     {
-        NSString *category = [self primaryCategory];
+        NSString *category = [self getPrimaryCategory];
         
         if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
         {

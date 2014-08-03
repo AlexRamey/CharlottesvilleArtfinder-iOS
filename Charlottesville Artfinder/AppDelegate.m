@@ -78,6 +78,52 @@ NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
     [sharedStore cleanUp];
 }
 
+#pragma mark - Background App Refresh
+
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    return YES;
+}
+
+-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    __block NSError *error = nil;
+    
+    ARTObjectStore *sharedStore = [ARTObjectStore sharedStore];
+    [sharedStore loadLatestVenuesWithCompletion:^(NSError *err) {
+        if (err)
+        {
+            error = err;
+        }
+        [sharedStore loadAllEventsWithCompletion:^(NSError *e) {
+            if (e)
+            {
+                error = e;
+            }
+            
+            if (error)
+            {
+                completionHandler(UIBackgroundFetchResultFailed);
+            }
+            else
+            {
+                completionHandler(UIBackgroundFetchResultNewData);
+                
+# warning Notification for Debugging purposes only; remove for production build
+                // Set up Local Notifications
+                [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                NSDate *now = [NSDate date];
+                localNotification.fireDate = now;
+                localNotification.alertBody = [NSString stringWithFormat:@"Background Refresh!"];
+                localNotification.soundName = UILocalNotificationDefaultSoundName;
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+            }
+        }];
+    }];
+}
+
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.

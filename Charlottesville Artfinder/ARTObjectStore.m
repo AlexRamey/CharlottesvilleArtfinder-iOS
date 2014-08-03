@@ -367,6 +367,16 @@
     return [NSURL fileURLWithPath:[cacheDirectory stringByAppendingPathComponent:key]];
 }
 
+-(NSUInteger)venueCount
+{
+    return [[ARTVenue MR_findAll] count];
+}
+
+-(NSUInteger)eventCount
+{
+    return [[ARTEvent MR_findAll] count];
+}
+
 -(void)cleanUp
 {
     // Clean up before application terminates

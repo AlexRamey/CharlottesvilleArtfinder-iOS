@@ -23,6 +23,11 @@
     return UIColorFromRGB(0x30A81B);
 }
 
++(UIColor *)ARTDarkGreen
+{
+    return UIColorFromRGB(0x298E17);
+}
+
 +(UIColor *)ARTIndigo
 {
     return UIColorFromRGB(0x4640A8);

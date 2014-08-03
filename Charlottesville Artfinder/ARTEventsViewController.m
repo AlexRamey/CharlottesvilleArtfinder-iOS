@@ -107,23 +107,21 @@
 {
     NSArray *events = [_store eventsWithEventID:[event.info objectForKey:@"EVENT_ID"]];
     
-    if ([events count] > 1)
-    {
-        NSLog(@"ALERT: DUPLICATE EVENTS!!!");
-    }
-    
     selectedEvent = (ARTEvent *)(events[0]);
+    
+    [self performSegueWithIdentifier:@"EventsToDetail" sender:self];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // TODO: Pass on selected event
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

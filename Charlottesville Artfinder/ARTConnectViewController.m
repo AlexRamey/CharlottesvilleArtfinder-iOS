@@ -56,6 +56,13 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     [self selectionMade:_segmentedControl];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    [self updateControlStates];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

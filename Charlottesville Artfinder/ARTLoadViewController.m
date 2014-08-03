@@ -8,8 +8,6 @@
 
 #import "ARTLoadViewController.h"
 #import "ARTObjectStore.h"
-#import "ARTVenue.h"
-#import "ARTEvent.h"
 
 @interface ARTLoadViewController ()
 
@@ -34,57 +32,60 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CGSize result = [[UIScreen mainScreen] bounds].size;
-    if(result.height == 480)
-    {
-        // iPhone Classic
-        imageView.image = [UIImage imageNamed:@"cvilleartfinderlaunchimage"];
-    }
-    else
-    {
-        // iPhone 5 or maybe a larger iPhone ??
-        imageView.image = [UIImage imageNamed:@"cvilleartfinderlaunchimage-1136"];
-    }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
-    [activityIndicator setHidesWhenStopped:YES];
+    [activityIndicator startAnimating];
     
     ARTObjectStore *store = [ARTObjectStore sharedStore];
     
-    __block NSError *loadError = nil;
-    
-    [store loadLatestVenuesWithCompletion:^(NSError *error) {
+    void (^completion)(NSError *) = ^(NSError *error){
         if (error)
         {
-            loadError = error;
-        }
-        else
-        {
-            NSArray *venues = [ARTVenue MR_findAll];
-            NSLog(@"Venues in Core Data: %d", [venues count]);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Failed" message:@"Some data was unable to be downloaded. Restarting the app will force it to try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
         
-        [store loadAllEventsWithCompletion:^(NSError *err) {
-            if (err)
-            {
-                loadError = err;
-            }
-            else
-            {
-                NSArray *events = [ARTEvent MR_findAll];
-                NSLog(@"Events in Core Data: %d", [events count]);
-            }
-            
-            [activityIndicator stopAnimating];
-            [self performSegueWithIdentifier:@"ARTLoadCompleteSegue" sender:self];
-        }];
-    }];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+        [activityIndicator stopAnimating];
+        [self performSegueWithIdentifier:@"ARTLoadCompleteSegue" sender:self];
+    };
     
-    [activityIndicator startAnimating];
+    if ([store eventCount] == 0 && [store venueCount] == 0)
+    {
+        __block NSError *error = nil;
+        
+        [store loadLatestVenuesWithCompletion:^(NSError *err) {
+            
+            error = err;
+            
+            [store loadAllEventsWithCompletion:^(NSError *e) {
+                
+                if (e)
+                {
+                    error = e;
+                }
+                
+                completion(error);
+                
+            }];
+        }];
+    }
+    else if ([store venueCount] == 0)
+    {
+        [store loadLatestVenuesWithCompletion:completion];
+    }
+    else if ([store eventCount] == 0)
+    {
+        [store loadAllEventsWithCompletion:completion];
+    }
+    else
+    {
+        completion(nil);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning

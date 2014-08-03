@@ -29,7 +29,6 @@
     t.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor] ,
                               NSShadowAttributeName : shadow,
                               NSFontAttributeName : [UIFont fontWithName:@"ArialMT" size:21.0] };
-    
     //Configure Status Bar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
