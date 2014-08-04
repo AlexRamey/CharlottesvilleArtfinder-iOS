@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EventKit/EventKit.h>
 
+@class ARTEvent;
 @interface ARTEventsDetailViewController : UIViewController
+{
+    __weak IBOutlet UIScrollView *scrollView;
+    UIButton *calendarActionButton;
+    EKEventStore *calendarEventStore;
+    BOOL calendarPermission;
+}
+
+@property (nonatomic, strong) ARTEvent *event;
+@property (nonatomic, strong) NSDate *selectedDate;
 
 @end

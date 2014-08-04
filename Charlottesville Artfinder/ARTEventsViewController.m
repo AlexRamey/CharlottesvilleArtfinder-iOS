@@ -11,6 +11,7 @@
 #import "UIColor+Theme.h"
 #import "ARTObjectStore.h"
 #import "ARTEvent.h"
+#import "ARTEventsDetailViewController.h"
 
 @interface ARTEventsViewController ()
 
@@ -47,6 +48,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)filterAction:(id)sender
+{
+    //TODO: Present Modal Filter Controller
 }
 
 #pragma mark - CKCalendarViewDataSource
@@ -108,6 +114,7 @@
     NSArray *events = [_store eventsWithEventID:[event.info objectForKey:@"EVENT_ID"]];
     
     selectedEvent = (ARTEvent *)(events[0]);
+    selectedDate = event.date;
     
     [self performSegueWithIdentifier:@"EventsToDetail" sender:self];
 }
@@ -118,9 +125,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // TODO: Pass on selected event
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [(ARTEventsDetailViewController *)[segue destinationViewController] setEvent:selectedEvent];
+    [(ARTEventsDetailViewController *)[segue destinationViewController] setSelectedDate:selectedDate];
 }
 
 

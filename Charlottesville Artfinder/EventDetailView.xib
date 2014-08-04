@@ -13,6 +13,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvh-bB-bfn">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-8R-NtS" customClass="ARTEventDetailButton">
+                            <rect key="frame" x="75" y="89" width="170" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.22226391619999999" green="0.70962213009999997" blue="0.21696423619999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.84865419710000001" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="136" id="BrW-S5-EqG"/>
@@ -26,17 +37,17 @@
                         <constraint firstAttribute="width" constant="64" id="hEo-ja-OmK"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="231" placeholderIntrinsicHeight="24" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="CYk-Qd-0z4">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="231" placeholderIntrinsicHeight="24" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="CYk-Qd-0z4">
                     <rect key="frame" x="84" y="12" width="229" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="231" placeholderIntrinsicHeight="19" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="4Yh-cR-uA5">
                     <rect key="frame" x="84" y="37" width="229" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-Mm-nVR">
@@ -104,10 +115,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="aboutVenue" destination="Zz7-Np-KPp" id="NMd-7n-i8s"/>
-                <outlet property="organizationAddress" destination="4Yh-cR-uA5" id="OrJ-mb-woh"/>
-                <outlet property="organizationName" destination="CYk-Qd-0z4" id="KHR-aO-C8M"/>
-                <outlet property="thumbnailImage" destination="ndi-X7-ABQ" id="ox2-Wi-XdW"/>
+                <outlet property="calendarButton" destination="bGB-8R-NtS" id="qvN-bc-kxn"/>
+                <outlet property="eventDescription" destination="Zz7-Np-KPp" id="hYD-Bq-W3j"/>
+                <outlet property="eventTime" destination="4Yh-cR-uA5" id="U4p-Uw-2PG"/>
+                <outlet property="eventTitle" destination="CYk-Qd-0z4" id="iQv-UH-XKD"/>
+                <outlet property="thumbnailImage" destination="ndi-X7-ABQ" id="KcP-iA-p4M"/>
             </connections>
         </view>
     </objects>

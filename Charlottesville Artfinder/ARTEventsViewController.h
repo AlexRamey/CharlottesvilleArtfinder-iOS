@@ -14,6 +14,7 @@
 @interface ARTEventsViewController : UIViewController <CKCalendarViewDataSource, CKCalendarViewDelegate>
 {
     ARTEvent *selectedEvent;
+    NSDate *selectedDate;
 }
 
 @property (nonatomic, weak) IBOutlet UIView *containerView;

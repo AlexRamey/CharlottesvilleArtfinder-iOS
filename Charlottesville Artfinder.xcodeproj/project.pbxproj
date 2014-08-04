@@ -46,6 +46,8 @@
 		D01FE936198DD859000DEBDC /* calendar-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE935198DD859000DEBDC /* calendar-32.png */; };
 		D01FE938198DD97B000DEBDC /* contacts-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE937198DD97B000DEBDC /* contacts-32.png */; };
 		D01FE93A198DE2F3000DEBDC /* filter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE939198DE2F3000DEBDC /* filter-32.png */; };
+		D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */; };
+		D01FE93F198F2F82000DEBDC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01FE93E198F2F81000DEBDC /* EventKit.framework */; };
 		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
 		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
 		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
@@ -151,6 +153,9 @@
 		D01FE935198DD859000DEBDC /* calendar-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-32.png"; sourceTree = "<group>"; };
 		D01FE937198DD97B000DEBDC /* contacts-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-32.png"; sourceTree = "<group>"; };
 		D01FE939198DE2F3000DEBDC /* filter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter-32.png"; sourceTree = "<group>"; };
+		D01FE93B198E60D5000DEBDC /* ARTEventDetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventDetailButton.h; sourceTree = "<group>"; };
+		D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventDetailButton.m; sourceTree = "<group>"; };
+		D01FE93E198F2F81000DEBDC /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
 		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
 		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -239,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01FE93F198F2F82000DEBDC /* EventKit.framework in Frameworks */,
 				D01FE8D0198569C3000DEBDC /* QuartzCore.framework in Frameworks */,
 				D0663E15196EDBAC0056DC9E /* MapKit.framework in Frameworks */,
 				D0663DE1196ED83A0056DC9E /* CoreGraphics.framework in Frameworks */,
@@ -450,6 +456,8 @@
 				D01FE92C198DD440000DEBDC /* ARTEventDetailView.h */,
 				D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */,
 				D01FE92F198DD45F000DEBDC /* EventDetailView.xib */,
+				D01FE93B198E60D5000DEBDC /* ARTEventDetailButton.h */,
+				D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -510,6 +518,7 @@
 		D0663DDD196ED83A0056DC9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D01FE93E198F2F81000DEBDC /* EventKit.framework */,
 				D01FE8CF198569C3000DEBDC /* QuartzCore.framework */,
 				D0663E14196EDBAC0056DC9E /* MapKit.framework */,
 				D0663DDE196ED83A0056DC9E /* Foundation.framework */,
@@ -806,6 +815,7 @@
 				D01FE92E198DD440000DEBDC /* ARTEventDetailView.m in Sources */,
 				D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */,
 				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
+				D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */,
 				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
 				D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */,
 				D0210D91197FFB4700568F53 /* ARTTheme.m in Sources */,

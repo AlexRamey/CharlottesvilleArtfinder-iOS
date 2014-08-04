@@ -35,7 +35,7 @@
     [attrString addAttribute:NSParagraphStyleAttributeName
                        value:style
                        range:NSMakeRange(0, [venueDescription length])];
-    [attrString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"American Typewriter" size:16] range:NSMakeRange(0, [venueDescription length])];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica Neue" size:16] range:NSMakeRange(0, [venueDescription length])];
     [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:NSMakeRange(0, [venueDescription length])];
      
     self.aboutVenue.attributedText = attrString;

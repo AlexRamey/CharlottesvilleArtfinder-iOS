@@ -1,16 +1,15 @@
 //
-//  ARTDirectoryDetailButton.m
+//  ARTEventDetailButton.m
 //  Charlottesville Artfinder
 //
-//  Created by Alex Ramey on 7/27/14.
+//  Created by Alex Ramey on 8/3/14.
 //  Copyright (c) 2014 HooApps. All rights reserved.
 //
 
-#import "ARTDirectoryDetailButton.h"
-#import "UIColor+THeme.h"
-#import <QuartzCore/QuartzCore.h>
+#import "ARTEventDetailButton.h"
+#import "UIColor+Theme.h"
 
-@implementation ARTDirectoryDetailButton
+@implementation ARTEventDetailButton
 
 + (CALayer *)buttonWithType:(UIButtonType)type
 {
@@ -43,7 +42,7 @@
     
     layer.cornerRadius = 4.5f;
     layer.borderWidth = 1;
-    layer.borderColor = [UIColor ARTOrange].CGColor;
+    layer.borderColor = [UIColor ARTGreen].CGColor;
 }
 
 - (void)drawBackgroundLayer
@@ -56,8 +55,8 @@
         
         // Set the colors
         _backgroundLayer.colors = (@[
-                                     (id)[UIColor ARTOrange].CGColor,
-                                     (id)[UIColor ARTDarkOrange].CGColor
+                                     (id)[UIColor ARTGreen].CGColor,
+                                     (id)[UIColor ARTDarkGreen].CGColor
                                      ]);
         
         // Set the stops
@@ -81,15 +80,15 @@
         
         // Set the colors
         _highlightBackgroundLayer.colors = (@[
-                                     (id)[UIColor ARTDarkOrange].CGColor,
-                                     (id)[UIColor ARTDarkOrange].CGColor
-                                     ]);
+                                              (id)[UIColor ARTDarkGreen].CGColor,
+                                              (id)[UIColor ARTDarkGreen].CGColor
+                                              ]);
         
         // Set the stops
         _highlightBackgroundLayer.locations = (@[
-                                        @0.0f,
-                                        @1.0f
-                                        ]);
+                                                 @0.0f,
+                                                 @1.0f
+                                                 ]);
         
         // Add the gradient to the layer hierarchy
         [self.layer insertSublayer:_highlightBackgroundLayer atIndex:1];
@@ -124,26 +123,6 @@
     _highlightBackgroundLayer.frame = self.bounds;
     
     [super layoutSubviews];
-    
-    UIImageView *buttonIcon = [[UIImageView alloc] initWithFrame:CGRectMake(27.5, 2.5, 35.0,35.0)];
-    UIImage *image = nil;
-    
-    if (self.frame.origin.x < 100)
-    {
-        image = [UIImage imageNamed:@"map_marker-50.png"];
-    }
-    else if (self.frame.origin.x < 200)
-    {
-        image = [UIImage imageNamed:@"directions-50.png"];
-    }
-    else
-    {
-        image = [UIImage imageNamed:@"phone1-50.png"];
-    }
-    
-    [buttonIcon setContentMode:UIViewContentModeScaleAspectFit];
-    [buttonIcon setImage:image];
-    [self addSubview:buttonIcon];
 }
 
 - (void)setHighlighted:(BOOL)highlighted
@@ -159,6 +138,7 @@
     
     [super setHighlighted:highlighted];
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

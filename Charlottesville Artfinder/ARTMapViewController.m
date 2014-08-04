@@ -103,6 +103,12 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     NSArray *annotations = [_mapView annotations];
     for (ARTVenue *a in annotations)
     {
+        //MKUserLocation (Blue Dot) is an annotation on which .parseObjectID is an unrecognized selector
+        if ([a class] != [ARTVenue class])
+        {
+            continue;
+        }
+        
         if ([a.parseObjectID caseInsensitiveCompare:venue.parseObjectID] == NSOrderedSame)
         {
             [_mapView setRegion:MKCoordinateRegionMakeWithDistance(a.coordinate, 50, 50) animated:YES];

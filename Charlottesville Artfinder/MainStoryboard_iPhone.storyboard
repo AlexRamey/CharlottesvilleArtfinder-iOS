@@ -200,7 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-aV-6ug">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-aV-6ug">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -214,10 +214,16 @@
                             <constraint firstItem="VUa-aV-6ug" firstAttribute="top" secondItem="3cS-Va-GKc" secondAttribute="bottom" id="qRm-mF-5UV"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Events" id="Hew-tE-KHb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mMt-0D-WhJ"/>
-                        <barButtonItem key="rightBarButtonItem" image="filter-32.png" id="tws-Bw-JFV"/>
+                        <barButtonItem key="leftBarButtonItem" image="filter-32.png" id="tws-Bw-JFV">
+                            <connections>
+                                <action selector="filterAction:" destination="t5k-ke-Vhl" id="X1r-L3-rpm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="containerView" destination="VUa-aV-6ug" id="XGN-KO-M3J"/>
                         <segue destination="c8a-3d-yV8" kind="push" identifier="EventsToDetail" id="iUb-kB-gpK"/>
@@ -230,7 +236,7 @@
         <!--Events Detail View Controller - Event Details-->
         <scene sceneID="2FO-iY-RyJ">
             <objects>
-                <viewController id="c8a-3d-yV8" customClass="ARTEventsDetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="c8a-3d-yV8" customClass="ARTEventsDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rcy-Sy-T3I"/>
                         <viewControllerLayoutGuide type="bottom" id="bya-xZ-BKR"/>
@@ -238,9 +244,25 @@
                     <view key="view" contentMode="scaleToFill" id="D0Z-Le-lGM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-ua-H7q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bya-xZ-BKR" firstAttribute="top" secondItem="6Zk-ua-H7q" secondAttribute="bottom" id="YKN-at-7W2"/>
+                            <constraint firstItem="6Zk-ua-H7q" firstAttribute="top" secondItem="Rcy-Sy-T3I" secondAttribute="bottom" id="axM-UG-FHd"/>
+                            <constraint firstItem="6Zk-ua-H7q" firstAttribute="leading" secondItem="D0Z-Le-lGM" secondAttribute="leading" id="hVY-zs-vw9"/>
+                            <constraint firstAttribute="trailing" secondItem="6Zk-ua-H7q" secondAttribute="trailing" id="yji-xO-waj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="lu2-pt-40x"/>
+                    <connections>
+                        <outlet property="scrollView" destination="6Zk-ua-H7q" id="q0m-mG-VsO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tQ-k2-kgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,7 +400,7 @@
                             <scrollView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFJ-RW-SH2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.22226391619999999" green="0.70962213009999997" blue="0.21696423619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
