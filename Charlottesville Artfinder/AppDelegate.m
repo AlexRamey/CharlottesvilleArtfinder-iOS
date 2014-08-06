@@ -14,6 +14,7 @@
 @implementation AppDelegate
 
 NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
+NSString * const ART_LAST_REFRESH_KEY = @"ART_LAST_REFRESH_KEY";
 
 +(void)initialize
 {
@@ -24,6 +25,7 @@ NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
     
     NSDictionary *defaults = @{
                                ART_IS_FIRST_LAUNCH_KEY : @YES,
+                               ART_LAST_REFRESH_KEY : @0,
                                @"Dance_Toggle" : @YES,
                                @"Gallery_Toggle" : @YES,
                                @"Music_Toggle" : @YES,
@@ -113,7 +115,18 @@ NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
             }
             else
             {
-                completionHandler(UIBackgroundFetchResultNewData);
+                NSInteger UNIX = [[NSDate date] timeIntervalSince1970];
+                NSInteger lastRefresh = [[[NSUserDefaults standardUserDefaults] objectForKey:ART_LAST_REFRESH_KEY] intValue];
+                if (UNIX - lastRefresh < 24 * 60 * 60)
+                {
+                    completionHandler(UIBackgroundFetchResultNoData);
+                }
+                else
+                {
+                    completionHandler(UIBackgroundFetchResultNewData);
+                }
+                
+                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:UNIX] forKey:ART_LAST_REFRESH_KEY];
                 
 # warning Notification for Debugging purposes only; remove for production build
                 // Set up Local Notifications

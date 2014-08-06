@@ -27,6 +27,9 @@
     {
         //custom initialization
         _store = [ARTObjectStore sharedStore];
+        
+        enabledCategories = [[NSMutableArray alloc] init];
+        
     }
     
     return self;
@@ -60,7 +63,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateStyle:NSDateFormatterNoStyle];
-    [formatter setTimeZone:[NSTimeZone localTimeZone]];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
     
     for (ARTEvent *e in artEvents)
     {

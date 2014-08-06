@@ -46,16 +46,16 @@
 
 -(IBAction)viewOnMapAction:(id)sender
 {
-    int initiallySelectedIndex = self.tabBarController.selectedIndex;
-    
     self.tabBarController.selectedIndex = 0;
+    
     UINavigationController *mapNav = (UINavigationController *)self.tabBarController.selectedViewController;
+    if ([mapNav.viewControllers count] > 1)
+    {
+        [mapNav popToRootViewControllerAnimated:YES];
+    }
+    
     ARTMapViewController *mapViewController = (ARTMapViewController *)mapNav.viewControllers[0];
     [mapViewController spotlightVenue:_venue];
-    
-    BOOL isAnimated = initiallySelectedIndex == 0;
-    [self.navigationController popViewControllerAnimated:isAnimated];
-    
 }
 
 -(IBAction)getDirectionsAction:(id)sender

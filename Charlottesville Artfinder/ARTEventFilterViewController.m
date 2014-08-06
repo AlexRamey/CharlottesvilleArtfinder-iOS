@@ -39,7 +39,7 @@
 
 -(IBAction)dismiss:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -75,34 +75,15 @@
 {
     ARTEventCategoryToggleCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"EventCategoryToggle"];
     
-    NSArray *categories = [ARTObjectStore primaryCategories];
-    NSString *category = categories[indexPath.row];
+    NSString *category = [ARTObjectStore primaryCategories][indexPath.row];
     [cell.category setText: category];
     
-    UIImage *thumbnail = nil;
-    
-    if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
-    {
-        thumbnail = [UIImage imageNamed:@"dancedefault"];
-    }
-    else  if ([category caseInsensitiveCompare:@"Gallery"] == NSOrderedSame)
-    {
-        thumbnail = [UIImage imageNamed:@"gallerydefault"];
-    }
-    else  if ([category caseInsensitiveCompare:@"Music"] == NSOrderedSame)
-    {
-        thumbnail = [UIImage imageNamed:@"musicdefault"];
-    }
-    else  if ([category caseInsensitiveCompare:@"Theatre"] == NSOrderedSame)
-    {
-        thumbnail = [UIImage imageNamed:@"theatredefault"];
-    }
-    else
-    {
-        thumbnail = [UIImage imageNamed:@"venuedefault"];
-    }
-    
+    UIImage *thumbnail = [ARTObjectStore defaultImageForCategory:category];
     [cell.thumbnail setImage:thumbnail];
+    
+    cell.toggle.on = [[[NSUserDefaults standardUserDefaults] objectForKey:[category stringByAppendingString:@"_Toggle"]] boolValue];
+    
+    NSLog(@"%hhd", cell.toggle.on);
     
     return cell;
 }

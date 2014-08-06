@@ -32,6 +32,34 @@
     return @[@"Dance", @"Gallery", @"Music", @"Theatre", @"Venue"];
 }
 
++(UIImage *)defaultImageForCategory:(NSString *)category
+{
+    UIImage *image = nil;
+    
+    if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
+    {
+        image = [UIImage imageNamed:@"dancedefault"];
+    }
+    else  if ([category caseInsensitiveCompare:@"Gallery"] == NSOrderedSame)
+    {
+        image = [UIImage imageNamed:@"gallerydefault"];
+    }
+    else  if ([category caseInsensitiveCompare:@"Music"] == NSOrderedSame)
+    {
+        image = [UIImage imageNamed:@"musicdefault"];
+    }
+    else  if ([category caseInsensitiveCompare:@"Theatre"] == NSOrderedSame)
+    {
+        image = [UIImage imageNamed:@"theatredefault"];
+    }
+    else
+    {
+        image = [UIImage imageNamed:@"venuedefault"];
+    }
+    
+    return image;
+}
+
 -(id)init
 {
     self = [super init];

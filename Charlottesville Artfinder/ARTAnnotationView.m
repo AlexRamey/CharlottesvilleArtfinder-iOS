@@ -48,6 +48,7 @@
             [self setRightCalloutAccessoryView:infoButton];
             
             //set image based on reuseIdentifier, which is just encoding the primary category
+            
             if ([reuseIdentifier caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
             {
                 [self setImage:[UIImage imageNamed:@"dancemarker"]];

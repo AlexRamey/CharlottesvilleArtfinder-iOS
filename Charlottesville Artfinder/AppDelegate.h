@@ -21,6 +21,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 extern NSString * const ART_IS_FIRST_LAUNCH_KEY;
+extern NSString * const ART_LAST_REFRESH_KEY;
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,6 +7,7 @@
 //
 
 #import "ARTEventDetailView.h"
+#import "ARTObjectStore.h"
 #import "ARTEvent.h"
 
 @implementation ARTEventDetailView
@@ -31,7 +32,7 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setTimeStyle:NSDateFormatterShortStyle];
         [formatter setDateStyle:NSDateFormatterNoStyle];
-        [formatter setTimeZone:[NSTimeZone localTimeZone]];
+        [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
         startTime = [formatter stringFromDate:event.startDate];
         endTime = [formatter stringFromDate:event.endDate];
     }
@@ -40,38 +41,14 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setTimeStyle:NSDateFormatterNoStyle];
         [formatter setDateStyle:NSDateFormatterShortStyle];
-        [formatter setTimeZone:[NSTimeZone localTimeZone]];
+        [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"America/New_York"]];
         startTime = [formatter stringFromDate:date];
         endTime = @"All Day";
     }
     
     self.eventTime.text = [NSString stringWithFormat:@"%@ - %@", startTime, endTime];
     
-    NSString *category = event.category;
-    UIImage *thumbnailImage = nil;
-    
-    if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
-    {
-        thumbnailImage = [UIImage imageNamed:@"dancedefault"];
-    }
-    else if ([category caseInsensitiveCompare:@"Gallery"] == NSOrderedSame)
-    {
-        thumbnailImage = [UIImage imageNamed:@"gallerydefault"];
-    }
-    else if ([category caseInsensitiveCompare:@"Music"] == NSOrderedSame)
-    {
-        thumbnailImage = [UIImage imageNamed:@"musicdefault"];
-    }
-    else if ([category caseInsensitiveCompare:@"Theatre"] == NSOrderedSame)
-    {
-        thumbnailImage = [UIImage imageNamed:@"theatredefault"];
-    }
-    else
-    {
-        thumbnailImage = [UIImage imageNamed:@"venuedefault"];
-    }
-    
-    self.thumbnailImage.image = thumbnailImage;
+    self.thumbnailImage.image = [ARTObjectStore defaultImageForCategory:event.category];
     
     NSString *description = [event.eventDescription stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     

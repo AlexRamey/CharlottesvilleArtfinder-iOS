@@ -53,7 +53,7 @@
     _locale = [NSLocale currentLocale];
     _calendar = [NSCalendar currentCalendar];
     [_calendar setLocale:_locale];
-    _timeZone = nil;
+    _timeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
     _date = [NSDate date];
     _displayMode = CKCalendarViewModeMonth;
     _spareCells = [NSMutableSet new];
@@ -574,7 +574,7 @@
 - (void)setTimeZone:(NSTimeZone *)timeZone animated:(BOOL)animated
 {
     if (!timeZone) {
-        timeZone = [NSTimeZone localTimeZone];
+        timeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
     }
     
     [[self calendar] setTimeZone:timeZone];

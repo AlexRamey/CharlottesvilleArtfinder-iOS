@@ -106,7 +106,7 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     }
     
     NSArray *navTitles = @[@"Facebook", @"Twitter", @"PCA Blog"];
-    self.title = navTitles[_segmentedControl.selectedSegmentIndex];
+    self.navigationItem.title = navTitles[_segmentedControl.selectedSegmentIndex];
 }
 
 -(IBAction)tapReceived:(id)sender
@@ -117,7 +117,7 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
 -(IBAction)selectionMade:(id)sender
 {
     NSArray *navTitles = @[@"Facebook", @"Twitter", @"PCA Blog"];
-    self.title = navTitles[_segmentedControl.selectedSegmentIndex];
+    self.navigationItem.title = navTitles[_segmentedControl.selectedSegmentIndex];
     
     NSURL *url = nil;
     switch ([sender selectedSegmentIndex])

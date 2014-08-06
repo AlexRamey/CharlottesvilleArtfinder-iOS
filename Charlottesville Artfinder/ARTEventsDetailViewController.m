@@ -130,7 +130,7 @@
                 }
                 
                 eventToAdd.location = _event.location;
-                eventToAdd.timeZone = [NSTimeZone localTimeZone];
+                eventToAdd.timeZone = [NSTimeZone timeZoneWithName:@"America/New_York"];
                 
                 [eventToAdd setCalendar:[calendarEventStore defaultCalendarForNewEvents]];
                 

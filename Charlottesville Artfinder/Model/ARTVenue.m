@@ -69,26 +69,7 @@
     {
         NSString *category = [self getPrimaryCategory];
         
-        if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
-        {
-            data = UIImageJPEGRepresentation([UIImage imageNamed:@"dancedefault"], .5);
-        }
-        else if ([category caseInsensitiveCompare:@"Gallery"] == NSOrderedSame)
-        {
-            data = UIImageJPEGRepresentation([UIImage imageNamed:@"gallerydefault"], .5);
-        }
-        else if ([category caseInsensitiveCompare:@"Music"] == NSOrderedSame)
-        {
-            data = UIImageJPEGRepresentation([UIImage imageNamed:@"musicdefault"], .5);
-        }
-        else if ([category caseInsensitiveCompare:@"Theatre"] == NSOrderedSame)
-        {
-            data = UIImageJPEGRepresentation([UIImage imageNamed:@"theatredefault"], .5);
-        }
-        else
-        {
-            data = UIImageJPEGRepresentation([UIImage imageNamed:@"venuedefault"], .5);
-        }
+        data = UIImageJPEGRepresentation([ARTObjectStore defaultImageForCategory:category], .5);
     }
     
     return data;

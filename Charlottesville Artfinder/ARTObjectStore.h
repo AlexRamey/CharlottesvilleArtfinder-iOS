@@ -21,6 +21,8 @@
 
 +(NSArray *)primaryCategories;
 
++(UIImage *)defaultImageForCategory:(NSString *)category;
+
 +(NSURL *)filePathForKey:(NSString *)key;
 
 -(void)loadLatestVenuesWithCompletion:(void (^)(NSError *))completion;

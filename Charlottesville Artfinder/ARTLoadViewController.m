@@ -7,6 +7,7 @@
 //
 
 #import "ARTLoadViewController.h"
+#import "AppDelegate.h"
 #import "ARTObjectStore.h"
 
 @interface ARTLoadViewController ()
@@ -45,15 +46,19 @@
     void (^completion)(NSError *) = ^(NSError *error){
         if (error)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Failed" message:@"Some data was unable to be downloaded. Restarting the app will force it to try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Failed" message:@"Some data was unable to be downloaded. Restart the app to force a refresh." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
+        }
+        else
+        {
+               [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:[[NSDate date] timeIntervalSince1970]] forKey:ART_LAST_REFRESH_KEY];
         }
         
         [activityIndicator stopAnimating];
         [self performSegueWithIdentifier:@"ARTLoadCompleteSegue" sender:self];
     };
     
-    if ([store eventCount] == 0 && [store venueCount] == 0)
+    if (([store eventCount] == 0 && [store venueCount] == 0) || ([[NSDate date] timeIntervalSince1970] - [[[NSUserDefaults standardUserDefaults] objectForKey:ART_LAST_REFRESH_KEY] integerValue] > 7 * 24 * 60 * 60))
     {
         __block NSError *error = nil;
         

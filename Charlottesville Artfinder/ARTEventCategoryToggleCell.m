@@ -13,6 +13,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    [self.toggle addTarget:self action:@selector(toggleAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
