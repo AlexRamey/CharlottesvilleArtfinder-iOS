@@ -33,8 +33,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *pcaDescription = [[NSUserDefaults standardUserDefaults] objectForKey:ART_PCA_DESCRIPTION_KEY];
-    [_organizationDescription setText:pcaDescription];
+    
+     NSString *pcaDescription = [[NSUserDefaults standardUserDefaults] objectForKey:ART_PCA_DESCRIPTION_KEY];
+    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc] initWithString:pcaDescription];
+    
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineSpacing:6];
+    [attrString addAttribute:NSParagraphStyleAttributeName
+                       value:style
+                       range:NSMakeRange(0, [pcaDescription length])];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Helvetica Neue" size:16] range:NSMakeRange(0, [pcaDescription length])];
+    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:NSMakeRange(0, [pcaDescription length])];
+    
+    [_organizationDescription setAttributedText:attrString];
 }
 
 - (void)didReceiveMemoryWarning

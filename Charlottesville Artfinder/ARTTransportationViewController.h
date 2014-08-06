@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ARTTransportationViewController : UIViewController
-{
-    __weak IBOutlet UIScrollView *scrollView;
-}
+@interface ARTTransportationViewController : UIViewController <MKMapViewDelegate>
 
 @end

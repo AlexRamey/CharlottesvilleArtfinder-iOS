@@ -28,9 +28,9 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
         
         UIBarButtonItem *forwardArrow = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nb_forward"] style:UIBarButtonItemStylePlain target:self action:@selector(navigateForward:)];
         
-        NSArray *rightBarButtonItems = @[forwardArrow, backArrow];
+        NSArray *leftBarButtonItems = @[backArrow, forwardArrow];
         
-        self.navigationItem.rightBarButtonItems = rightBarButtonItems;
+        self.navigationItem.leftBarButtonItems = leftBarButtonItems;
         
         loadStack = 0;
     }
@@ -75,20 +75,20 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
 {
     if ([_webView canGoForward])
     {
-        [(self.navigationItem.rightBarButtonItems[0]) setEnabled: YES];
+        [(self.navigationItem.leftBarButtonItems[1]) setEnabled: YES];
     }
     else
     {
-        [(self.navigationItem.rightBarButtonItems[0]) setEnabled: NO];
+        [(self.navigationItem.leftBarButtonItems[1]) setEnabled: NO];
     }
     
     if ([_webView canGoBack])
     {
-        [(self.navigationItem.rightBarButtonItems[1]) setEnabled: YES];
+        [(self.navigationItem.leftBarButtonItems[0]) setEnabled: YES];
     }
     else
     {
-        [(self.navigationItem.rightBarButtonItems[1]) setEnabled: NO];
+        [(self.navigationItem.leftBarButtonItems[0]) setEnabled: NO];
     }
     
     //Segmented Control

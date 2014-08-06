@@ -44,7 +44,6 @@
 
     if (![self hasChanges]) {
         MRLogVerbose(@"NO CHANGES IN ** %@ ** CONTEXT - NOT SAVING", [self MR_workingName]);
-        NSLog(@"NO CHANGES");
         if (completion)
         {
             dispatch_async(dispatch_get_main_queue(), ^{

@@ -28,7 +28,7 @@
         UIButton *aboutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [aboutButton addTarget:self action:@selector(aboutSelected:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *aboutBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
-        self.navigationItem.leftBarButtonItem = aboutBarButtonItem;
+        self.navigationItem.rightBarButtonItem = aboutBarButtonItem;
     }
     return self;
 }

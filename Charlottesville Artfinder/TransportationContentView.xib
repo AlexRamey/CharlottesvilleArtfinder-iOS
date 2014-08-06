@@ -10,70 +10,101 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpV-Zy-Ols">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpV-Zy-Ols">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="363"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d8W-wa-1SL">
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d8W-wa-1SL">
                             <rect key="frame" x="0.0" y="39" width="320" height="248"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </mapView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Downtown Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-I2-r6b">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downtown Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-I2-r6b">
                             <rect key="frame" x="69" y="7" width="182" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="VZ7-mO-j6O"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Market Street Garage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pss-NG-7xl">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market Street Garage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pss-NG-7xl">
                             <rect key="frame" x="73" y="295" width="174" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="6e0-ZE-ZTv"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JER-bU-JSt" userLabel="Line Separator View">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JER-bU-JSt" userLabel="Line Separator View">
                             <rect key="frame" x="10" y="324" width="300" height="1"/>
                             <color key="backgroundColor" white="0.79639028280000002" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="K7D-VH-onw"/>
+                            </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ief-zT-WZr">
-                            <rect key="frame" x="117" y="331" width="87" height="22"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ief-zT-WZr">
+                            <rect key="frame" x="95" y="333" width="131" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Directions">
-                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="SBB-bk-T9H"/>
+                                <constraint firstAttribute="width" constant="131" id="rDd-lK-rpW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Directions"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ief-zT-WZr" secondAttribute="bottom" constant="8" id="AdX-OZ-RxS"/>
+                        <constraint firstAttribute="centerX" secondItem="YIM-I2-r6b" secondAttribute="centerX" id="Dgm-tD-lgF"/>
+                        <constraint firstItem="pss-NG-7xl" firstAttribute="leading" secondItem="jpV-Zy-Ols" secondAttribute="leading" constant="73" id="Hi5-sX-xGc"/>
+                        <constraint firstItem="YIM-I2-r6b" firstAttribute="top" secondItem="jpV-Zy-Ols" secondAttribute="top" constant="7" id="TBN-8m-mih"/>
+                        <constraint firstAttribute="trailing" secondItem="d8W-wa-1SL" secondAttribute="trailing" id="ToR-qd-ySK"/>
+                        <constraint firstItem="d8W-wa-1SL" firstAttribute="leading" secondItem="jpV-Zy-Ols" secondAttribute="leading" id="ZAI-x8-zoX"/>
+                        <constraint firstAttribute="centerX" secondItem="ief-zT-WZr" secondAttribute="centerX" constant="-0.5" id="ZvP-Zn-hi4"/>
+                        <constraint firstAttribute="height" constant="363" id="aUX-Iv-Lhr"/>
+                        <constraint firstAttribute="trailing" secondItem="JER-bU-JSt" secondAttribute="trailing" constant="10" id="bat-eQ-W2J"/>
+                        <constraint firstItem="JER-bU-JSt" firstAttribute="top" secondItem="pss-NG-7xl" secondAttribute="bottom" constant="8" id="e88-kC-R9b"/>
+                        <constraint firstItem="ief-zT-WZr" firstAttribute="top" secondItem="JER-bU-JSt" secondAttribute="bottom" constant="8" id="grd-nP-5dz"/>
+                        <constraint firstAttribute="centerX" secondItem="pss-NG-7xl" secondAttribute="centerX" id="ky5-Bk-pRf"/>
+                        <constraint firstItem="pss-NG-7xl" firstAttribute="top" secondItem="d8W-wa-1SL" secondAttribute="bottom" constant="8" id="t5d-qz-iPd"/>
+                        <constraint firstItem="d8W-wa-1SL" firstAttribute="top" secondItem="YIM-I2-r6b" secondAttribute="bottom" constant="8" id="y1P-fv-GJg"/>
+                        <constraint firstItem="JER-bU-JSt" firstAttribute="leading" secondItem="jpV-Zy-Ols" secondAttribute="leading" constant="10" id="y66-eF-1aT"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-FU-Fz9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-FU-Fz9">
                     <rect key="frame" x="0.0" y="370" width="320" height="230"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Public Transportation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-qL-Y5A">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public Transportation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-qL-Y5A">
                             <rect key="frame" x="58" y="5" width="205" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-ei-mIu">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-ei-mIu" customClass="ARTEventDetailButton">
                             <rect key="frame" x="40" y="175" width="240" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.22226391619999999" green="0.70962213009999997" blue="0.21696423619999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="2lc-b2-73H"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="Get the App">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Charlottesville Area Transit (CAT)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-yk-H90">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charlottesville Area Transit (CAT)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-yk-H90">
                             <rect key="frame" x="20" y="51" width="261" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="305" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-GZ-GKz">
-                            <rect key="frame" x="8" y="69" width="305" height="98"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="305" placeholderIntrinsicHeight="78" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="305" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-GZ-GKz">
+                            <rect key="frame" x="8" y="80" width="305" height="78"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <string key="text">      CAT services all of Charlottesville, including the historic downtown mall, the University of Virginia, and Barracks Road Shopping Center.</string>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -81,16 +112,39 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="JJR-yk-H90" firstAttribute="top" secondItem="ytE-qL-Y5A" secondAttribute="bottom" constant="22" id="Aio-T9-xBF"/>
+                        <constraint firstAttribute="centerX" secondItem="ytE-qL-Y5A" secondAttribute="centerX" constant="-0.5" id="K45-9e-IT5"/>
+                        <constraint firstItem="PJn-GZ-GKz" firstAttribute="leading" secondItem="Xzr-FU-Fz9" secondAttribute="leading" constant="8" id="MYq-pO-akH"/>
+                        <constraint firstAttribute="centerY" secondItem="JJR-yk-H90" secondAttribute="centerY" constant="53.5" id="RpS-Ws-Ibh"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="TQX-EA-EVi"/>
+                        <constraint firstAttribute="height" constant="230" id="ctf-sD-RDo"/>
+                        <constraint firstItem="PJn-GZ-GKz" firstAttribute="top" secondItem="JJR-yk-H90" secondAttribute="bottom" constant="8" id="hHk-mY-zPh"/>
+                        <constraint firstAttribute="centerX" secondItem="FAa-ei-mIu" secondAttribute="centerX" id="iEL-I1-FWV"/>
+                        <constraint firstItem="JJR-yk-H90" firstAttribute="leading" secondItem="Xzr-FU-Fz9" secondAttribute="leading" constant="20" id="q5V-FV-cjO"/>
+                        <constraint firstAttribute="centerX" secondItem="PJn-GZ-GKz" secondAttribute="centerX" constant="-0.5" id="u5R-im-uxc"/>
+                        <constraint firstItem="FAa-ei-mIu" firstAttribute="top" secondItem="PJn-GZ-GKz" secondAttribute="bottom" constant="17" id="wPY-J1-PQg"/>
+                        <constraint firstAttribute="bottom" secondItem="FAa-ei-mIu" secondAttribute="bottom" constant="15" id="zMt-oe-aWq"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xzr-FU-Fz9" secondAttribute="trailing" id="CeV-kV-Ism"/>
+                <constraint firstAttribute="trailing" secondItem="jpV-Zy-Ols" secondAttribute="trailing" id="VWp-zn-mRl"/>
+                <constraint firstItem="Xzr-FU-Fz9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZIv-PR-W3F"/>
+                <constraint firstItem="jpV-Zy-Ols" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nKz-G3-cDm"/>
+                <constraint firstAttribute="bottom" secondItem="Xzr-FU-Fz9" secondAttribute="bottom" id="rPT-3Q-sG8"/>
+                <constraint firstItem="jpV-Zy-Ols" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ul6-p0-m3g"/>
+                <constraint firstItem="Xzr-FU-Fz9" firstAttribute="top" secondItem="jpV-Zy-Ols" secondAttribute="bottom" constant="7" id="wjE-xu-1HG"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="getApp" destination="FAa-ei-mIu" id="bR8-j4-xSg"/>
                 <outlet property="getDirections" destination="ief-zT-WZr" id="rah-5V-aCK"/>
                 <outlet property="mapView" destination="d8W-wa-1SL" id="TtO-Hr-hGs"/>
-                <outlet property="parkingLocation" destination="pss-NG-7xl" id="YXq-Fs-rv2"/>
+                <outlet property="parkingSelection" destination="pss-NG-7xl" id="EqE-Rf-d23"/>
             </connections>
         </view>
     </objects>

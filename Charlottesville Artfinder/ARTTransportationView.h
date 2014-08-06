@@ -11,9 +11,9 @@
 
 @interface ARTTransportationView : UIView
 
-@property (weak, nonatomic) IBOutlet UIButton *getDirections;
-@property (weak, nonatomic) IBOutlet UIButton *getApp;
-@property (weak, nonatomic) IBOutlet UILabel *parkingLocation;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, weak) IBOutlet UIButton *getDirections;
+@property (nonatomic, weak) IBOutlet UIButton *getApp;
+@property (nonatomic, weak) IBOutlet UILabel *parkingSelection;
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
 @end

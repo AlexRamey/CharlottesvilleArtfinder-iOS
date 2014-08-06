@@ -154,7 +154,6 @@ NSString *const literaryURL = @"charlottesvillearts.org_1nvlsks9klme3evsf1cqhe2i
     [self GET:url parameters:params success:^(NSURLSessionDataTask *task, NSDictionary *responseObject){
         
         NSDictionary *googleResponse = (NSDictionary *)responseObject;
-        NSLog(@"Google Response: %@", googleResponse);
         
         if ([googleResponse objectForKey:@"error"])
         {

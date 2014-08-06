@@ -38,18 +38,9 @@
 		D01FE94C19907A85000DEBDC /* ARTEventFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */; };
 		D01FE94F19907BEA000DEBDC /* ARTEventCategoryToggleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */; };
 		D01FE96219929E81000DEBDC /* ARTAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE96119929E81000DEBDC /* ARTAboutViewController.m */; };
+		D01FE9681992B8AE000DEBDC /* ARTTransportationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE9671992B8AE000DEBDC /* ARTTransportationAnnotation.m */; };
 		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
 		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
-		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
-		D0210D54197FF4FA00568F53 /* cville_art_logo_icon_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */; };
-		D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */; };
-		D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */; };
-		D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */; };
-		D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */; };
-		D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */; };
-		D0210D5D197FF51600568F53 /* cvillartfinderlaunchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */; };
-		D0210D5E197FF51600568F53 /* cvillartfinderlaunchimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */; };
-		D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */; };
 		D0210D64197FF5C800568F53 /* centercville.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D60197FF5C800568F53 /* centercville.png */; };
 		D0210D65197FF5C800568F53 /* currentlocation.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D61197FF5C800568F53 /* currentlocation.png */; };
 		D0210D66197FF5C800568F53 /* pca_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D62197FF5C800568F53 /* pca_banner.png */; };
@@ -139,19 +130,11 @@
 		D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventCategoryToggleCell.m; sourceTree = "<group>"; };
 		D01FE96019929E81000DEBDC /* ARTAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAboutViewController.h; sourceTree = "<group>"; };
 		D01FE96119929E81000DEBDC /* ARTAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAboutViewController.m; sourceTree = "<group>"; };
+		D01FE9661992B8AE000DEBDC /* ARTTransportationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTransportationAnnotation.h; sourceTree = "<group>"; };
+		D01FE9671992B8AE000DEBDC /* ARTTransportationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationAnnotation.m; sourceTree = "<group>"; };
 		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
 		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
 		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon.png; sourceTree = "<group>"; };
-		D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon_ios7.png; sourceTree = "<group>"; };
-		D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cville_art_logo_icon_settings.png; sourceTree = "<group>"; };
-		D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon_settings@2x.png"; sourceTree = "<group>"; };
-		D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon_spotlight@2x.png"; sourceTree = "<group>"; };
-		D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cville_art_logo_icon@2x.png"; sourceTree = "<group>"; };
-		D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cvillartfinderlaunchimage-1136.png"; sourceTree = "<group>"; };
-		D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cvillartfinderlaunchimage.png; sourceTree = "<group>"; };
-		D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cvillartfinderlaunchimage@2x.png"; sourceTree = "<group>"; };
-		D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CAT_App_Icon.png; sourceTree = "<group>"; };
 		D0210D60197FF5C800568F53 /* centercville.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centercville.png; sourceTree = "<group>"; };
 		D0210D61197FF5C800568F53 /* currentlocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentlocation.png; sourceTree = "<group>"; };
 		D0210D62197FF5C800568F53 /* pca_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pca_banner.png; sourceTree = "<group>"; };
@@ -359,9 +342,7 @@
 			children = (
 				D01FE8DA1986ECE1000DEBDC /* Button Images */,
 				D0210DA7198004D500568F53 /* Markers */,
-				D0210D49197FF41800568F53 /* App Icons */,
 				D0210D4C197FF46700568F53 /* Defaults */,
-				D0210D4A197FF42700568F53 /* Launch Images */,
 				D0210D48197FF3E300568F53 /* Supporting Images */,
 			);
 			name = Assets;
@@ -371,33 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */,
-				D0210D5F197FF5C800568F53 /* CAT_App_Icon.png */,
 				D0210D62197FF5C800568F53 /* pca_banner.png */,
 			);
 			name = "Supporting Images";
-			sourceTree = "<group>";
-		};
-		D0210D49197FF41800568F53 /* App Icons */ = {
-			isa = PBXGroup;
-			children = (
-				D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */,
-				D0210D4E197FF4FA00568F53 /* cville_art_logo_icon_ios7.png */,
-				D0210D4F197FF4FA00568F53 /* cville_art_logo_icon_settings.png */,
-				D0210D50197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png */,
-				D0210D51197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png */,
-				D0210D52197FF4FA00568F53 /* cville_art_logo_icon@2x.png */,
-			);
-			name = "App Icons";
-			sourceTree = "<group>";
-		};
-		D0210D4A197FF42700568F53 /* Launch Images */ = {
-			isa = PBXGroup;
-			children = (
-				D0210D59197FF51600568F53 /* cvillartfinderlaunchimage-1136.png */,
-				D0210D5A197FF51600568F53 /* cvillartfinderlaunchimage.png */,
-				D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */,
-			);
-			name = "Launch Images";
 			sourceTree = "<group>";
 		};
 		D0210D4C197FF46700568F53 /* Defaults */ = {
@@ -440,6 +397,8 @@
 				D0210DC7198155EE00568F53 /* ARTTransportationView.h */,
 				D0210DC8198155EE00568F53 /* ARTTransportationView.m */,
 				D0210DC519814FBF00568F53 /* TransportationContentView.xib */,
+				D01FE9661992B8AE000DEBDC /* ARTTransportationAnnotation.h */,
+				D01FE9671992B8AE000DEBDC /* ARTTransportationAnnotation.m */,
 			);
 			name = Transportation;
 			sourceTree = "<group>";
@@ -685,38 +644,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */,
 				D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */,
 				D0210DB2198004F500568F53 /* theatremarker.png in Resources */,
-				D0210D5D197FF51600568F53 /* cvillartfinderlaunchimage.png in Resources */,
 				D0210D65197FF5C800568F53 /* currentlocation.png in Resources */,
 				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
 				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
 				D0210DB3198004F500568F53 /* venuemarker.png in Resources */,
-				D0210D5E197FF51600568F53 /* cvillartfinderlaunchimage@2x.png in Resources */,
 				D0210D88197FF76400568F53 /* venuedefault.png in Resources */,
 				D0210D64197FF5C800568F53 /* centercville.png in Resources */,
 				D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */,
-				D0210D54197FF4FA00568F53 /* cville_art_logo_icon_ios7.png in Resources */,
 				D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */,
 				D0210D87197FF76400568F53 /* theatredefault.png in Resources */,
 				D01FE9101989CB85000DEBDC /* ReadMe in Resources */,
-				D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */,
 				D0210DB0198004F500568F53 /* musicmarker.png in Resources */,
 				D0663DF6196ED83A0056DC9E /* Images.xcassets in Resources */,
 				D0210D66197FF5C800568F53 /* pca_banner.png in Resources */,
 				D0210D85197FF76400568F53 /* gallerydefault.png in Resources */,
 				D0210DB1198004F500568F53 /* parking.png in Resources */,
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
-				D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */,
-				D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */,
 				D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */,
 				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
-				D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */,
-				D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */,
 				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
-				D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +732,7 @@
 			files = (
 				D0D94EB5196F3ABF007567EF /* ARTEvent.m in Sources */,
 				D0663DF1196ED83A0056DC9E /* AppDelegate.m in Sources */,
+				D01FE9681992B8AE000DEBDC /* ARTTransportationAnnotation.m in Sources */,
 				D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */,
 				D0210DC9198155EE00568F53 /* ARTTransportationView.m in Sources */,
 				D01FE94F19907BEA000DEBDC /* ARTEventCategoryToggleCell.m in Sources */,
