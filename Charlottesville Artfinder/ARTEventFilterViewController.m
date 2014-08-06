@@ -84,8 +84,6 @@
     
     cell.toggle.on = [[NSUserDefaults standardUserDefaults] boolForKey:[AppDelegate toggleKeyForCategory:category]];
     
-    NSLog(@"%hhd", cell.toggle.on);
-    
     return cell;
 }
 

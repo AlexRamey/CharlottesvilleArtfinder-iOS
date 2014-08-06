@@ -52,7 +52,16 @@
     
     NSString *description = [event.eventDescription stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc] initWithString:description];
+    NSMutableAttributedString *attrString = nil;
+    
+    if (description)
+    {
+        attrString = [[NSMutableAttributedString alloc] initWithString:description];
+    }
+    else
+    {
+        attrString = [[NSMutableAttributedString alloc] initWithString:@"No Description"];
+    }
     
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     [style setLineSpacing:6];
