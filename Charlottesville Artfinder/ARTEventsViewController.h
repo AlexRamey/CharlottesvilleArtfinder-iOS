@@ -15,7 +15,6 @@
 {
     ARTEvent *selectedEvent;
     NSDate *selectedDate;
-    NSArray *enabledCategories;
 }
 
 @property (nonatomic, weak) IBOutlet UIView *containerView;

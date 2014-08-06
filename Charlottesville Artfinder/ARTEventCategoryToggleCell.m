@@ -7,6 +7,7 @@
 //
 
 #import "ARTEventCategoryToggleCell.h"
+#import "AppDelegate.h"
 
 @implementation ARTEventCategoryToggleCell
 
@@ -25,7 +26,8 @@
 
 -(IBAction)toggleAction:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_toggle.on] forKey:[self.category.text stringByAppendingString:@"_Toggle"]];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:_toggle.on] forKey:[AppDelegate toggleKeyForCategory:self.category.text]];
 }
+
 
 @end

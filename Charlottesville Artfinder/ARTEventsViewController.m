@@ -12,12 +12,49 @@
 #import "ARTObjectStore.h"
 #import "ARTEvent.h"
 #import "ARTEventsDetailViewController.h"
+#import "AppDelegate.h"
 
 @interface ARTEventsViewController ()
+
+@property (nonatomic, strong) CKCalendarView *calendar;
 
 @end
 
 @implementation ARTEventsViewController
+
++(NSArray *)enabledFilterCategories
+{
+    BOOL isDanceEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:ART_DANCE_TOGGLE_KEY];
+    BOOL isGalleryEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:ART_GALLERY_TOGGLE_KEY];
+    BOOL isMusicEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:ART_MUSIC_TOGGLE_KEY];
+    BOOL isTheatreEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:ART_THEATRE_TOGGLE_KEY];
+    BOOL isVenueEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:ART_VENUE_TOGGLE_KEY];
+    
+    NSMutableArray *enabledFilterCategories = [[NSMutableArray alloc] init];
+    
+    if (isDanceEnabled)
+    {
+        [enabledFilterCategories addObject:@"Dance"];
+    }
+    if (isGalleryEnabled)
+    {
+        [enabledFilterCategories addObject:@"Gallery"];
+    }
+    if (isMusicEnabled)
+    {
+        [enabledFilterCategories addObject:@"Music"];
+    }
+    if (isTheatreEnabled)
+    {
+        [enabledFilterCategories addObject:@"Theatre"];
+    }
+    if (isVenueEnabled)
+    {
+        [enabledFilterCategories addObject:@"Venue"];
+    }
+    
+    return [NSArray arrayWithArray:enabledFilterCategories];
+}
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -27,12 +64,16 @@
     {
         //custom initialization
         _store = [ARTObjectStore sharedStore];
-        
-        enabledCategories = [[NSMutableArray alloc] init];
-        
     }
     
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [_calendar reloadAnimated:NO];
 }
 
 - (void)viewDidLoad
@@ -40,11 +81,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CKCalendarView *calendar = [[CKCalendarView alloc] initWithMode:1];
-    [calendar setDelegate:self];
-    [calendar setDataSource:self];
+    _calendar = [[CKCalendarView alloc] initWithMode:1];
+    [_calendar setDelegate:self];
+    [_calendar setDataSource:self];
     
-    [self.containerView addSubview:calendar];
+    [self.containerView addSubview:_calendar];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +98,7 @@
 
 -(NSArray *)calendarView:(CKCalendarView *)calendarView eventsForDate:(NSDate *)date
 {
-    NSArray *artEvents = [_store allEventsOnDate:date];
+    NSArray *artEvents = [_store allEventsOnDate:date forCategories:[ARTEventsViewController enabledFilterCategories]];
     NSMutableArray *eventItems = [[NSMutableArray alloc] init];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

@@ -33,7 +33,7 @@
 
 -(NSArray *)allVenuesOfPrimaryCategory:(NSString *)category;
 
--(NSArray *)allEventsOnDate:(NSDate *)date;
+-(NSArray *)allEventsOnDate:(NSDate *)date forCategories:(NSArray *)categories;
 
 -(NSArray *)eventsWithEventID:(NSString *)eventID;
 

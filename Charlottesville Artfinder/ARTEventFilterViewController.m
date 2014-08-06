@@ -9,6 +9,7 @@
 #import "ARTEventFilterViewController.h"
 #import "ARTEventCategoryToggleCell.h"
 #import "ARTObjectStore.h"
+#import "AppDelegate.h"
 
 @interface ARTEventFilterViewController ()
 
@@ -81,7 +82,7 @@
     UIImage *thumbnail = [ARTObjectStore defaultImageForCategory:category];
     [cell.thumbnail setImage:thumbnail];
     
-    cell.toggle.on = [[[NSUserDefaults standardUserDefaults] objectForKey:[category stringByAppendingString:@"_Toggle"]] boolValue];
+    cell.toggle.on = [[NSUserDefaults standardUserDefaults] boolForKey:[AppDelegate toggleKeyForCategory:category]];
     
     NSLog(@"%hhd", cell.toggle.on);
     

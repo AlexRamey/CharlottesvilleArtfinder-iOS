@@ -343,7 +343,7 @@
     return [ARTVenue MR_findAllWithPredicate:predicate];
 }
 
--(NSArray *)allEventsOnDate:(NSDate *)date
+-(NSArray *)allEventsOnDate:(NSDate *)date forCategories:(NSArray *)categories
 {
     //Note: You can only trust the day, month, year components of this date
     //ALSO: You have to get the day, month, year of this date in the current locale
@@ -376,6 +376,10 @@
     
     NSMutableArray *results = [NSMutableArray arrayWithArray:nonSpanningEvents];
     [results addObjectsFromArray:spanningEvents];
+    
+    //filter results to only retain objects in enabled categories
+    NSPredicate *eventFilter = [NSPredicate predicateWithFormat:@"category IN %@", categories];
+    [results filterUsingPredicate:eventFilter];
     
     return results;
 }

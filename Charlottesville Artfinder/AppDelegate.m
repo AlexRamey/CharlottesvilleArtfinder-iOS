@@ -14,7 +14,14 @@
 @implementation AppDelegate
 
 NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
+
 NSString * const ART_LAST_REFRESH_KEY = @"ART_LAST_REFRESH_KEY";
+
+NSString * const ART_DANCE_TOGGLE_KEY = @"ART_DANCE_TOGGLE_KEY";
+NSString * const ART_GALLERY_TOGGLE_KEY = @"ART_GALLERY_TOGGLE_KEY";
+NSString * const ART_MUSIC_TOGGLE_KEY = @"ART_MUSIC_TOGGLE_KEY";
+NSString * const ART_THEATRE_TOGGLE_KEY = @"ART_THEATRE_TOGGLE_KEY";
+NSString * const ART_VENUE_TOGGLE_KEY = @"ART_VENUE_TOGGLE_KEY";
 
 +(void)initialize
 {
@@ -26,11 +33,11 @@ NSString * const ART_LAST_REFRESH_KEY = @"ART_LAST_REFRESH_KEY";
     NSDictionary *defaults = @{
                                ART_IS_FIRST_LAUNCH_KEY : @YES,
                                ART_LAST_REFRESH_KEY : @0,
-                               @"Dance_Toggle" : @YES,
-                               @"Gallery_Toggle" : @YES,
-                               @"Music_Toggle" : @YES,
-                               @"Theatre_Toggle" : @YES,
-                               @"Venue_Toggle" : @YES
+                               ART_DANCE_TOGGLE_KEY : @YES,
+                               ART_GALLERY_TOGGLE_KEY : @YES,
+                               ART_MUSIC_TOGGLE_KEY : @YES,
+                               ART_THEATRE_TOGGLE_KEY : @YES,
+                               ART_VENUE_TOGGLE_KEY : @YES
                                };
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
@@ -83,6 +90,31 @@ NSString * const ART_LAST_REFRESH_KEY = @"ART_LAST_REFRESH_KEY";
     // Clean up before application terminates
     ARTObjectStore *sharedStore = [ARTObjectStore sharedStore];
     [sharedStore cleanUp];
+}
+
+#pragma mark - Toggle Key Helper
++(NSString *)toggleKeyForCategory:(NSString *)category
+{
+    if ([category caseInsensitiveCompare:@"Dance"] == NSOrderedSame)
+    {
+        return ART_DANCE_TOGGLE_KEY;
+    }
+    else if ([category caseInsensitiveCompare:@"Gallery"] == NSOrderedSame)
+    {
+        return ART_GALLERY_TOGGLE_KEY;
+    }
+    else if ([category caseInsensitiveCompare:@"Music"] == NSOrderedSame)
+    {
+        return ART_MUSIC_TOGGLE_KEY;
+    }
+    else if ([category caseInsensitiveCompare:@"Theatre"] == NSOrderedSame)
+    {
+        return ART_THEATRE_TOGGLE_KEY;
+    }
+    else
+    {
+        return ART_VENUE_TOGGLE_KEY;
+    }
 }
 
 #pragma mark - Background App Refresh
