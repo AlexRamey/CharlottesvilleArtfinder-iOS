@@ -29,6 +29,8 @@
 
 -(void)loadAllEventsWithCompletion:(void (^)(NSError *))completion;
 
+-(void)loadPCAInformationWithCompletion:(void (^)(NSError *))completion;
+
 -(NSArray *)allVenues;
 
 -(NSArray *)allVenuesOfPrimaryCategory:(NSString *)category;

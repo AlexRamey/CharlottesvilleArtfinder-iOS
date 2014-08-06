@@ -14,6 +14,8 @@
 
 -(void)getAllVenuesUpdatedSinceDate:(NSDate *)date completion:(void(^)(NSDictionary*, NSError*))completion;
 
+-(void)getPCAInformationWithCompletion:(void(^)(NSDictionary*, NSError*))completion;
+
 -(void)downloadFileFromURL:(NSURL *)remoteURL toPath:(NSURL *)localURL completion:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error)) completion;
 
 @end

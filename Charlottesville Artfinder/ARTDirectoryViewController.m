@@ -15,16 +15,6 @@
 @interface ARTDirectoryViewController ()
 
 @end
-#warning Implement This
-
-/*
- 
- UIButton *aboutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
- 
- [aboutButton addTarget:self action:@selector(aboutSelected:) forControlEvents:UIControlEventTouchUpInside];
- 
- UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
- */
 
 @implementation ARTDirectoryViewController
 
@@ -34,6 +24,11 @@
     if (self) {
         // Custom initialization
         _store = [ARTObjectStore sharedStore];
+        
+        UIButton *aboutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [aboutButton addTarget:self action:@selector(aboutSelected:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *aboutBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
+        self.navigationItem.leftBarButtonItem = aboutBarButtonItem;
     }
     return self;
 }
@@ -54,6 +49,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)aboutSelected:(id)sender
+{
+    [self performSegueWithIdentifier:@"DirectoryToAbout" sender:self];
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -112,14 +112,15 @@
     return cell;
 }
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [(ARTVenueDetailViewController *)[segue destinationViewController] setVenue:selectedVenue];
+    if ([[segue identifier] caseInsensitiveCompare:@"MasterToDetail"] == NSOrderedSame)
+    {
+        [(ARTVenueDetailViewController *)[segue destinationViewController] setVenue:selectedVenue];
+    }
 }
-
 
 @end

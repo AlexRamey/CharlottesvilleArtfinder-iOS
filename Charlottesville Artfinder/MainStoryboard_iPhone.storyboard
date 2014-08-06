@@ -153,24 +153,116 @@
             </objects>
             <point key="canvasLocation" x="1364" y="1450"/>
         </scene>
-        <!--View Controller - About PCA-->
+        <!--About View Controller - About-->
         <scene sceneID="3S7-ba-r8Y">
             <objects>
-                <viewController id="Q7n-uo-lme" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Q7n-uo-lme" customClass="ARTAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dsX-kM-H78"/>
                         <viewControllerLayoutGuide type="bottom" id="JZv-5n-Fh4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dWf-zM-BWX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-Lg-V85">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwG-hz-gdH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PCA_Thumbnail.png" translatesAutoresizingMaskIntoConstraints="NO" id="TVv-dd-2BT">
+                                                <rect key="frame" x="12" y="12" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="HGv-Jv-jZX"/>
+                                                    <constraint firstAttribute="height" constant="64" id="KQm-BK-eTS"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piedmont Council for the Arts" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="nZd-3y-5lH">
+                                                <rect key="frame" x="84" y="20" width="206" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="nZd-3y-5lH" firstAttribute="top" secondItem="cwG-hz-gdH" secondAttribute="top" constant="20" id="22H-aV-Zic"/>
+                                            <constraint firstAttribute="trailing" secondItem="nZd-3y-5lH" secondAttribute="trailing" constant="30" id="MjJ-sK-ozt"/>
+                                            <constraint firstItem="TVv-dd-2BT" firstAttribute="leading" secondItem="cwG-hz-gdH" secondAttribute="leading" constant="12" id="S7w-bI-arH"/>
+                                            <constraint firstAttribute="height" constant="96" id="WQk-mk-MhP"/>
+                                            <constraint firstItem="TVv-dd-2BT" firstAttribute="top" secondItem="cwG-hz-gdH" secondAttribute="top" constant="12" id="dx9-nc-W92"/>
+                                            <constraint firstItem="nZd-3y-5lH" firstAttribute="leading" secondItem="TVv-dd-2BT" secondAttribute="trailing" constant="8" id="mit-MS-rTl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WJ-0i-DFZ">
+                                        <rect key="frame" x="0.0" y="96" width="320" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About PCA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PC-2Y-TTc">
+                                                <rect key="frame" x="13" y="4" width="86" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="86" id="A9t-ef-HnV"/>
+                                                    <constraint firstAttribute="height" constant="21" id="Jat-zg-NHD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8PC-2Y-TTc" firstAttribute="leading" secondItem="1WJ-0i-DFZ" secondAttribute="leading" constant="13" id="UpA-tO-dA9"/>
+                                            <constraint firstAttribute="height" constant="29" id="qAp-ez-RyU"/>
+                                            <constraint firstItem="8PC-2Y-TTc" firstAttribute="top" secondItem="1WJ-0i-DFZ" secondAttribute="top" constant="4" id="vVe-Ye-kWY"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="277" placeholderIntrinsicHeight="339" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-3T-MzH">
+                                        <rect key="frame" x="20" y="133" width="277" height="339"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cwG-hz-gdH" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="top" id="4M4-oB-fYp"/>
+                                    <constraint firstItem="1WJ-0i-DFZ" firstAttribute="top" secondItem="cwG-hz-gdH" secondAttribute="bottom" id="DtU-ep-KKK"/>
+                                    <constraint firstAttribute="trailing" secondItem="cwG-hz-gdH" secondAttribute="trailing" id="IHc-Ix-Li6"/>
+                                    <constraint firstAttribute="trailing" secondItem="1WJ-0i-DFZ" secondAttribute="trailing" id="KgU-I1-1bK"/>
+                                    <constraint firstItem="cwG-hz-gdH" firstAttribute="leading" secondItem="FP0-Lg-V85" secondAttribute="leading" id="LTQ-qM-2Kl"/>
+                                    <constraint firstItem="1WJ-0i-DFZ" firstAttribute="leading" secondItem="FP0-Lg-V85" secondAttribute="leading" id="Sqb-LP-Kb3"/>
+                                    <constraint firstAttribute="trailing" secondItem="lwd-3T-MzH" secondAttribute="trailing" constant="23" id="Zkv-zp-gdZ"/>
+                                    <constraint firstItem="lwd-3T-MzH" firstAttribute="leading" secondItem="FP0-Lg-V85" secondAttribute="leading" constant="20" id="fCm-bw-jGQ"/>
+                                    <constraint firstItem="lwd-3T-MzH" firstAttribute="top" secondItem="1WJ-0i-DFZ" secondAttribute="bottom" constant="8" id="kDq-AP-O6j"/>
+                                    <constraint firstItem="1WJ-0i-DFZ" firstAttribute="top" secondItem="cwG-hz-gdH" secondAttribute="bottom" id="owU-Hv-FF6"/>
+                                    <constraint firstAttribute="bottom" secondItem="lwd-3T-MzH" secondAttribute="bottom" constant="20" id="xcJ-9p-ctd"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JZv-5n-Fh4" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="bottom" constant="1" id="KJC-dE-Fry"/>
+                            <constraint firstItem="FP0-Lg-V85" firstAttribute="leading" secondItem="dWf-zM-BWX" secondAttribute="leading" id="LbS-uZ-TWr"/>
+                            <constraint firstItem="FP0-Lg-V85" firstAttribute="top" secondItem="dsX-kM-H78" secondAttribute="bottom" id="XLk-ef-s7z"/>
+                            <constraint firstItem="FP0-Lg-V85" firstAttribute="top" secondItem="dsX-kM-H78" secondAttribute="bottom" id="azp-ee-cb8"/>
+                            <constraint firstAttribute="trailing" secondItem="FP0-Lg-V85" secondAttribute="trailing" id="dCT-EY-rph"/>
+                            <constraint firstItem="JZv-5n-Fh4" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="bottom" constant="1" id="lYR-PK-mDj"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About PCA" id="6tZ-Cj-hnI"/>
+                    <navigationItem key="navigationItem" title="About" id="6tZ-Cj-hnI"/>
+                    <connections>
+                        <outlet property="organizationDescription" destination="lwd-3T-MzH" id="ou9-Si-ncw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1A-yp-NFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="-157"/>
+            <point key="canvasLocation" x="1949" y="-171"/>
         </scene>
         <!--Navigation Controller - Events-->
         <scene sceneID="zzJ-cP-vsq">
@@ -523,6 +615,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="YCH-14-6Tt" kind="push" identifier="MasterToDetail" id="Ef7-nb-76J"/>
+                        <segue destination="Q7n-uo-lme" kind="push" identifier="DirectoryToAbout" id="rad-rH-Bui"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vX5-Md-RtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -698,6 +791,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PCA_Thumbnail.png" width="495" height="495"/>
         <image name="centercville.png" width="62" height="62"/>
         <image name="currentlocation.png" width="48" height="48"/>
         <image name="nb_filter" width="25" height="25"/>

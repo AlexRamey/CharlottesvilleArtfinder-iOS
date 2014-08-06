@@ -51,7 +51,7 @@
         }
         else
         {
-               [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:[[NSDate date] timeIntervalSince1970]] forKey:ART_LAST_REFRESH_KEY];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:[[NSDate date] timeIntervalSince1970]] forKey:ART_LAST_REFRESH_KEY];
         }
         
         [activityIndicator stopAnimating];
@@ -73,8 +73,14 @@
                     error = e;
                 }
                 
-                completion(error);
-                
+                [store loadPCAInformationWithCompletion:^(NSError *ARTError) {
+                    if (ARTError)
+                    {
+                        error = ARTError;
+                    }
+                    
+                    completion(error);
+                }];
             }];
         }];
     }

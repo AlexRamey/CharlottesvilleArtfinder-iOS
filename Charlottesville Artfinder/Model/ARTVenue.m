@@ -8,7 +8,6 @@
 
 @end
 
-
 @implementation ARTVenue
 
 // Custom logic goes here.
@@ -18,6 +17,11 @@
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.localImagePath]];
     
     UIImage *image = [UIImage imageWithData:imageData];
+    
+    if (!image)
+    {
+        image = [ARTObjectStore defaultImageForCategory:[self getPrimaryCategory]];
+    }
     
     CGSize origImageSize = [image size];
     
@@ -63,16 +67,12 @@
 
 -(NSData *)getThumbnailData
 {
-    NSData *data = self.thumbnailData;
-    
-    if (!data)
+    if (!self.thumbnailData)
     {
-        NSString *category = [self getPrimaryCategory];
-        
-        data = UIImageJPEGRepresentation([ARTObjectStore defaultImageForCategory:category], .5);
+        [self createThumbnailData];
     }
     
-    return data;
+    return self.thumbnailData;
 }
 
 -(NSString *)getPrimaryCategory

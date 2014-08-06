@@ -23,12 +23,16 @@ NSString * const ART_MUSIC_TOGGLE_KEY = @"ART_MUSIC_TOGGLE_KEY";
 NSString * const ART_THEATRE_TOGGLE_KEY = @"ART_THEATRE_TOGGLE_KEY";
 NSString * const ART_VENUE_TOGGLE_KEY = @"ART_VENUE_TOGGLE_KEY";
 
+NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
+
 +(void)initialize
 {
     //Register Factory Defaults, which will be created and temporarily stored in the registration
     //domain of NSUserDefaults. In the application domain, if no value has been assigned yet to a
     //specified key, then the application will look in the registration domain. The application domain
     //persists, so once a value has been set, factory defaults will always be ignored
+    
+    NSString *defaultPCADescription = @"Piedmont Council for the Arts (PCA) is the designated arts agency of Charlottesville and Albemarle. PCA encourages community-wide access to and appreciation for the arts through programs and services for artists, arts organizations, and their audiences. The PCA website provides the most comprehensive arts-related information in the area as we work to inform residents and visitors about cultural resources and to showcase the Charlottesville region as an arts destination.";
     
     NSDictionary *defaults = @{
                                ART_IS_FIRST_LAUNCH_KEY : @YES,
@@ -37,7 +41,8 @@ NSString * const ART_VENUE_TOGGLE_KEY = @"ART_VENUE_TOGGLE_KEY";
                                ART_GALLERY_TOGGLE_KEY : @YES,
                                ART_MUSIC_TOGGLE_KEY : @YES,
                                ART_THEATRE_TOGGLE_KEY : @YES,
-                               ART_VENUE_TOGGLE_KEY : @YES
+                               ART_VENUE_TOGGLE_KEY : @YES,
+                               ART_PCA_DESCRIPTION_KEY : defaultPCADescription
                                };
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
@@ -140,36 +145,42 @@ NSString * const ART_VENUE_TOGGLE_KEY = @"ART_VENUE_TOGGLE_KEY";
             {
                 error = e;
             }
-            
-            if (error)
-            {
-                completionHandler(UIBackgroundFetchResultFailed);
-            }
-            else
-            {
-                NSInteger UNIX = [[NSDate date] timeIntervalSince1970];
-                NSInteger lastRefresh = [[[NSUserDefaults standardUserDefaults] objectForKey:ART_LAST_REFRESH_KEY] intValue];
-                if (UNIX - lastRefresh < 24 * 60 * 60)
+            [sharedStore loadPCAInformationWithCompletion:^(NSError *ARTError) {
+                if (ARTError)
                 {
-                    completionHandler(UIBackgroundFetchResultNoData);
+                    error = ARTError;
+                }
+                if (error)
+                {
+                    completionHandler(UIBackgroundFetchResultFailed);
                 }
                 else
                 {
-                    completionHandler(UIBackgroundFetchResultNewData);
+                    NSInteger UNIX = [[NSDate date] timeIntervalSince1970];
+                    NSInteger lastRefresh = [[[NSUserDefaults standardUserDefaults] objectForKey:ART_LAST_REFRESH_KEY] intValue];
+                    if (UNIX - lastRefresh < 24 * 60 * 60)
+                    {
+                        completionHandler(UIBackgroundFetchResultNoData);
+                    }
+                    else
+                    {
+                        completionHandler(UIBackgroundFetchResultNewData);
+                    }
+                    
+                    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:UNIX] forKey:ART_LAST_REFRESH_KEY];
+                    
+# warning Notification for Debugging purposes only; remove for production build
+                    // Set up Local Notifications
+                    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+                    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                    NSDate *now = [NSDate date];
+                    localNotification.fireDate = now;
+                    localNotification.alertBody = [NSString stringWithFormat:@"Background Refresh!"];
+                    localNotification.soundName = UILocalNotificationDefaultSoundName;
+                    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
                 }
                 
-                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:UNIX] forKey:ART_LAST_REFRESH_KEY];
-                
-# warning Notification for Debugging purposes only; remove for production build
-                // Set up Local Notifications
-                [[UIApplication sharedApplication] cancelAllLocalNotifications];
-                UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-                NSDate *now = [NSDate date];
-                localNotification.fireDate = now;
-                localNotification.alertBody = [NSString stringWithFormat:@"Background Refresh!"];
-                localNotification.soundName = UILocalNotificationDefaultSoundName;
-                [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-            }
+            }];
         }];
     }];
 }

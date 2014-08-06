@@ -11,6 +11,7 @@
 #import "ARTGoogleCalendarClient.h"
 #import "ARTVenue.h"
 #import "ARTEvent.h"
+#import "AppDelegate.h"
 
 @implementation ARTObjectStore
 
@@ -234,7 +235,6 @@
     } completion:^(BOOL success, NSError *error) {
         if (success)
         {
-            NSLog(@"Data created and saved");
             completion(nil);
         }
         else if (!error)
@@ -302,6 +302,23 @@
             completion(error);
         }
         
+    }];
+}
+
+-(void)loadPCAInformationWithCompletion:(void (^)(NSError *))completion
+{
+    [_parseClient getPCAInformationWithCompletion:^(NSDictionary *result, NSError *error) {
+        if (result)
+        {
+            NSArray *results = [result objectForKey:@"results"];
+            NSString *pcaDescription = [results[0] objectForKey:@"Description"];
+            [[NSUserDefaults standardUserDefaults] setObject:pcaDescription forKey:ART_PCA_DESCRIPTION_KEY];
+            completion(nil);
+        }
+        else
+        {
+            completion(error);
+        }
     }];
 }
 

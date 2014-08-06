@@ -11,8 +11,6 @@
 
 @implementation ARTTheme
 
-#warning - Consider changing the font to AmericanTypewriter
-
 +(void)setupTheme
 {
     UINavigationBar* t = [UINavigationBar appearance];
@@ -28,9 +26,9 @@
     shadow.shadowOffset = CGSizeMake(0, 1);
     t.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor] ,
                               NSShadowAttributeName : shadow,
-                              NSFontAttributeName : [UIFont fontWithName:@"ArialMT" size:21.0] };
+                              NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:22.0] };
     //Configure Status Bar
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 @end

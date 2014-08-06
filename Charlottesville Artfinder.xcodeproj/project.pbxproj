@@ -37,6 +37,7 @@
 		D01FE93F198F2F82000DEBDC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01FE93E198F2F81000DEBDC /* EventKit.framework */; };
 		D01FE94C19907A85000DEBDC /* ARTEventFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */; };
 		D01FE94F19907BEA000DEBDC /* ARTEventCategoryToggleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */; };
+		D01FE96219929E81000DEBDC /* ARTAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE96119929E81000DEBDC /* ARTAboutViewController.m */; };
 		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
 		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
 		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
@@ -136,6 +137,8 @@
 		D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventFilterViewController.m; sourceTree = "<group>"; };
 		D01FE94D19907BEA000DEBDC /* ARTEventCategoryToggleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventCategoryToggleCell.h; sourceTree = "<group>"; };
 		D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventCategoryToggleCell.m; sourceTree = "<group>"; };
+		D01FE96019929E81000DEBDC /* ARTAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAboutViewController.h; sourceTree = "<group>"; };
+		D01FE96119929E81000DEBDC /* ARTAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAboutViewController.m; sourceTree = "<group>"; };
 		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
 		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
 		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -283,9 +286,45 @@
 			name = "Detail View Controller";
 			sourceTree = "<group>";
 		};
+		D01FE9631992AFD5000DEBDC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE916198B380E000DEBDC /* ARTEventsDetailViewController.h */,
+				D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */,
+				D01FE92C198DD440000DEBDC /* ARTEventDetailView.h */,
+				D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */,
+				D01FE92F198DD45F000DEBDC /* EventDetailView.xib */,
+				D01FE93B198E60D5000DEBDC /* ARTEventDetailButton.h */,
+				D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		D01FE9641992AFDE000DEBDC /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */,
+				D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		D01FE9651992AFE7000DEBDC /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				D01FE94A19907A85000DEBDC /* ARTEventFilterViewController.h */,
+				D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */,
+				D01FE94D19907BEA000DEBDC /* ARTEventCategoryToggleCell.h */,
+				D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
 		D0210D3A197FED7300568F53 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D01FE96019929E81000DEBDC /* ARTAboutViewController.h */,
+				D01FE96119929E81000DEBDC /* ARTAboutViewController.m */,
 				D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */,
 				D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */,
 				D0210DB4198005A100568F53 /* ARTLoadViewController.h */,
@@ -408,19 +447,9 @@
 		D0210D8C197FF95E00568F53 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				D01FE94A19907A85000DEBDC /* ARTEventFilterViewController.h */,
-				D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */,
-				D01FE94D19907BEA000DEBDC /* ARTEventCategoryToggleCell.h */,
-				D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */,
-				D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */,
-				D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */,
-				D01FE916198B380E000DEBDC /* ARTEventsDetailViewController.h */,
-				D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */,
-				D01FE92C198DD440000DEBDC /* ARTEventDetailView.h */,
-				D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */,
-				D01FE92F198DD45F000DEBDC /* EventDetailView.xib */,
-				D01FE93B198E60D5000DEBDC /* ARTEventDetailButton.h */,
-				D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */,
+				D01FE9651992AFE7000DEBDC /* Filter */,
+				D01FE9641992AFDE000DEBDC /* Master */,
+				D01FE9631992AFD5000DEBDC /* Detail */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -765,6 +794,7 @@
 				D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */,
 				D01FE92E198DD440000DEBDC /* ARTEventDetailView.m in Sources */,
 				D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */,
+				D01FE96219929E81000DEBDC /* ARTAboutViewController.m in Sources */,
 				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
 				D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */,
 				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
