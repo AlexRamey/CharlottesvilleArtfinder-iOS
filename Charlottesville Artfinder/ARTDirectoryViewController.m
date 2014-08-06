@@ -15,6 +15,16 @@
 @interface ARTDirectoryViewController ()
 
 @end
+#warning Implement This
+
+/*
+ 
+ UIButton *aboutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+ 
+ [aboutButton addTarget:self action:@selector(aboutSelected:) forControlEvents:UIControlEventTouchUpInside];
+ 
+ UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
+ */
 
 @implementation ARTDirectoryViewController
 

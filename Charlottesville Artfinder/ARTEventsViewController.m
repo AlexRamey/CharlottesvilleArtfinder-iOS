@@ -50,11 +50,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)filterAction:(id)sender
-{
-    //TODO: Present Modal Filter Controller
-}
-
 #pragma mark - CKCalendarViewDataSource
 
 -(NSArray *)calendarView:(CKCalendarView *)calendarView eventsForDate:(NSDate *)date
@@ -125,8 +120,11 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [(ARTEventsDetailViewController *)[segue destinationViewController] setEvent:selectedEvent];
-    [(ARTEventsDetailViewController *)[segue destinationViewController] setSelectedDate:selectedDate];
+    if ([segue.identifier caseInsensitiveCompare:@"EventsToDetail"] == NSOrderedSame)
+    {
+        [(ARTEventsDetailViewController *)[segue destinationViewController] setEvent:selectedEvent];
+        [(ARTEventsDetailViewController *)[segue destinationViewController] setSelectedDate:selectedDate];
+    }
 }
 
 

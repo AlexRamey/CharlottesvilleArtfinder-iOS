@@ -24,11 +24,15 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     
     if (self)
     {
-        UIButton *aboutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        UIBarButtonItem *backArrow = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nb_back"] style:UIBarButtonItemStylePlain target:self action:@selector(navigateBack:)];
         
-        [aboutButton addTarget:self action:@selector(aboutSelected:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *forwardArrow = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nb_forward"] style:UIBarButtonItemStylePlain target:self action:@selector(navigateForward:)];
         
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
+        NSArray *rightBarButtonItems = @[forwardArrow, backArrow];
+        
+        self.navigationItem.rightBarButtonItems = rightBarButtonItems;
+        
+        loadStack = 0;
     }
     
     return self;
@@ -39,13 +43,11 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    self.navigationItem.leftBarButtonItem.enabled = NO;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
     tapRecognizer.numberOfTapsRequired = 1;
     tapRecognizer.delegate = self;
     [_webView addGestureRecognizer:tapRecognizer];
-    
     
     [_webView setDelegate:self];
     [_webView setScalesPageToFit:YES];
@@ -71,15 +73,24 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
 
 -(void)updateControlStates
 {
-    //Back Button
-    if ([_webView canGoBack])
+    if ([_webView canGoForward])
     {
-        self.navigationItem.leftBarButtonItem.enabled = YES;
+        [(self.navigationItem.rightBarButtonItems[0]) setEnabled: YES];
     }
     else
     {
-        self.navigationItem.leftBarButtonItem.enabled = NO;
+        [(self.navigationItem.rightBarButtonItems[0]) setEnabled: NO];
     }
+    
+    if ([_webView canGoBack])
+    {
+        [(self.navigationItem.rightBarButtonItems[1]) setEnabled: YES];
+    }
+    else
+    {
+        [(self.navigationItem.rightBarButtonItems[1]) setEnabled: NO];
+    }
+    
     //Segmented Control
     if ([[_webView.request.URL absoluteString] rangeOfString:@"facebook.com"].location != NSNotFound)
     {
@@ -93,6 +104,9 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     {
         _segmentedControl.selectedSegmentIndex = 2;
     }
+    
+    NSArray *navTitles = @[@"Facebook", @"Twitter", @"PCA Blog"];
+    self.title = navTitles[_segmentedControl.selectedSegmentIndex];
 }
 
 -(IBAction)tapReceived:(id)sender
@@ -102,29 +116,24 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
 
 -(IBAction)selectionMade:(id)sender
 {
-    NSURL *url = nil;
+    NSArray *navTitles = @[@"Facebook", @"Twitter", @"PCA Blog"];
+    self.title = navTitles[_segmentedControl.selectedSegmentIndex];
     
+    NSURL *url = nil;
     switch ([sender selectedSegmentIndex])
     {
         case 0:
-        {
             url = [NSURL URLWithString:FACEBOOK_URL];
             break;
-        }
         case 1:
-        {
             url = [NSURL URLWithString:TWITTER_URL];
             break;
-        }
         case 2:
-        {
             url = [NSURL URLWithString:BLOG_URL];
             break;
-        }
     }
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    loadStack = 0;
     [_webView loadRequest:request];
 }
 
@@ -134,13 +143,19 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
     {
         [_webView goBack];
     }
-    
-    [self updateControlStates];
 }
 
--(IBAction)aboutSelected:(id)sender
+-(IBAction)navigateForward:(id)sender
 {
-    [self performSegueWithIdentifier:@"ConnectToAbout" sender:self];
+    if ([_webView canGoForward])
+    {
+        [_webView goForward];
+    }
+}
+
+-(IBAction)refresh:(id)sender
+{
+    [_webView reload];
 }
 
 #pragma mark - UIWebViewDelegate Methods
@@ -175,11 +190,7 @@ static NSString * const TWITTER_URL = @"https://twitter.com/PCA_Arts";
         [alertView show];
     }
     
-    //Error Code -999 gets returned if the webview cancels it's own load
-    //This happens if you quickly click around on the segmented control
-    //The webview cancels its prior engagement, calls this method, and start its new one
-    
-    [_activityIndicator stopAnimating];
+    [self webViewDidFinishLoad:_webView];
 }
 
 #pragma mark - UIGestureRecognizer Delegate

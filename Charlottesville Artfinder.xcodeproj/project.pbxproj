@@ -26,28 +26,17 @@
 		D01FE8D0198569C3000DEBDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01FE8CF198569C3000DEBDC /* QuartzCore.framework */; };
 		D01FE8D61985E231000DEBDC /* ARTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8D51985E231000DEBDC /* ARTMapViewController.m */; };
 		D01FE8D91985F443000DEBDC /* ARTAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8D81985F443000DEBDC /* ARTAnnotationView.m */; };
-		D01FE8DC1986ED02000DEBDC /* directions-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DB1986ED02000DEBDC /* directions-50.png */; };
-		D01FE8DE1986ED0E000DEBDC /* map_marker-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */; };
-		D01FE8E01986ED18000DEBDC /* phone1-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8DF1986ED18000DEBDC /* phone1-50.png */; };
-		D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE8E31986F5FA000DEBDC /* map_marker-32.png */; };
 		D01FE8E91987E8E3000DEBDC /* ARTEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */; };
 		D01FE9101989CB85000DEBDC /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D01FE90F1989CB85000DEBDC /* ReadMe */; };
 		D01FE918198B380E000DEBDC /* ARTEventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */; };
 		D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */; };
-		D01FE921198C027D000DEBDC /* twitter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE920198C027D000DEBDC /* twitter-32.png */; };
-		D01FE923198C0286000DEBDC /* facebook-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE922198C0286000DEBDC /* facebook-32.png */; };
-		D01FE925198C0292000DEBDC /* speech_bubble-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE924198C0292000DEBDC /* speech_bubble-32.png */; };
-		D01FE929198C083F000DEBDC /* left_arrow-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE928198C083F000DEBDC /* left_arrow-32.png */; };
 		D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */; };
 		D01FE92E198DD440000DEBDC /* ARTEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */; };
 		D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FE92F198DD45F000DEBDC /* EventDetailView.xib */; };
-		D01FE932198DD83C000DEBDC /* link-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE931198DD83C000DEBDC /* link-32.png */; };
-		D01FE934198DD849000DEBDC /* bus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE933198DD849000DEBDC /* bus-32.png */; };
-		D01FE936198DD859000DEBDC /* calendar-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE935198DD859000DEBDC /* calendar-32.png */; };
-		D01FE938198DD97B000DEBDC /* contacts-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE937198DD97B000DEBDC /* contacts-32.png */; };
-		D01FE93A198DE2F3000DEBDC /* filter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE939198DE2F3000DEBDC /* filter-32.png */; };
 		D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */; };
 		D01FE93F198F2F82000DEBDC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01FE93E198F2F81000DEBDC /* EventKit.framework */; };
+		D01FE94C19907A85000DEBDC /* ARTEventFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */; };
+		D01FE94F19907BEA000DEBDC /* ARTEventCategoryToggleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */; };
 		D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */; };
 		D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */; };
 		D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210D4D197FF4FA00568F53 /* cville_art_logo_icon.png */; };
@@ -129,10 +118,6 @@
 		D01FE8D51985E231000DEBDC /* ARTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTMapViewController.m; sourceTree = "<group>"; };
 		D01FE8D71985F443000DEBDC /* ARTAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAnnotationView.h; sourceTree = "<group>"; };
 		D01FE8D81985F443000DEBDC /* ARTAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAnnotationView.m; sourceTree = "<group>"; };
-		D01FE8DB1986ED02000DEBDC /* directions-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "directions-50.png"; sourceTree = "<group>"; };
-		D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-50.png"; sourceTree = "<group>"; };
-		D01FE8DF1986ED18000DEBDC /* phone1-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1-50.png"; sourceTree = "<group>"; };
-		D01FE8E31986F5FA000DEBDC /* map_marker-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-32.png"; sourceTree = "<group>"; };
 		D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventsViewController.h; sourceTree = "<group>"; };
 		D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsViewController.m; sourceTree = "<group>"; };
 		D01FE90F1989CB85000DEBDC /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
@@ -140,22 +125,17 @@
 		D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsDetailViewController.m; sourceTree = "<group>"; };
 		D01FE919198BE4D1000DEBDC /* ARTConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConnectViewController.h; sourceTree = "<group>"; };
 		D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConnectViewController.m; sourceTree = "<group>"; };
-		D01FE920198C027D000DEBDC /* twitter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-32.png"; sourceTree = "<group>"; };
-		D01FE922198C0286000DEBDC /* facebook-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-32.png"; sourceTree = "<group>"; };
-		D01FE924198C0292000DEBDC /* speech_bubble-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech_bubble-32.png"; sourceTree = "<group>"; };
-		D01FE928198C083F000DEBDC /* left_arrow-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow-32.png"; sourceTree = "<group>"; };
 		D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PCA_Thumbnail.png; sourceTree = "<group>"; };
 		D01FE92C198DD440000DEBDC /* ARTEventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventDetailView.h; sourceTree = "<group>"; };
 		D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventDetailView.m; sourceTree = "<group>"; };
 		D01FE92F198DD45F000DEBDC /* EventDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailView.xib; sourceTree = "<group>"; };
-		D01FE931198DD83C000DEBDC /* link-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link-32.png"; sourceTree = "<group>"; };
-		D01FE933198DD849000DEBDC /* bus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-32.png"; sourceTree = "<group>"; };
-		D01FE935198DD859000DEBDC /* calendar-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-32.png"; sourceTree = "<group>"; };
-		D01FE937198DD97B000DEBDC /* contacts-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-32.png"; sourceTree = "<group>"; };
-		D01FE939198DE2F3000DEBDC /* filter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter-32.png"; sourceTree = "<group>"; };
 		D01FE93B198E60D5000DEBDC /* ARTEventDetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventDetailButton.h; sourceTree = "<group>"; };
 		D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventDetailButton.m; sourceTree = "<group>"; };
 		D01FE93E198F2F81000DEBDC /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		D01FE94A19907A85000DEBDC /* ARTEventFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventFilterViewController.h; sourceTree = "<group>"; };
+		D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventFilterViewController.m; sourceTree = "<group>"; };
+		D01FE94D19907BEA000DEBDC /* ARTEventCategoryToggleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventCategoryToggleCell.h; sourceTree = "<group>"; };
+		D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventCategoryToggleCell.m; sourceTree = "<group>"; };
 		D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTGoogleCalendarClient.h; sourceTree = "<group>"; };
 		D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTGoogleCalendarClient.m; sourceTree = "<group>"; };
 		D0210D43197FF01600568F53 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -272,14 +252,6 @@
 		D01FE8DA1986ECE1000DEBDC /* Button Images */ = {
 			isa = PBXGroup;
 			children = (
-				D01FE939198DE2F3000DEBDC /* filter-32.png */,
-				D01FE8DF1986ED18000DEBDC /* phone1-50.png */,
-				D01FE8DD1986ED0E000DEBDC /* map_marker-50.png */,
-				D01FE8DB1986ED02000DEBDC /* directions-50.png */,
-				D01FE928198C083F000DEBDC /* left_arrow-32.png */,
-				D01FE924198C0292000DEBDC /* speech_bubble-32.png */,
-				D01FE922198C0286000DEBDC /* facebook-32.png */,
-				D01FE920198C027D000DEBDC /* twitter-32.png */,
 				D0210D60197FF5C800568F53 /* centercville.png */,
 				D0210D61197FF5C800568F53 /* currentlocation.png */,
 			);
@@ -352,7 +324,6 @@
 				D0210D4C197FF46700568F53 /* Defaults */,
 				D0210D4A197FF42700568F53 /* Launch Images */,
 				D0210D48197FF3E300568F53 /* Supporting Images */,
-				D0210D4B197FF45C00568F53 /* Tab Icons */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -388,18 +359,6 @@
 				D0210D5B197FF51600568F53 /* cvillartfinderlaunchimage@2x.png */,
 			);
 			name = "Launch Images";
-			sourceTree = "<group>";
-		};
-		D0210D4B197FF45C00568F53 /* Tab Icons */ = {
-			isa = PBXGroup;
-			children = (
-				D01FE937198DD97B000DEBDC /* contacts-32.png */,
-				D01FE935198DD859000DEBDC /* calendar-32.png */,
-				D01FE931198DD83C000DEBDC /* link-32.png */,
-				D01FE933198DD849000DEBDC /* bus-32.png */,
-				D01FE8E31986F5FA000DEBDC /* map_marker-32.png */,
-			);
-			name = "Tab Icons";
 			sourceTree = "<group>";
 		};
 		D0210D4C197FF46700568F53 /* Defaults */ = {
@@ -449,6 +408,10 @@
 		D0210D8C197FF95E00568F53 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				D01FE94A19907A85000DEBDC /* ARTEventFilterViewController.h */,
+				D01FE94B19907A85000DEBDC /* ARTEventFilterViewController.m */,
+				D01FE94D19907BEA000DEBDC /* ARTEventCategoryToggleCell.h */,
+				D01FE94E19907BEA000DEBDC /* ARTEventCategoryToggleCell.m */,
 				D01FE8E71987E8E3000DEBDC /* ARTEventsViewController.h */,
 				D01FE8E81987E8E3000DEBDC /* ARTEventsViewController.m */,
 				D01FE916198B380E000DEBDC /* ARTEventsDetailViewController.h */,
@@ -694,7 +657,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0210D53197FF4FA00568F53 /* cville_art_logo_icon.png in Resources */,
-				D01FE8E01986ED18000DEBDC /* phone1-50.png in Resources */,
 				D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */,
 				D0210DB2198004F500568F53 /* theatremarker.png in Resources */,
@@ -703,39 +665,27 @@
 				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
 				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
 				D0210DB3198004F500568F53 /* venuemarker.png in Resources */,
-				D01FE938198DD97B000DEBDC /* contacts-32.png in Resources */,
 				D0210D5E197FF51600568F53 /* cvillartfinderlaunchimage@2x.png in Resources */,
-				D01FE936198DD859000DEBDC /* calendar-32.png in Resources */,
 				D0210D88197FF76400568F53 /* venuedefault.png in Resources */,
 				D0210D64197FF5C800568F53 /* centercville.png in Resources */,
-				D01FE8DC1986ED02000DEBDC /* directions-50.png in Resources */,
 				D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */,
-				D01FE8DE1986ED0E000DEBDC /* map_marker-50.png in Resources */,
 				D0210D54197FF4FA00568F53 /* cville_art_logo_icon_ios7.png in Resources */,
 				D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */,
 				D0210D87197FF76400568F53 /* theatredefault.png in Resources */,
-				D01FE929198C083F000DEBDC /* left_arrow-32.png in Resources */,
 				D01FE9101989CB85000DEBDC /* ReadMe in Resources */,
-				D01FE932198DD83C000DEBDC /* link-32.png in Resources */,
-				D01FE921198C027D000DEBDC /* twitter-32.png in Resources */,
-				D01FE934198DD849000DEBDC /* bus-32.png in Resources */,
 				D0210D57197FF4FA00568F53 /* cville_art_logo_icon_spotlight@2x.png in Resources */,
 				D0210DB0198004F500568F53 /* musicmarker.png in Resources */,
-				D01FE93A198DE2F3000DEBDC /* filter-32.png in Resources */,
-				D01FE8E41986F5FA000DEBDC /* map_marker-32.png in Resources */,
 				D0663DF6196ED83A0056DC9E /* Images.xcassets in Resources */,
 				D0210D66197FF5C800568F53 /* pca_banner.png in Resources */,
 				D0210D85197FF76400568F53 /* gallerydefault.png in Resources */,
 				D0210DB1198004F500568F53 /* parking.png in Resources */,
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
 				D0210D5C197FF51600568F53 /* cvillartfinderlaunchimage-1136.png in Resources */,
-				D01FE923198C0286000DEBDC /* facebook-32.png in Resources */,
 				D0210D56197FF4FA00568F53 /* cville_art_logo_icon_settings@2x.png in Resources */,
 				D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */,
 				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
 				D0210D55197FF4FA00568F53 /* cville_art_logo_icon_settings.png in Resources */,
 				D0210D58197FF4FA00568F53 /* cville_art_logo_icon@2x.png in Resources */,
-				D01FE925198C0292000DEBDC /* speech_bubble-32.png in Resources */,
 				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
 				D0210D63197FF5C800568F53 /* CAT_App_Icon.png in Resources */,
 			);
@@ -806,6 +756,7 @@
 				D0663DF1196ED83A0056DC9E /* AppDelegate.m in Sources */,
 				D0210D3D197FEDAA00568F53 /* ARTGoogleCalendarClient.m in Sources */,
 				D0210DC9198155EE00568F53 /* ARTTransportationView.m in Sources */,
+				D01FE94F19907BEA000DEBDC /* ARTEventCategoryToggleCell.m in Sources */,
 				D0663DED196ED83A0056DC9E /* main.m in Sources */,
 				D0210DB91980063300568F53 /* ARTObjectStore.m in Sources */,
 				D0D94EB4196F3ABF007567EF /* _ARTVenue.m in Sources */,
@@ -826,6 +777,7 @@
 				D01FE8CE1985694C000DEBDC /* ARTDirectoryDetailButton.m in Sources */,
 				D0D94EB6196F3ABF007567EF /* ARTVenue.m in Sources */,
 				D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */,
+				D01FE94C19907A85000DEBDC /* ARTEventFilterViewController.m in Sources */,
 				D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */,
 				D01FE918198B380E000DEBDC /* ARTEventsDetailViewController.m in Sources */,
 				D0663DF4196ED83A0056DC9E /* Charlottesville_Artfinder.xcdatamodeld in Sources */,

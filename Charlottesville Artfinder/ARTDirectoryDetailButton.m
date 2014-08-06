@@ -130,15 +130,15 @@
     
     if (self.frame.origin.x < 100)
     {
-        image = [UIImage imageNamed:@"map_marker-50.png"];
+        image = [UIImage imageNamed:@"btn_map"];
     }
     else if (self.frame.origin.x < 200)
     {
-        image = [UIImage imageNamed:@"directions-50.png"];
+        image = [UIImage imageNamed:@"btn_directions"];
     }
     else
     {
-        image = [UIImage imageNamed:@"phone1-50.png"];
+        image = [UIImage imageNamed:@"btn_phone"];
     }
     
     [buttonIcon setContentMode:UIViewContentModeScaleAspectFit];

@@ -24,6 +24,11 @@ NSString * const ART_IS_FIRST_LAUNCH_KEY = @"ART_IS_FIRST_LAUNCH_KEY";
     
     NSDictionary *defaults = @{
                                ART_IS_FIRST_LAUNCH_KEY : @YES,
+                               @"Dance_Toggle" : @YES,
+                               @"Gallery_Toggle" : @YES,
+                               @"Music_Toggle" : @YES,
+                               @"Theatre_Toggle" : @YES,
+                               @"Venue_Toggle" : @YES
                                };
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
