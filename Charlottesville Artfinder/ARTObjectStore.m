@@ -322,12 +322,10 @@
     }];
 }
 
-#pragma mark - Incomplete Implementation
-//TODO: Filter out venues for which isDeleted == YES
-
 -(NSArray *)allVenues
 {
-    return [ARTVenue MR_findAll];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"deletedStatus CONTAINS[c] %@", @"NO"];
+    return [ARTVenue MR_findAllWithPredicate:predicate];
 }
 
 -(NSArray *)allVenuesOfPrimaryCategory:(NSString *)category
@@ -357,7 +355,10 @@
         predicate = [NSPredicate predicateWithFormat:@"NOT (primaryCategory IN %@)", primaryCategoriesWithoutVenue];
     }
     
-    return [ARTVenue MR_findAllWithPredicate:predicate];
+    NSMutableArray *results = [NSMutableArray arrayWithArray:[ARTVenue MR_findAllWithPredicate:predicate]];
+    [results filterUsingPredicate:[NSPredicate predicateWithFormat:@"deletedStatus CONTAINS[c] %@", @"NO"]];
+    
+    return results;
 }
 
 -(NSArray *)allEventsOnDate:(NSDate *)date forCategories:(NSArray *)categories
@@ -418,7 +419,8 @@
 
 -(NSUInteger)venueCount
 {
-    return [[ARTVenue MR_findAll] count];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"deletedStatus CONTAINS[c] %@", @"NO"];
+    return [[ARTVenue MR_findAllWithPredicate:predicate] count];
 }
 
 -(NSUInteger)eventCount
@@ -429,6 +431,12 @@
 -(void)cleanUp
 {
     // Clean up before application terminates
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"deletedStatus CONTAINS[c] %@", @"YES"];
+    NSArray *deletedVenues = [ARTVenue MR_findAllWithPredicate:predicate];
+    
+    //TODO: delete images that are saved for deleted entities
+    //Then delete deleted entities . . .
+    
     [MagicalRecord cleanUp];
 }
 

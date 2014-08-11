@@ -7,7 +7,7 @@
 extern const struct ARTVenueAttributes {
 	__unsafe_unretained NSString *city;
 	__unsafe_unretained NSString *createdAt;
-	__unsafe_unretained NSString *deleted;
+	__unsafe_unretained NSString *deletedStatus;
 	__unsafe_unretained NSString *emailAddress;
 	__unsafe_unretained NSString *homepageURL;
 	__unsafe_unretained NSString *imageURL;
@@ -88,11 +88,11 @@ extern const struct ARTVenueFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSString* deleted;
+@property (nonatomic, strong) NSString* deletedStatus;
 
 
 
-//- (BOOL)validateDeleted:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateDeletedStatus:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -302,8 +302,8 @@ extern const struct ARTVenueFetchedProperties {
 
 
 
-- (NSString*)primitiveDeleted;
-- (void)setPrimitiveDeleted:(NSString*)value;
+- (NSString*)primitiveDeletedStatus;
+- (void)setPrimitiveDeletedStatus:(NSString*)value;
 
 
 

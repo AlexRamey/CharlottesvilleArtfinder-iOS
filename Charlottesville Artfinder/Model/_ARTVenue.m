@@ -6,7 +6,7 @@
 const struct ARTVenueAttributes ARTVenueAttributes = {
 	.city = @"city",
 	.createdAt = @"createdAt",
-	.deleted = @"deleted",
+	.deletedStatus = @"deletedStatus",
 	.emailAddress = @"emailAddress",
 	.homepageURL = @"homepageURL",
 	.imageURL = @"imageURL",
@@ -94,7 +94,7 @@ const struct ARTVenueFetchedProperties ARTVenueFetchedProperties = {
 
 
 
-@dynamic deleted;
+@dynamic deletedStatus;
 
 
 
