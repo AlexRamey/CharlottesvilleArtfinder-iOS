@@ -378,38 +378,6 @@
                                             <outlet property="toggle" destination="9e8-rV-2wm" id="ZH0-OF-B9T"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5YB-MC-rhT">
-                                        <rect key="frame" x="0.0" y="66" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5YB-MC-rhT" id="LIZ-ne-8q6">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HAU-tI-E4D">
-                                        <rect key="frame" x="0.0" y="110" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HAU-tI-E4D" id="Br1-jG-kPU">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CYr-Dk-nbW">
-                                        <rect key="frame" x="0.0" y="154" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CYr-Dk-nbW" id="PQ6-ir-CyW">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Cff-KV-Agj">
-                                        <rect key="frame" x="0.0" y="198" width="325" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cff-KV-Agj" id="pEE-OS-Gif">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Ukv-h9-zGm" id="hph-zA-W0I"/>
@@ -769,6 +737,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yI1-Ox-t3f"/>
+        <segue reference="Ef7-nb-76J"/>
     </inferredMetricsTieBreakers>
 </document>

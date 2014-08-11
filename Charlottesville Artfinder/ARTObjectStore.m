@@ -115,7 +115,7 @@
                      
                      NSArray *duplicateVenues = [ARTVenue MR_findAllWithPredicate:venueFilter inContext:localContext];
                      
-                     if(duplicateVenues)
+                     if (duplicateVenues)
                      {
                          for (ARTVenue *duplicate in duplicateVenues)
                          {
@@ -124,12 +124,12 @@
                      }
                      
                      NSArray *newImports = [ARTVenue MR_importFromArray:venues inContext:localContext];
-                     //TODO: SAVE BASED ON PARSE OBJECT ID
+                     
                      for (ARTVenue *venue in newImports)
                      {
-                         venue.localImagePath = [[ARTObjectStore filePathForKey:venue.organizationName] absoluteString];
+                         venue.localImagePath = [[ARTObjectStore filePathForKey:venue.parseObjectID] absoluteString];
                          
-                         if (venue.imageURL && [[venue.imageURL stringByReplacingOccurrencesOfString:@" " withString:@""] length] > 0)
+                         if (venue.imageURL && [[venue.imageURL stringByReplacingOccurrencesOfString:@" " withString:@""] length] > 0 && [venue.deletedStatus caseInsensitiveCompare:@"NO"] == NSOrderedSame)
                          {
                              [newVenues setObject:[NSURL URLWithString:venue.imageURL] forKey:[NSURL URLWithString:venue.localImagePath]];
                          }
@@ -185,7 +185,7 @@
         return;
     }
     
-    __block int downloadCounter = [keys count];
+    __block NSUInteger downloadCounter = [keys count];
     __block NSError *err = nil;
     
     for (NSURL *localURL in keys)
@@ -235,6 +235,16 @@
     } completion:^(BOOL success, NSError *error) {
         if (success)
         {
+            NSFileManager *fm = [[NSFileManager alloc] init];
+            for (ARTVenue *venue in [ARTVenue MR_findAll])
+            {
+                NSURL *url = [NSURL URLWithString:venue.localImagePath];
+                if ([fm fileExistsAtPath:[url path]])
+                {
+                    [fm removeItemAtPath:[url path] error:nil];
+                }
+            }
+            
             completion(nil);
         }
         else if (!error)
@@ -430,13 +440,6 @@
 
 -(void)cleanUp
 {
-    // Clean up before application terminates
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"deletedStatus CONTAINS[c] %@", @"YES"];
-    NSArray *deletedVenues = [ARTVenue MR_findAllWithPredicate:predicate];
-    
-    //TODO: delete images that are saved for deleted entities
-    //Then delete deleted entities . . .
-    
     [MagicalRecord cleanUp];
 }
 
