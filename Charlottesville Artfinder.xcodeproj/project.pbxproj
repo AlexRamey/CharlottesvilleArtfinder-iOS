@@ -64,6 +64,8 @@
 		D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0210DC519814FBF00568F53 /* TransportationContentView.xib */; };
 		D0210DC9198155EE00568F53 /* ARTTransportationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DC8198155EE00568F53 /* ARTTransportationView.m */; };
 		D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DCB1981581400568F53 /* ARTTransportationViewController.m */; };
+		D02AF10419954E0E007191E9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D02AF10319954E0E007191E9 /* Settings.bundle */; };
+		D02AF1061995503B007191E9 /* licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = D02AF1051995503B007191E9 /* licenses.plist */; };
 		D0663DDF196ED83A0056DC9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DDE196ED83A0056DC9E /* Foundation.framework */; };
 		D0663DE1196ED83A0056DC9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */; };
 		D0663DE3196ED83A0056DC9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE2196ED83A0056DC9E /* UIKit.framework */; };
@@ -166,6 +168,8 @@
 		D0210DC8198155EE00568F53 /* ARTTransportationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationView.m; sourceTree = "<group>"; };
 		D0210DCA1981581400568F53 /* ARTTransportationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTTransportationViewController.h; sourceTree = "<group>"; };
 		D0210DCB1981581400568F53 /* ARTTransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationViewController.m; sourceTree = "<group>"; };
+		D02AF10319954E0E007191E9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		D02AF1051995503B007191E9 /* licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = licenses.plist; sourceTree = "<group>"; };
 		D0663DDB196ED83A0056DC9E /* Charlottesville Artfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charlottesville Artfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0663DDE196ED83A0056DC9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -449,6 +453,7 @@
 		D0663DD2196ED83A0056DC9E = {
 			isa = PBXGroup;
 			children = (
+				D02AF10319954E0E007191E9 /* Settings.bundle */,
 				D0663DE6196ED83A0056DC9E /* Charlottesville Artfinder */,
 				D0663E03196ED83B0056DC9E /* Charlottesville ArtfinderTests */,
 				D0663DDD196ED83A0056DC9E /* Frameworks */,
@@ -506,6 +511,7 @@
 		D0663DE7196ED83A0056DC9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D02AF1051995503B007191E9 /* licenses.plist */,
 				D01FE90F1989CB85000DEBDC /* ReadMe */,
 				D0663DE8196ED83A0056DC9E /* Charlottesville Artfinder-Info.plist */,
 				D0663DE9196ED83A0056DC9E /* InfoPlist.strings */,
@@ -647,6 +653,7 @@
 				D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */,
 				D0210DB2198004F500568F53 /* theatremarker.png in Resources */,
+				D02AF10419954E0E007191E9 /* Settings.bundle in Resources */,
 				D0210D65197FF5C800568F53 /* currentlocation.png in Resources */,
 				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
 				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
@@ -665,6 +672,7 @@
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
 				D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */,
 				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
+				D02AF1061995503B007191E9 /* licenses.plist in Resources */,
 				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

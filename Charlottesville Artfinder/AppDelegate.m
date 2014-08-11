@@ -168,18 +168,7 @@ NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
                     }
                     
                     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:UNIX] forKey:ART_LAST_REFRESH_KEY];
-                    
-# warning Notification for Debugging purposes only; remove for production build
-                    // Set up Local Notifications
-                    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-                    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-                    NSDate *now = [NSDate date];
-                    localNotification.fireDate = now;
-                    localNotification.alertBody = [NSString stringWithFormat:@"Background Refresh!"];
-                    localNotification.soundName = UILocalNotificationDefaultSoundName;
-                    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
                 }
-                
             }];
         }];
     }];
