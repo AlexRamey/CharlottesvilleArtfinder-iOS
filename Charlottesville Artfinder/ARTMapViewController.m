@@ -12,6 +12,7 @@
 #import "ARTObjectStore.h"
 #import "ARTVenue.h"
 #import "ARTAnnotationView.h"
+#import "ARTEasterEggViewController.h"
 
 @implementation ARTMapViewController
 
@@ -35,24 +36,28 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)viewDidLoad
 {
-    [super viewWillAppear:animated];
+    [super viewDidLoad];
     
-    static dispatch_once_t onceToken;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     
-    dispatch_once(&onceToken, ^{
-        
-        [_mapView removeAnnotations:_mapView.annotations];
-        
-        for (ARTVenue *venue in [_store allVenues])
-        {
-            [_mapView addAnnotation:venue];
-        }
-        
-        [_locationManager startUpdatingLocation];
-        [_activityIndicator startAnimating];
-    });
+    //NSUserDefaults integerForKey: returns 0 if no value exists
+    NSInteger mapTypeValue = [[NSUserDefaults standardUserDefaults]
+                              integerForKey:ART_MAP_TYPE_PREF_KEY];
+    
+    [_mapTypeControl setSelectedSegmentIndex:mapTypeValue];
+    
+    [self changeMapType:_mapTypeControl];
+    
+    for (ARTVenue *venue in [_store allVenues])
+    {
+        [_mapView addAnnotation:venue];
+    }
+    
+    [_locationManager startUpdatingLocation];
+    [_activityIndicator startAnimating];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -69,23 +74,6 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
         UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Pro Tip" message:@"Use the buttons in the top corners to quickly shift the map's focus to the downtown mall or your location." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [a show];
     }
-}
-
-
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-    //NSUserDefaults integerForKey: returns 0 if no value exists
-    NSInteger mapTypeValue = [[NSUserDefaults standardUserDefaults]
-                              integerForKey:ART_MAP_TYPE_PREF_KEY];
-    
-    [_mapTypeControl setSelectedSegmentIndex:mapTypeValue];
-    
-    [self changeMapType:_mapTypeControl];
 }
 
 - (void)appToBackground
@@ -196,6 +184,17 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     selectedVenue = (ARTVenue *)[view annotation];
     
     [self performSegueWithIdentifier:@"MapToDetail" sender:self];
+}
+
+-(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    CLLocation *home = [[CLLocation alloc] initWithLatitude:34.980723 longitude:-85.360301];
+    CLLocation *currentCenter = [[CLLocation alloc] initWithLatitude:[_mapView region].center.latitude longitude:[_mapView region].center.longitude];
+    if ([home distanceFromLocation:currentCenter] < 20 && _mapView.region.span.latitudeDelta < .25)
+    {
+        ARTEasterEggViewController *vc = [[ARTEasterEggViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate Methods

@@ -66,6 +66,8 @@
 		D0210DCC1981581400568F53 /* ARTTransportationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DCB1981581400568F53 /* ARTTransportationViewController.m */; };
 		D02AF10419954E0E007191E9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D02AF10319954E0E007191E9 /* Settings.bundle */; };
 		D02AF1061995503B007191E9 /* licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = D02AF1051995503B007191E9 /* licenses.plist */; };
+		D047216D199C0AFF00612065 /* ARTEasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D047216B199C0AFF00612065 /* ARTEasterEggViewController.m */; };
+		D047216E199C0AFF00612065 /* ARTEasterEggViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D047216C199C0AFF00612065 /* ARTEasterEggViewController.xib */; };
 		D0663DDF196ED83A0056DC9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DDE196ED83A0056DC9E /* Foundation.framework */; };
 		D0663DE1196ED83A0056DC9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */; };
 		D0663DE3196ED83A0056DC9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663DE2196ED83A0056DC9E /* UIKit.framework */; };
@@ -82,6 +84,8 @@
 		D0663E08196ED83B0056DC9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0663E06196ED83B0056DC9E /* InfoPlist.strings */; };
 		D0663E0A196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */; };
 		D0663E15196EDBAC0056DC9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663E14196EDBAC0056DC9E /* MapKit.framework */; };
+		D0D1FDEB199BFBA2007EFA5B /* DowntownMall.kml in Resources */ = {isa = PBXBuildFile; fileRef = D0D1FDEA199BFBA2007EFA5B /* DowntownMall.kml */; };
+		D0D1FDF0199BFC07007EFA5B /* ARTKMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */; };
 		D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EAC196F3ABF007567EF /* _ARTEvent.m */; };
 		D0D94EB4196F3ABF007567EF /* _ARTVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EAE196F3ABF007567EF /* _ARTVenue.m */; };
 		D0D94EB5196F3ABF007567EF /* ARTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EB0196F3ABF007567EF /* ARTEvent.m */; };
@@ -170,6 +174,9 @@
 		D0210DCB1981581400568F53 /* ARTTransportationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTTransportationViewController.m; sourceTree = "<group>"; };
 		D02AF10319954E0E007191E9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D02AF1051995503B007191E9 /* licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = licenses.plist; sourceTree = "<group>"; };
+		D047216A199C0AFF00612065 /* ARTEasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEasterEggViewController.h; sourceTree = "<group>"; };
+		D047216B199C0AFF00612065 /* ARTEasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEasterEggViewController.m; sourceTree = "<group>"; };
+		D047216C199C0AFF00612065 /* ARTEasterEggViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARTEasterEggViewController.xib; sourceTree = "<group>"; };
 		D0663DDB196ED83A0056DC9E /* Charlottesville Artfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charlottesville Artfinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0663DDE196ED83A0056DC9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0663DE0196ED83A0056DC9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +196,9 @@
 		D0663E07196ED83B0056DC9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Charlottesville_ArtfinderTests.m; sourceTree = "<group>"; };
 		D0663E14196EDBAC0056DC9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0D1FDEA199BFBA2007EFA5B /* DowntownMall.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DowntownMall.kml; sourceTree = "<group>"; };
+		D0D1FDEE199BFC07007EFA5B /* ARTKMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTKMLParser.h; sourceTree = "<group>"; };
+		D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTKMLParser.m; sourceTree = "<group>"; };
 		D0D94EAB196F3ABF007567EF /* _ARTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ARTEvent.h; sourceTree = "<group>"; };
 		D0D94EAC196F3ABF007567EF /* _ARTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ARTEvent.m; sourceTree = "<group>"; };
 		D0D94EAD196F3ABF007567EF /* _ARTVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ARTVenue.h; sourceTree = "<group>"; };
@@ -312,8 +322,13 @@
 			children = (
 				D01FE96019929E81000DEBDC /* ARTAboutViewController.h */,
 				D01FE96119929E81000DEBDC /* ARTAboutViewController.m */,
+				D047216A199C0AFF00612065 /* ARTEasterEggViewController.h */,
+				D047216B199C0AFF00612065 /* ARTEasterEggViewController.m */,
+				D047216C199C0AFF00612065 /* ARTEasterEggViewController.xib */,
 				D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */,
 				D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */,
+				D0D1FDEE199BFC07007EFA5B /* ARTKMLParser.h */,
+				D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */,
 				D0210DB4198005A100568F53 /* ARTLoadViewController.h */,
 				D0210DB5198005A100568F53 /* ARTLoadViewController.m */,
 				D0210DBA198006C900568F53 /* ARTParseRESTClient.h */,
@@ -511,6 +526,7 @@
 		D0663DE7196ED83A0056DC9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0D1FDEA199BFBA2007EFA5B /* DowntownMall.kml */,
 				D02AF1051995503B007191E9 /* licenses.plist */,
 				D01FE90F1989CB85000DEBDC /* ReadMe */,
 				D0663DE8196ED83A0056DC9E /* Charlottesville Artfinder-Info.plist */,
@@ -656,6 +672,7 @@
 				D02AF10419954E0E007191E9 /* Settings.bundle in Resources */,
 				D0210D65197FF5C800568F53 /* currentlocation.png in Resources */,
 				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
+				D047216E199C0AFF00612065 /* ARTEasterEggViewController.xib in Resources */,
 				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
 				D0210DB3198004F500568F53 /* venuemarker.png in Resources */,
 				D0210D88197FF76400568F53 /* venuedefault.png in Resources */,
@@ -671,6 +688,7 @@
 				D0210DB1198004F500568F53 /* parking.png in Resources */,
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
 				D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */,
+				D0D1FDEB199BFBA2007EFA5B /* DowntownMall.kml in Resources */,
 				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
 				D02AF1061995503B007191E9 /* licenses.plist in Resources */,
 				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
@@ -751,10 +769,12 @@
 				D0210D94197FFB8A00568F53 /* UIColor+Theme.m in Sources */,
 				D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */,
 				D01FE92E198DD440000DEBDC /* ARTEventDetailView.m in Sources */,
+				D0D1FDF0199BFC07007EFA5B /* ARTKMLParser.m in Sources */,
 				D0DA55B11984A563006315BC /* ARTVenueDetailViewController.m in Sources */,
 				D01FE96219929E81000DEBDC /* ARTAboutViewController.m in Sources */,
 				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
 				D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */,
+				D047216D199C0AFF00612065 /* ARTEasterEggViewController.m in Sources */,
 				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
 				D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */,
 				D0210D91197FFB4700568F53 /* ARTTheme.m in Sources */,

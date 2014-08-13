@@ -10,8 +10,10 @@
 #import "ARTTransportationView.h"
 #import "ARTTransportationAnnotation.h"
 #import <MapKit/MapKit.h>
+#import "ARTKMLParser.h"
+#import "UIColor+Theme.h"
 
-@interface ARTTransportationViewController ()
+@interface ARTTransportationViewController () <MKMapViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 
@@ -61,7 +63,7 @@
     _mapView.delegate = self;
     
     //Center map on correct region of downtown mall
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(38.030316, -78.480052), 350, 350);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(38.030316, -78.480052), 500, 500);
     
     [_mapView setRegion:region animated:YES];
     [_mapView setMapType:MKMapTypeHybrid];
@@ -79,6 +81,14 @@
     
     [_scrollView addSubview:view];
     [_scrollView setContentSize:CGSizeMake(320, 600)];
+    
+    NSDictionary *downtownMallPolygon = [ARTKMLParser overlaysFromKMLAtPath:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"DowntownMall" ofType:@"kml"]]];
+    
+    MKPolygon *downtownMallOverlay = [downtownMallPolygon objectForKey:@"DowntownMall"];
+    
+    [downtownMallOverlay setTitle:@"Downtown Mall"];
+    
+    [_mapView addOverlay:downtownMallOverlay];
 }
 
 -(void)awakeFromNib
@@ -185,6 +195,23 @@
     return nil;
 }
 
+#pragma mark - MKMapViewDelegate Methods
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolygon class]])
+    {
+        MKPolygonRenderer *aRenderer = [[MKPolygonRenderer alloc] initWithPolygon:(MKPolygon *)overlay];
+        
+        aRenderer.fillColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.3];
+        aRenderer.strokeColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.5];
+        aRenderer.lineWidth = 2;
+        
+        return aRenderer;
+        
+    }
+    return nil;
+}
 
 
 /*

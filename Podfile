@@ -7,6 +7,7 @@ target "Charlottesville Artfinder" do
 pod 'AFNetworking', '2.3.1'
 pod 'MBCalendarKit', :git => 'git@github.com:MosheBerman/MBCalendarKit.git', :tag => '2.1.0'
 pod 'MagicalRecord', :git => 'git@github.com:magicalpanda/MagicalRecord.git', :tag => 'v2.3.0-beta.2'
+pod 'KissXML'
 
 end
 

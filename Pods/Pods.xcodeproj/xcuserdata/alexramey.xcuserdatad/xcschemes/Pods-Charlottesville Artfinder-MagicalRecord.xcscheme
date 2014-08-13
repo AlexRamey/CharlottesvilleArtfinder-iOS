@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46E93BA9AF924FA193E66128"
+               BlueprintIdentifier = "EA6D5433939046428D6A3763"
                BuildableName = "libPods-Charlottesville Artfinder-MagicalRecord.a"
                BlueprintName = "Pods-Charlottesville Artfinder-MagicalRecord"
                ReferencedContainer = "container:Pods.xcodeproj">
