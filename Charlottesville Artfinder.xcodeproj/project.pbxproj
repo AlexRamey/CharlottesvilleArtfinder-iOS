@@ -30,7 +30,6 @@
 		D01FE9101989CB85000DEBDC /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D01FE90F1989CB85000DEBDC /* ReadMe */; };
 		D01FE918198B380E000DEBDC /* ARTEventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */; };
 		D01FE91B198BE4D1000DEBDC /* ARTConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */; };
-		D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */; };
 		D01FE92E198DD440000DEBDC /* ARTEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */; };
 		D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01FE92F198DD45F000DEBDC /* EventDetailView.xib */; };
 		D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D01FE93C198E60D5000DEBDC /* ARTEventDetailButton.m */; };
@@ -52,12 +51,6 @@
 		D0210D91197FFB4700568F53 /* ARTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D90197FFB4700568F53 /* ARTTheme.m */; };
 		D0210D94197FFB8A00568F53 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D93197FFB8A00568F53 /* UIColor+Theme.m */; };
 		D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210D991980007D00568F53 /* ARTURLCache.m */; };
-		D0210DAE198004F500568F53 /* dancemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DA8198004F500568F53 /* dancemarker.png */; };
-		D0210DAF198004F500568F53 /* gallerymarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DA9198004F500568F53 /* gallerymarker.png */; };
-		D0210DB0198004F500568F53 /* musicmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAA198004F500568F53 /* musicmarker.png */; };
-		D0210DB1198004F500568F53 /* parking.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAB198004F500568F53 /* parking.png */; };
-		D0210DB2198004F500568F53 /* theatremarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAC198004F500568F53 /* theatremarker.png */; };
-		D0210DB3198004F500568F53 /* venuemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = D0210DAD198004F500568F53 /* venuemarker.png */; };
 		D0210DB6198005A100568F53 /* ARTLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DB5198005A100568F53 /* ARTLoadViewController.m */; };
 		D0210DB91980063300568F53 /* ARTObjectStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DB81980063300568F53 /* ARTObjectStore.m */; };
 		D0210DBC198006C900568F53 /* ARTParseRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0210DBB198006C900568F53 /* ARTParseRESTClient.m */; };
@@ -123,7 +116,6 @@
 		D01FE917198B380E000DEBDC /* ARTEventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventsDetailViewController.m; sourceTree = "<group>"; };
 		D01FE919198BE4D1000DEBDC /* ARTConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTConnectViewController.h; sourceTree = "<group>"; };
 		D01FE91A198BE4D1000DEBDC /* ARTConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTConnectViewController.m; sourceTree = "<group>"; };
-		D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PCA_Thumbnail.png; sourceTree = "<group>"; };
 		D01FE92C198DD440000DEBDC /* ARTEventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTEventDetailView.h; sourceTree = "<group>"; };
 		D01FE92D198DD440000DEBDC /* ARTEventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTEventDetailView.m; sourceTree = "<group>"; };
 		D01FE92F198DD45F000DEBDC /* EventDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailView.xib; sourceTree = "<group>"; };
@@ -155,12 +147,6 @@
 		D0210D93197FFB8A00568F53 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
 		D0210D981980007D00568F53 /* ARTURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTURLCache.h; sourceTree = "<group>"; };
 		D0210D991980007D00568F53 /* ARTURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTURLCache.m; sourceTree = "<group>"; };
-		D0210DA8198004F500568F53 /* dancemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dancemarker.png; sourceTree = "<group>"; };
-		D0210DA9198004F500568F53 /* gallerymarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallerymarker.png; sourceTree = "<group>"; };
-		D0210DAA198004F500568F53 /* musicmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicmarker.png; sourceTree = "<group>"; };
-		D0210DAB198004F500568F53 /* parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parking.png; sourceTree = "<group>"; };
-		D0210DAC198004F500568F53 /* theatremarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theatremarker.png; sourceTree = "<group>"; };
-		D0210DAD198004F500568F53 /* venuemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venuemarker.png; sourceTree = "<group>"; };
 		D0210DB4198005A100568F53 /* ARTLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTLoadViewController.h; sourceTree = "<group>"; };
 		D0210DB5198005A100568F53 /* ARTLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTLoadViewController.m; sourceTree = "<group>"; };
 		D0210DB71980063300568F53 /* ARTObjectStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTObjectStore.h; sourceTree = "<group>"; };
@@ -360,7 +346,6 @@
 			isa = PBXGroup;
 			children = (
 				D01FE8DA1986ECE1000DEBDC /* Button Images */,
-				D0210DA7198004D500568F53 /* Markers */,
 				D0210D4C197FF46700568F53 /* Defaults */,
 				D0210D48197FF3E300568F53 /* Supporting Images */,
 			);
@@ -370,7 +355,6 @@
 		D0210D48197FF3E300568F53 /* Supporting Images */ = {
 			isa = PBXGroup;
 			children = (
-				D01FE92A198C9787000DEBDC /* PCA_Thumbnail.png */,
 				D0210D62197FF5C800568F53 /* pca_banner.png */,
 			);
 			name = "Supporting Images";
@@ -450,19 +434,6 @@
 				D0210D93197FFB8A00568F53 /* UIColor+Theme.m */,
 			);
 			name = Theme;
-			sourceTree = "<group>";
-		};
-		D0210DA7198004D500568F53 /* Markers */ = {
-			isa = PBXGroup;
-			children = (
-				D0210DA8198004F500568F53 /* dancemarker.png */,
-				D0210DA9198004F500568F53 /* gallerymarker.png */,
-				D0210DAA198004F500568F53 /* musicmarker.png */,
-				D0210DAB198004F500568F53 /* parking.png */,
-				D0210DAC198004F500568F53 /* theatremarker.png */,
-				D0210DAD198004F500568F53 /* venuemarker.png */,
-			);
-			name = Markers;
 			sourceTree = "<group>";
 		};
 		D0663DD2196ED83A0056DC9E = {
@@ -667,31 +638,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0210D44197FF01600568F53 /* MainStoryboard_iPhone.storyboard in Resources */,
-				D01FE92B198C9787000DEBDC /* PCA_Thumbnail.png in Resources */,
-				D0210DB2198004F500568F53 /* theatremarker.png in Resources */,
 				D02AF10419954E0E007191E9 /* Settings.bundle in Resources */,
 				D0210D65197FF5C800568F53 /* currentlocation.png in Resources */,
 				D0663DEB196ED83A0056DC9E /* InfoPlist.strings in Resources */,
 				D047216E199C0AFF00612065 /* ARTEasterEggViewController.xib in Resources */,
 				D0210D84197FF76400568F53 /* dancedefault.png in Resources */,
-				D0210DB3198004F500568F53 /* venuemarker.png in Resources */,
 				D0210D88197FF76400568F53 /* venuedefault.png in Resources */,
 				D0210D64197FF5C800568F53 /* centercville.png in Resources */,
 				D0210DC619814FBF00568F53 /* TransportationContentView.xib in Resources */,
 				D0DA55AB198496F8006315BC /* VenueDetailView.xib in Resources */,
 				D0210D87197FF76400568F53 /* theatredefault.png in Resources */,
 				D01FE9101989CB85000DEBDC /* ReadMe in Resources */,
-				D0210DB0198004F500568F53 /* musicmarker.png in Resources */,
 				D0663DF6196ED83A0056DC9E /* Images.xcassets in Resources */,
 				D0210D66197FF5C800568F53 /* pca_banner.png in Resources */,
 				D0210D85197FF76400568F53 /* gallerydefault.png in Resources */,
-				D0210DB1198004F500568F53 /* parking.png in Resources */,
 				D0210D86197FF76400568F53 /* musicdefault.png in Resources */,
 				D01FE930198DD460000DEBDC /* EventDetailView.xib in Resources */,
 				D0D1FDEB199BFBA2007EFA5B /* DowntownMall.kml in Resources */,
-				D0210DAE198004F500568F53 /* dancemarker.png in Resources */,
 				D02AF1061995503B007191E9 /* licenses.plist in Resources */,
-				D0210DAF198004F500568F53 /* gallerymarker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
