@@ -8,8 +8,6 @@
 
 #import "ARTGoogleCalendarClient.h"
 
-#warning - Hard-Coded API Key
-
 @implementation ARTGoogleCalendarClient
 
 NSString *const danceURL = @"charlottesvillearts.org_6j3aq5pd2t3ikhm4ms563h5hrs%40group.calendar.google.com/events";

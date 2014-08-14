@@ -14,26 +14,47 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pup-4u-wrd">
-                    <rect key="frame" x="78" y="20" width="165" height="165"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creator" translatesAutoresizingMaskIntoConstraints="NO" id="Pup-4u-wrd">
+                    <rect key="frame" x="33" y="27" width="255" height="255"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="255" id="1De-R6-Wld"/>
+                        <constraint firstAttribute="height" constant="255" id="j4P-cI-pCS"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alex Ramey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAX-PG-ycy">
-                    <rect key="frame" x="78" y="210" width="165" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of Virginia, Class of 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-Jn-PZS">
+                    <rect key="frame" x="25" y="326" width="271" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="chx-iV-CVl"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="University of Virginia, Class of 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-Jn-PZS">
-                    <rect key="frame" x="25" y="250" width="271" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex Ramey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-tZ-vGu">
+                    <rect key="frame" x="114" y="297" width="92" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Tue-Kc-16l"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Pup-4u-wrd" secondAttribute="centerX" constant="-0.5" id="6Kh-WA-jCL"/>
+                <constraint firstItem="Pup-4u-wrd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="G6U-Xi-AX9"/>
+                <constraint firstAttribute="centerX" secondItem="UPA-tZ-vGu" secondAttribute="centerX" id="Nio-nM-bEs"/>
+                <constraint firstItem="UPA-tZ-vGu" firstAttribute="top" secondItem="Pup-4u-wrd" secondAttribute="bottom" constant="15" id="WCT-kX-UUo"/>
+                <constraint firstItem="UEp-Jn-PZS" firstAttribute="top" secondItem="UPA-tZ-vGu" secondAttribute="bottom" constant="8" id="gtz-bU-iFK"/>
+                <constraint firstAttribute="centerX" secondItem="UEp-Jn-PZS" secondAttribute="centerX" constant="-0.5" id="rH1-eW-f7F"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="creator" width="1620" height="1620"/>
+    </resources>
 </document>

@@ -10,6 +10,7 @@
 #import "ARTTheme.h"
 #import "ARTObjectStore.h"
 #import "ARTURLCache.h"
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -65,6 +66,11 @@ NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [Flurry setCrashReportingEnabled:YES];
+    
+    [Flurry startSession:@"85F7M5858KHZ4W4C3YBK"];
+    
     return YES;
 }
 

@@ -62,7 +62,7 @@
         }
         
         //Subtract 1 b/c the last point is the same as the first point
-        int numPoints = [[NSNumber numberWithUnsignedInt:[pointsWithoutAltitude count]] intValue] - 1;
+        int numPoints = [[NSNumber numberWithUnsignedLong:[pointsWithoutAltitude count]] intValue] - 1;
         CLLocationCoordinate2D mapPoints[numPoints];
         
         int indexCounter = 0;

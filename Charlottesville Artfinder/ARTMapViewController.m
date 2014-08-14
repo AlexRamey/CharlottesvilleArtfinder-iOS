@@ -190,10 +190,13 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
 {
     CLLocation *home = [[CLLocation alloc] initWithLatitude:34.980723 longitude:-85.360301];
     CLLocation *currentCenter = [[CLLocation alloc] initWithLatitude:[_mapView region].center.latitude longitude:[_mapView region].center.longitude];
-    if ([home distanceFromLocation:currentCenter] < 20 && _mapView.region.span.latitudeDelta < .25)
+    if ([home distanceFromLocation:currentCenter] < 20 && _mapView.region.span.latitudeDelta < .20 && _mapTypeControl.selectedSegmentIndex == 2)
     {
-        ARTEasterEggViewController *vc = [[ARTEasterEggViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            ARTEasterEggViewController *vc = [[ARTEasterEggViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        });
     }
 }
 

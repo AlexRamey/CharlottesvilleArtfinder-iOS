@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BACB70532774BCC94AA7504"
+               BlueprintIdentifier = "3278DA38C1A54E6FA7AC34F5"
                BuildableName = "libPods-Charlottesville Artfinder-KissXML.a"
                BlueprintName = "Pods-Charlottesville Artfinder-KissXML"
                ReferencedContainer = "container:Pods.xcodeproj">

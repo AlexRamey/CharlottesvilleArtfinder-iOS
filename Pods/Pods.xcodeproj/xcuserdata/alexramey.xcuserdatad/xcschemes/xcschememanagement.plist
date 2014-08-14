@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Charlottesville Artfinder-FlurrySDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Charlottesville Artfinder-KissXML.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3BACB70532774BCC94AA7504</key>
+		<key>0EEDE533C38C4ACD820739D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BCEECF4CBC4476E956B292C</key>
+		<key>3278DA38C1A54E6FA7AC34F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69DBADB5C7184EB0A00A96B7</key>
+		<key>36F7FA595D204E60B20AAECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5B067E9AC984EB89B340D0D</key>
+		<key>87635E1CE23D44DCB03CF899</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA6D5433939046428D6A3763</key>
+		<key>C9CCD3CED72547FD80A7A4E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E382A6A5FB014DD78E2092EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

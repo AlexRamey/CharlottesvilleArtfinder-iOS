@@ -203,9 +203,9 @@
     {
         MKPolygonRenderer *aRenderer = [[MKPolygonRenderer alloc] initWithPolygon:(MKPolygon *)overlay];
         
-        aRenderer.fillColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.3];
-        aRenderer.strokeColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.5];
-        aRenderer.lineWidth = 2;
+        aRenderer.fillColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.4];
+        aRenderer.strokeColor = [[UIColor ARTBlue] colorWithAlphaComponent:0.6];
+        aRenderer.lineWidth = 1;
         
         return aRenderer;
         

@@ -1,5 +1,5 @@
 #include "Pods-Charlottesville Artfinder-KissXML.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/KissXML" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/KissXML" "${PODS_ROOT}/Headers/MBCalendarKit" "${PODS_ROOT}/Headers/MagicalRecord" ${PODS_CHARLOTTESVILLE_ARTFINDER_KISSXML_HEADER_SEARCH_PATHS}
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/KissXML" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/FlurrySDK" "${PODS_ROOT}/Headers/KissXML" "${PODS_ROOT}/Headers/MBCalendarKit" "${PODS_ROOT}/Headers/MagicalRecord" ${PODS_CHARLOTTESVILLE_ARTFINDER_KISSXML_HEADER_SEARCH_PATHS}
 OTHER_LDFLAGS = -ObjC ${PODS_CHARLOTTESVILLE_ARTFINDER_KISSXML_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}
