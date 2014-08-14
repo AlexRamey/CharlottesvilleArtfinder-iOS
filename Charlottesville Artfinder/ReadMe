@@ -75,7 +75,10 @@
 }
 
 3. Analytics
+
 Flurry
+Username: director@charlottesvillearts.org
+Password: GoodArt123
 
 a) 
     EVENT: Map Callout Selected
@@ -94,21 +97,25 @@ c)
 d)
     EVENT: About PCA Selected
     
+    Note: Tracks how many times the user navigates to the About PCA Screen
+    
 e) 
-    EVENT: Get the App Selected
+    EVENT: Get the CAT App Selected
+    
+    Note: This tracks how many times a user is routed to the CAT App Page in the App Store
 
 f) 
     EVENT: Parking Directions Selected
     Params: Lot -> {Water Lot or Water Garage or Market Garage}
-    
+
 g)
     EVENT: Event Filter Applied
     Params: 
-            Dance -> {YES or NO}
-            Gallery -> {YES or NO}
-            Music -> {YES or NO}
-            Theatre -> {YES or NO}
-            Venue -> {YES or NO}
+            Dance -> {ENABLED or DISABLED}
+            Gallery -> {ENABLED or DISABLED}
+            Music -> {ENABLED or DISABLED}
+            Theatre -> {ENABLED or DISABLED}
+            Venue -> {ENABLED or DISABLED}
             
     Note: This event only fires if the final state of the toggles when the filter view disappears is different than the initial state of the toggles when the filter appeared
 
@@ -117,3 +124,6 @@ h)
             
 i)
     EVENT: Add to Calendar Selected
+    
+    Note:  This event only fires when an event is added to the calendar from in app.
+    Removing an event from calendar in app does not fire this event.

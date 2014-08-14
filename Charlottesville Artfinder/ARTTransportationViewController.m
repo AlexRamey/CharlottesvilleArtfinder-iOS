@@ -157,14 +157,9 @@
 
 -(IBAction)getApp:(id)sender
 {
-    [Flurry logEvent:@"Get the App Selected"];
+    [Flurry logEvent:@"Get the CAT App Selected"];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/charlottesville-area-transit/id733998147?mt=8"]];
-}
-
--(void)dealloc
-{
-    _mapView.delegate = nil;
 }
 
 #pragma mark - MKMapViewDelegate Methods
