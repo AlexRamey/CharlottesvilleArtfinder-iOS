@@ -54,38 +54,38 @@
 -(IBAction)dismiss:(id)sender
 {
     BOOL finalDanceToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_DANCE_TOGGLE_KEY];
-    BOOL finalGalleryToggleState = [[NSUserDefaults standardUserDefaults] stringForKey:ART_GALLERY_TOGGLE_KEY];
+    BOOL finalGalleryToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_GALLERY_TOGGLE_KEY];
     BOOL finalMusicToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_MUSIC_TOGGLE_KEY];
     BOOL finalTheatreToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_THEATRE_TOGGLE_KEY];
     BOOL finalVenueToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_VENUE_TOGGLE_KEY];
     
     if (!(_initialDanceToggleState == finalDanceToggleState && _initialGalleryToggleState == finalGalleryToggleState && _initialMusicToggleState == finalMusicToggleState && _initialTheatreToggleState == finalTheatreToggleState && _initialVenueToggleState == finalVenueToggleState))
     {
-        NSString *isDanceEnabled = @"NO";
-        NSString *isGalleryEnabled = @"NO";
-        NSString *isMusicEnabled = @"NO";
-        NSString *isTheatreEnabled = @"NO";
-        NSString *isVenueEnabled = @"NO";
+        NSString *isDanceEnabled = @"DISABLED";
+        NSString *isGalleryEnabled = @"DISABLED";
+        NSString *isMusicEnabled = @"DISABLED";
+        NSString *isTheatreEnabled = @"DISABLED";
+        NSString *isVenueEnabled = @"DISABLED";
         
         if (finalDanceToggleState)
         {
-            isDanceEnabled = @"YES";
+            isDanceEnabled = @"ENABLED";
         }
         if (finalGalleryToggleState)
         {
-            isGalleryEnabled = @"YES";
+            isGalleryEnabled = @"ENABLED";
         }
         if (finalMusicToggleState)
         {
-            isMusicEnabled = @"YES";
+            isMusicEnabled = @"ENABLED";
         }
         if (finalTheatreToggleState)
         {
-            isTheatreEnabled = @"YES";
+            isTheatreEnabled = @"ENABLED";
         }
         if (finalVenueToggleState)
         {
-            isVenueEnabled = @"YES";
+            isVenueEnabled = @"ENABLED";
         }
         
         NSDictionary *params = @{

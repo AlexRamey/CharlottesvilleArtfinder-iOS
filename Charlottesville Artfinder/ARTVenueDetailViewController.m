@@ -9,6 +9,7 @@
 #import "ARTVenueDetailViewController.h"
 #import "ARTMapViewController.h"
 #import "ARTVenueDetailView.h"
+#import "AppDelegate.h"
 
 @interface ARTVenueDetailViewController ()
 
@@ -47,6 +48,8 @@
 -(IBAction)viewOnMapAction:(id)sender
 {
     self.tabBarController.selectedIndex = 0;
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate tabBarController:self.tabBarController didSelectViewController: nil];
     
     UINavigationController *mapNav = (UINavigationController *)self.tabBarController.selectedViewController;
     if ([mapNav.viewControllers count] > 1)

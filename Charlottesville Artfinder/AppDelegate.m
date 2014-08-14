@@ -26,6 +26,8 @@ NSString * const ART_VENUE_TOGGLE_KEY = @"ART_VENUE_TOGGLE_KEY";
 
 NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
 
+NSString * const ART_SELECTED_TAB_KEY = @"ART_SELECTED_TAB_KEY";
+
 +(void)initialize
 {
     //Register Factory Defaults, which will be created and temporarily stored in the registration
@@ -186,6 +188,13 @@ NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - UITabBarControllerDelegate Methods
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:tabBarController.selectedIndex forKey:ART_SELECTED_TAB_KEY];
 }
 
 @end

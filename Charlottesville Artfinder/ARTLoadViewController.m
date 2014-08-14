@@ -46,8 +46,8 @@
     void (^completion)(NSError *) = ^(NSError *error){
         if (error)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Failed" message:@"Some data was unable to be downloaded. Restart the app to force a refresh." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
+            //do nothing
+            NSLog(@"Download Error");
         }
         else
         {
@@ -105,15 +105,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ((UITabBarController *)[segue destinationViewController]).delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    ((UITabBarController *)[segue destinationViewController]).selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:ART_SELECTED_TAB_KEY];
 }
-*/
+
 
 @end

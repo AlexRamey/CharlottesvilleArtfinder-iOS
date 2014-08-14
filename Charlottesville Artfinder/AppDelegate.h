@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 extern NSString * const ART_IS_FIRST_LAUNCH_KEY;
 
@@ -21,6 +21,8 @@ extern NSString * const ART_THEATRE_TOGGLE_KEY;
 extern NSString * const ART_VENUE_TOGGLE_KEY;
 
 extern NSString * const ART_PCA_DESCRIPTION_KEY;
+
+extern NSString * const ART_SELECTED_TAB_KEY;
 
 @property (strong, nonatomic) UIWindow *window;
 

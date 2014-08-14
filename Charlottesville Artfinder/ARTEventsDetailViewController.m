@@ -84,8 +84,6 @@
     }
     else
     {
-        [Flurry logEvent:@"Add to Calendar Selected"];
-        
         NSString *identifier = [[NSUserDefaults standardUserDefaults] objectForKey:_event.eventID];
         EKEvent *eventCheck = [calendarEventStore eventWithIdentifier:identifier];
         
@@ -111,6 +109,8 @@
         }
         else
         {
+            [Flurry logEvent:@"Add to Calendar Selected"];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 EKEvent *eventToAdd = [EKEvent eventWithEventStore:calendarEventStore];
