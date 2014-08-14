@@ -93,6 +93,7 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSDictionary *mapOptions = nil;
+    NSDictionary *params = nil;
     
     if (buttonIndex == 1)
     {
@@ -102,6 +103,7 @@
                        MKLaunchOptionsMapTypeKey:[NSNumber numberWithInteger:MKMapTypeHybrid],
                        MKLaunchOptionsShowsTrafficKey:@"YES"
                        };
+        params = @{@"Selected Venue" : _venue.organizationName, @"Type of Directions" : @"Driving"};
     }
     else if (buttonIndex == 2)
     {
@@ -111,11 +113,14 @@
                        MKLaunchOptionsMapTypeKey:[NSNumber numberWithInteger:MKMapTypeHybrid],
                        MKLaunchOptionsShowsTrafficKey:@"YES"
                        };
+        params = @{@"Selected Venue" : _venue.organizationName, @"Type of Directions" : @"Walking"};
     }
     else
     {
         return;
     }
+    
+    [Flurry logEvent:@"Directions Selected" withParameters:params];
     
     Class itemClass = [MKMapItem class];
     if (itemClass && [itemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {

@@ -73,3 +73,47 @@
     
     return cell;
 }
+
+3. Analytics
+Flurry
+
+a) 
+    EVENT: Map Callout Selected
+    Params: Selected Venue -> {Organization Name}
+
+b)
+    EVENT: Directory Row Selected
+    Params: Selected Venue -> {Organization Name}
+    
+c) 
+    EVENT: Venue Directions Selected
+    Params: 
+            Selected Venue -> {Organization Name}
+            Type of Directions -> {Driving or Walking}
+
+d)
+    EVENT: About PCA Selected
+    
+e) 
+    EVENT: Get the App Selected
+
+f) 
+    EVENT: Parking Directions Selected
+    Params: Lot -> {Water Lot or Water Garage or Market Garage}
+    
+g)
+    EVENT: Event Filter Applied
+    Params: 
+            Dance -> {YES or NO}
+            Gallery -> {YES or NO}
+            Music -> {YES or NO}
+            Theatre -> {YES or NO}
+            Venue -> {YES or NO}
+            
+    Note: This event only fires if the final state of the toggles when the filter view disappears is different than the initial state of the toggles when the filter appeared
+
+h)
+    EVENT: Event Selected
+            
+i)
+    EVENT: Add to Calendar Selected

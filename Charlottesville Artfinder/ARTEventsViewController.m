@@ -168,6 +168,7 @@
     {
         [(ARTEventsDetailViewController *)[segue destinationViewController] setEvent:selectedEvent];
         [(ARTEventsDetailViewController *)[segue destinationViewController] setSelectedDate:selectedDate];
+        [Flurry logEvent:@"Event Selected"];
     }
 }
 

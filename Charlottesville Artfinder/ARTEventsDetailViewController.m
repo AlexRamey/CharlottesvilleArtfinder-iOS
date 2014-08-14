@@ -84,6 +84,8 @@
     }
     else
     {
+        [Flurry logEvent:@"Add to Calendar Selected"];
+        
         NSString *identifier = [[NSUserDefaults standardUserDefaults] objectForKey:_event.eventID];
         EKEvent *eventCheck = [calendarEventStore eventWithIdentifier:identifier];
         

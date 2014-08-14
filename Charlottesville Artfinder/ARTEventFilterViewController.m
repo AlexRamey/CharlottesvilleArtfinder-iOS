@@ -12,7 +12,11 @@
 #import "AppDelegate.h"
 
 @interface ARTEventFilterViewController ()
-
+@property BOOL initialDanceToggleState;
+@property BOOL initialGalleryToggleState;
+@property BOOL initialMusicToggleState;
+@property BOOL initialTheatreToggleState;
+@property BOOL initialVenueToggleState;
 @end
 
 @implementation ARTEventFilterViewController
@@ -32,6 +36,15 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    _initialDanceToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_DANCE_TOGGLE_KEY];
+    _initialGalleryToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_GALLERY_TOGGLE_KEY];
+    _initialMusicToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_MUSIC_TOGGLE_KEY];
+    _initialTheatreToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_THEATRE_TOGGLE_KEY];
+    _initialVenueToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_VENUE_TOGGLE_KEY];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -40,6 +53,52 @@
 
 -(IBAction)dismiss:(id)sender
 {
+    BOOL finalDanceToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_DANCE_TOGGLE_KEY];
+    BOOL finalGalleryToggleState = [[NSUserDefaults standardUserDefaults] stringForKey:ART_GALLERY_TOGGLE_KEY];
+    BOOL finalMusicToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_MUSIC_TOGGLE_KEY];
+    BOOL finalTheatreToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_THEATRE_TOGGLE_KEY];
+    BOOL finalVenueToggleState = [[NSUserDefaults standardUserDefaults] boolForKey:ART_VENUE_TOGGLE_KEY];
+    
+    if (!(_initialDanceToggleState == finalDanceToggleState && _initialGalleryToggleState == finalGalleryToggleState && _initialMusicToggleState == finalMusicToggleState && _initialTheatreToggleState == finalTheatreToggleState && _initialVenueToggleState == finalVenueToggleState))
+    {
+        NSString *isDanceEnabled = @"NO";
+        NSString *isGalleryEnabled = @"NO";
+        NSString *isMusicEnabled = @"NO";
+        NSString *isTheatreEnabled = @"NO";
+        NSString *isVenueEnabled = @"NO";
+        
+        if (finalDanceToggleState)
+        {
+            isDanceEnabled = @"YES";
+        }
+        if (finalGalleryToggleState)
+        {
+            isGalleryEnabled = @"YES";
+        }
+        if (finalMusicToggleState)
+        {
+            isMusicEnabled = @"YES";
+        }
+        if (finalTheatreToggleState)
+        {
+            isTheatreEnabled = @"YES";
+        }
+        if (finalVenueToggleState)
+        {
+            isVenueEnabled = @"YES";
+        }
+        
+        NSDictionary *params = @{
+                                 @"Dance" : isDanceEnabled,
+                                 @"Gallery" : isGalleryEnabled,
+                                 @"Music" : isMusicEnabled,
+                                 @"Theatre" : isTheatreEnabled,
+                                 @"Venue" : isVenueEnabled
+                                 };
+        
+        [Flurry logEvent:@"Event Filter Applied" withParameters:params];
+    }
+    
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 

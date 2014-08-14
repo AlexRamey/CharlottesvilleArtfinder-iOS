@@ -112,19 +112,25 @@
     Class itemClass = [MKMapItem class];
     if (itemClass && [itemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
         MKPlacemark *placemark = nil;
+        NSDictionary *params = nil;
         
         if ([[_parkingSelection text] caseInsensitiveCompare:@"Water Street Lot"] == NSOrderedSame)
         {
             placemark = [[MKPlacemark alloc] initWithCoordinate:_waterStreetLot addressDictionary:nil];
+            params = @{@"Lot" : @"Water Lot"};
         }
         else if ([[_parkingSelection text] caseInsensitiveCompare:@"Water Street Garage"] == NSOrderedSame)
         {
             placemark = [[MKPlacemark alloc] initWithCoordinate:_waterStreetGarage addressDictionary:nil];
+            params = @{@"Lot" : @"Water Garage"};
         }
         else
         {
             placemark = [[MKPlacemark alloc] initWithCoordinate:_marketStreetGarage addressDictionary:nil];
+            params = @{@"Lot" : @"Market Garage"};
         }
+        
+        [Flurry logEvent:@"Parking Directions Selected" withParameters:params];
         
         //By default, if one map item is provided, then directions are provided from current location to the map item
         MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
@@ -151,6 +157,8 @@
 
 -(IBAction)getApp:(id)sender
 {
+    [Flurry logEvent:@"Get the App Selected"];
+    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/charlottesville-area-transit/id733998147?mt=8"]];
 }
 

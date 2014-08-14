@@ -243,6 +243,9 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [(ARTVenueDetailViewController *)[segue destinationViewController] setVenue:selectedVenue];
+    
+    NSDictionary *params = @{@"Selected Venue" : selectedVenue.organizationName};
+    [Flurry logEvent:@"Map Callout Selected" withParameters:params];
 }
 
 @end

@@ -120,6 +120,12 @@
     if ([[segue identifier] caseInsensitiveCompare:@"MasterToDetail"] == NSOrderedSame)
     {
         [(ARTVenueDetailViewController *)[segue destinationViewController] setVenue:selectedVenue];
+        NSDictionary *params = @{@"Selected Venue" : selectedVenue.organizationName};
+        [Flurry logEvent:@"Directory Row Selected" withParameters:params];
+    }
+    else
+    {
+        [Flurry logEvent:@"About PCA Selected"];
     }
 }
 
