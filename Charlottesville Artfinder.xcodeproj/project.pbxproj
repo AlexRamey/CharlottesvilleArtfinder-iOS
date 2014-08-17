@@ -77,6 +77,7 @@
 		D0663E08196ED83B0056DC9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0663E06196ED83B0056DC9E /* InfoPlist.strings */; };
 		D0663E0A196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */; };
 		D0663E15196EDBAC0056DC9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0663E14196EDBAC0056DC9E /* MapKit.framework */; };
+		D0A809B019A044DB0055D894 /* ARTHooAppsParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A809AF19A044DB0055D894 /* ARTHooAppsParseClient.m */; };
 		D0D1FDEB199BFBA2007EFA5B /* DowntownMall.kml in Resources */ = {isa = PBXBuildFile; fileRef = D0D1FDEA199BFBA2007EFA5B /* DowntownMall.kml */; };
 		D0D1FDF0199BFC07007EFA5B /* ARTKMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */; };
 		D0D94EB3196F3ABF007567EF /* _ARTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D94EAC196F3ABF007567EF /* _ARTEvent.m */; };
@@ -182,6 +183,8 @@
 		D0663E07196ED83B0056DC9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0663E09196ED83B0056DC9E /* Charlottesville_ArtfinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Charlottesville_ArtfinderTests.m; sourceTree = "<group>"; };
 		D0663E14196EDBAC0056DC9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0A809AE19A044DB0055D894 /* ARTHooAppsParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTHooAppsParseClient.h; sourceTree = "<group>"; };
+		D0A809AF19A044DB0055D894 /* ARTHooAppsParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTHooAppsParseClient.m; sourceTree = "<group>"; };
 		D0D1FDEA199BFBA2007EFA5B /* DowntownMall.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DowntownMall.kml; sourceTree = "<group>"; };
 		D0D1FDEE199BFC07007EFA5B /* ARTKMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTKMLParser.h; sourceTree = "<group>"; };
 		D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTKMLParser.m; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				D047216C199C0AFF00612065 /* ARTEasterEggViewController.xib */,
 				D0210D3B197FEDAA00568F53 /* ARTGoogleCalendarClient.h */,
 				D0210D3C197FEDAA00568F53 /* ARTGoogleCalendarClient.m */,
+				D0A809AE19A044DB0055D894 /* ARTHooAppsParseClient.h */,
+				D0A809AF19A044DB0055D894 /* ARTHooAppsParseClient.m */,
 				D0D1FDEE199BFC07007EFA5B /* ARTKMLParser.h */,
 				D0D1FDEF199BFC07007EFA5B /* ARTKMLParser.m */,
 				D0210DB4198005A100568F53 /* ARTLoadViewController.h */,
@@ -738,6 +743,7 @@
 				D01FE96219929E81000DEBDC /* ARTAboutViewController.m in Sources */,
 				D0DA55AE19849A15006315BC /* ARTVenueDetailView.m in Sources */,
 				D01FE93D198E60D5000DEBDC /* ARTEventDetailButton.m in Sources */,
+				D0A809B019A044DB0055D894 /* ARTHooAppsParseClient.m in Sources */,
 				D047216D199C0AFF00612065 /* ARTEasterEggViewController.m in Sources */,
 				D0DA55A819842B01006315BC /* ARTVenueCell.m in Sources */,
 				D0210D9A1980007D00568F53 /* ARTURLCache.m in Sources */,

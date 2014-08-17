@@ -7,11 +7,13 @@
 //
 
 #import "ARTAboutViewController.h"
+#import "ARTHooAppsParseClient.h"
 #import "AppDelegate.h"
 
 @interface ARTAboutViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *organizationDescription;
+@property (nonatomic, weak) IBOutlet UIButton *attribution;
 
 @end
 
@@ -34,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-     NSString *pcaDescription = [[NSUserDefaults standardUserDefaults] objectForKey:ART_PCA_DESCRIPTION_KEY];
+    NSString *pcaDescription = [[NSUserDefaults standardUserDefaults] objectForKey:ART_PCA_DESCRIPTION_KEY];
     NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc] initWithString:pcaDescription];
     
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
@@ -46,12 +48,26 @@
     [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:NSMakeRange(0, [pcaDescription length])];
     
     [_organizationDescription setAttributedText:attrString];
+    
+#warning - Remove NSLog Statement, which is for testing only
+    
+    ARTHooAppsParseClient *sharedClient = [ARTHooAppsParseClient sharedClient];
+    [sharedClient loadAttributionURLWithCompletion:^(NSError * error) {
+        NSLog(@"Updated");
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)launchHooAppsPage:(id)sender
+{
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:ART_ATTRIBUTION_URL_KEY];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 /*

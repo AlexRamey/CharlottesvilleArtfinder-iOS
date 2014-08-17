@@ -46,8 +46,8 @@
     void (^completion)(NSError *) = ^(NSError *error){
         if (error)
         {
-            //do nothing
-            NSLog(@"Download Error");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Failed" message:@"Some data was unable to be downloaded." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
         else
         {

@@ -147,7 +147,7 @@
         <!--About View Controller - About-->
         <scene sceneID="3S7-ba-r8Y">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Q7n-uo-lme" customClass="ARTAboutViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Q7n-uo-lme" customClass="ARTAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dsX-kM-H78"/>
                         <viewControllerLayoutGuide type="bottom" id="JZv-5n-Fh4"/>
@@ -157,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP0-Lg-V85">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwG-hz-gdH">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
@@ -200,8 +200,8 @@
                                             <constraint firstItem="8PC-2Y-TTc" firstAttribute="top" secondItem="1WJ-0i-DFZ" secondAttribute="top" constant="4" id="vVe-Ye-kWY"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="277" placeholderIntrinsicHeight="339" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-3T-MzH">
-                                        <rect key="frame" x="20" y="133" width="277" height="339"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="277" placeholderIntrinsicHeight="253" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="lwd-3T-MzH">
+                                        <rect key="frame" x="20" y="133" width="277" height="253"/>
                                         <attributedString key="attributedText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -217,22 +217,38 @@
                                     <constraint firstItem="lwd-3T-MzH" firstAttribute="leading" secondItem="FP0-Lg-V85" secondAttribute="leading" constant="20" id="fCm-bw-jGQ"/>
                                     <constraint firstItem="lwd-3T-MzH" firstAttribute="top" secondItem="1WJ-0i-DFZ" secondAttribute="bottom" constant="8" id="kDq-AP-O6j"/>
                                     <constraint firstItem="1WJ-0i-DFZ" firstAttribute="top" secondItem="cwG-hz-gdH" secondAttribute="bottom" id="owU-Hv-FF6"/>
-                                    <constraint firstAttribute="bottom" secondItem="lwd-3T-MzH" secondAttribute="bottom" constant="20" id="xcJ-9p-ctd"/>
+                                    <constraint firstAttribute="bottom" secondItem="lwd-3T-MzH" secondAttribute="bottom" id="sCA-eh-x6I"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJx-Xh-HKW">
+                                <rect key="frame" x="0.0" y="386" width="320" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="1oP-Gc-FHf"/>
+                                </constraints>
+                                <state key="normal" title="Developed by HooApps">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchHooAppsPage:" destination="Q7n-uo-lme" eventType="touchUpInside" id="ZsL-2Y-MTj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="JZv-5n-Fh4" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="bottom" constant="1" id="KJC-dE-Fry"/>
+                            <constraint firstItem="dJx-Xh-HKW" firstAttribute="leading" secondItem="dWf-zM-BWX" secondAttribute="leading" id="Hfi-nb-9Ze"/>
+                            <constraint firstItem="JZv-5n-Fh4" firstAttribute="top" secondItem="dJx-Xh-HKW" secondAttribute="bottom" id="JcO-gc-V5e"/>
                             <constraint firstItem="FP0-Lg-V85" firstAttribute="leading" secondItem="dWf-zM-BWX" secondAttribute="leading" id="LbS-uZ-TWr"/>
                             <constraint firstItem="FP0-Lg-V85" firstAttribute="top" secondItem="dsX-kM-H78" secondAttribute="bottom" id="XLk-ef-s7z"/>
                             <constraint firstItem="FP0-Lg-V85" firstAttribute="top" secondItem="dsX-kM-H78" secondAttribute="bottom" id="azp-ee-cb8"/>
                             <constraint firstAttribute="trailing" secondItem="FP0-Lg-V85" secondAttribute="trailing" id="dCT-EY-rph"/>
-                            <constraint firstItem="JZv-5n-Fh4" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="bottom" constant="1" id="lYR-PK-mDj"/>
+                            <constraint firstAttribute="trailing" secondItem="dJx-Xh-HKW" secondAttribute="trailing" id="nns-2J-yuw"/>
+                            <constraint firstItem="dJx-Xh-HKW" firstAttribute="top" secondItem="FP0-Lg-V85" secondAttribute="bottom" id="rMb-PC-4Oh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="6tZ-Cj-hnI"/>
                     <connections>
+                        <outlet property="attribution" destination="dJx-Xh-HKW" id="gao-lo-HLp"/>
                         <outlet property="organizationDescription" destination="lwd-3T-MzH" id="ou9-Si-ncw"/>
                     </connections>
                 </viewController>

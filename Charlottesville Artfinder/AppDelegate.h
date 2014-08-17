@@ -24,6 +24,8 @@ extern NSString * const ART_PCA_DESCRIPTION_KEY;
 
 extern NSString * const ART_SELECTED_TAB_KEY;
 
+extern NSString * const ART_ATTRIBUTION_URL_KEY;
+
 @property (strong, nonatomic) UIWindow *window;
 
 +(NSString *)toggleKeyForCategory:(NSString *)category;

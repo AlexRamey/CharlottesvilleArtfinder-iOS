@@ -28,6 +28,8 @@ NSString * const ART_PCA_DESCRIPTION_KEY = @"ART_PCA_DESCRIPTION_KEY";
 
 NSString * const ART_SELECTED_TAB_KEY = @"ART_SELECTED_TAB_KEY";
 
+NSString * const ART_ATTRIBUTION_URL_KEY = @"ART_ATTRIBUTION_URL_KEY";
+
 +(void)initialize
 {
     //Register Factory Defaults, which will be created and temporarily stored in the registration
@@ -37,6 +39,8 @@ NSString * const ART_SELECTED_TAB_KEY = @"ART_SELECTED_TAB_KEY";
     
     NSString *defaultPCADescription = @"Piedmont Council for the Arts (PCA) is the designated arts agency of Charlottesville and Albemarle. PCA encourages community-wide access to and appreciation for the arts through programs and services for artists, arts organizations, and their audiences. The PCA website provides the most comprehensive arts-related information in the area as we work to inform residents and visitors about cultural resources and to showcase the Charlottesville region as an arts destination.";
     
+    NSString *defaultAttributionURL = @"https://atuva.student.virginia.edu/organization/hooapps";
+    
     NSDictionary *defaults = @{
                                ART_IS_FIRST_LAUNCH_KEY : @YES,
                                ART_LAST_REFRESH_KEY : @0,
@@ -45,7 +49,8 @@ NSString * const ART_SELECTED_TAB_KEY = @"ART_SELECTED_TAB_KEY";
                                ART_MUSIC_TOGGLE_KEY : @YES,
                                ART_THEATRE_TOGGLE_KEY : @YES,
                                ART_VENUE_TOGGLE_KEY : @YES,
-                               ART_PCA_DESCRIPTION_KEY : defaultPCADescription
+                               ART_PCA_DESCRIPTION_KEY : defaultPCADescription,
+                               ART_ATTRIBUTION_URL_KEY : defaultAttributionURL
                                };
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
