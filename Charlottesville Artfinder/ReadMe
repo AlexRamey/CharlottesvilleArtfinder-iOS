@@ -127,3 +127,9 @@ i)
     
     Note:  This event only fires when an event is added to the calendar from in app.
     Removing an event from calendar in app does not fire this event.
+    
+3. There will be some issues when iOS 8 comes out and this app will need an update
+Notably:
+    -There will be a need for the location manager in the map section to explicity ask for permission
+    -AlertViews will need to be updated
+    -About View needs to be looked at (bottom part shifts funny; hopefully this is an iOS8 beta issue)
