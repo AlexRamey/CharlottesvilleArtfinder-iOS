@@ -13,7 +13,7 @@
 @interface ARTAboutViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *organizationDescription;
-@property (nonatomic, weak) IBOutlet UIButton *attribution;
+@property (nonatomic, weak) IBOutlet UIImageView *attribution;
 
 @end
 
@@ -49,13 +49,15 @@
     
     [_organizationDescription setAttributedText:attrString];
     
-#warning - Remove NSLog Statement, which is for testing only
-    
     ARTHooAppsParseClient *sharedClient = [ARTHooAppsParseClient sharedClient];
     [sharedClient loadAttributionURLWithCompletion:^(NSError * error) {
-        NSLog(@"Updated");
+        //do nothing
     }];
     
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(launchHooAppsPage:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [_attribution addGestureRecognizer:tapRecognizer];
 }
 
 - (void)didReceiveMemoryWarning

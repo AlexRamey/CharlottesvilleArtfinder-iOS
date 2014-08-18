@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 HooApps. All rights reserved.
 //
 
-#import "ARTEasterEggViewController.h"
+#import "ARTViewController.h"
 
-@interface ARTEasterEggViewController ()
+@interface ARTViewController ()
 
 @end
 
-@implementation ARTEasterEggViewController
+@implementation ARTViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

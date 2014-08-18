@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ARTEasterEggViewController : UIViewController
+@interface ARTViewController : UIViewController
 
 @end

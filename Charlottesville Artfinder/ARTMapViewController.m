@@ -12,7 +12,7 @@
 #import "ARTObjectStore.h"
 #import "ARTVenue.h"
 #import "ARTAnnotationView.h"
-#import "ARTEasterEggViewController.h"
+#import "ARTViewController.h"
 
 @implementation ARTMapViewController
 
@@ -194,7 +194,7 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            ARTEasterEggViewController *vc = [[ARTEasterEggViewController alloc] init];
+            ARTViewController *vc = [[ARTViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         });
     }

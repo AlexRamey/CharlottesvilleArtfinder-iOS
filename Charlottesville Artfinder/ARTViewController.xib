@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARTEasterEggViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARTViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,16 +14,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creator" translatesAutoresizingMaskIntoConstraints="NO" id="Pup-4u-wrd">
-                    <rect key="frame" x="33" y="27" width="255" height="255"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creator" translatesAutoresizingMaskIntoConstraints="NO" id="Pup-4u-wrd">
+                    <rect key="frame" x="20" y="27" width="282" height="282"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="255" id="1De-R6-Wld"/>
-                        <constraint firstAttribute="height" constant="255" id="j4P-cI-pCS"/>
+                        <constraint firstAttribute="width" constant="282" id="1De-R6-Wld"/>
+                        <constraint firstAttribute="height" constant="282" id="j4P-cI-pCS"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of Virginia, Class of 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-Jn-PZS">
-                    <rect key="frame" x="25" y="326" width="271" height="21"/>
+                    <rect key="frame" x="25" y="341" width="271" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="chx-iV-CVl"/>
@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex Ramey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-tZ-vGu">
-                    <rect key="frame" x="114" y="297" width="92" height="21"/>
+                    <rect key="frame" x="114" y="316" width="92" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Tue-Kc-16l"/>
@@ -46,8 +46,8 @@
                 <constraint firstAttribute="centerX" secondItem="Pup-4u-wrd" secondAttribute="centerX" constant="-0.5" id="6Kh-WA-jCL"/>
                 <constraint firstItem="Pup-4u-wrd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="G6U-Xi-AX9"/>
                 <constraint firstAttribute="centerX" secondItem="UPA-tZ-vGu" secondAttribute="centerX" id="Nio-nM-bEs"/>
-                <constraint firstItem="UPA-tZ-vGu" firstAttribute="top" secondItem="Pup-4u-wrd" secondAttribute="bottom" constant="15" id="WCT-kX-UUo"/>
-                <constraint firstItem="UEp-Jn-PZS" firstAttribute="top" secondItem="UPA-tZ-vGu" secondAttribute="bottom" constant="8" id="gtz-bU-iFK"/>
+                <constraint firstItem="UPA-tZ-vGu" firstAttribute="top" secondItem="Pup-4u-wrd" secondAttribute="bottom" constant="7" id="WCT-kX-UUo"/>
+                <constraint firstItem="UEp-Jn-PZS" firstAttribute="top" secondItem="UPA-tZ-vGu" secondAttribute="bottom" constant="4" id="gtz-bU-iFK"/>
                 <constraint firstAttribute="centerX" secondItem="UEp-Jn-PZS" secondAttribute="centerX" constant="-0.5" id="rH1-eW-f7F"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="creator" width="1620" height="1620"/>
+        <image name="creator" width="960" height="1280"/>
     </resources>
 </document>
