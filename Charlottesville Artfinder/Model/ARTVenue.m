@@ -111,7 +111,7 @@
 
 -(NSString *)subtitle
 {
-    return self.primaryCategory;
+    return [self getPrimaryCategory];
 }
 
 -(void)setSubtitle:(NSString *)subtitle

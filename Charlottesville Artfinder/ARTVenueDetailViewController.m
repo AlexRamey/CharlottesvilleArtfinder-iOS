@@ -76,8 +76,17 @@
         NSString *trimmedPhoneNumber = [_venue.phone stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSString *venuePhoneNumberNoWhiteSpace = [trimmedPhoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSString *venuePhoneNumberNoWhiteSpaceOrDash = [venuePhoneNumberNoWhiteSpace stringByReplacingOccurrencesOfString:@"-" withString:@""];
-        NSString *phoneNumber = [@"telprompt://" stringByAppendingString:venuePhoneNumberNoWhiteSpaceOrDash];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+        
+        if ([venuePhoneNumberNoWhiteSpaceOrDash length] > 0)
+        {
+            NSString *phoneNumber = [@"telprompt://" stringByAppendingString:venuePhoneNumberNoWhiteSpaceOrDash];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+        }
+        else
+        {
+            UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Cannot Call" message:@"There is No Phone Number Recorded for this Venue." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [a show];
+        }
     }
     else
     {
