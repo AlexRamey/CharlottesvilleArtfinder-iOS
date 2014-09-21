@@ -60,6 +60,11 @@
     [_attribution addGestureRecognizer:tapRecognizer];
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

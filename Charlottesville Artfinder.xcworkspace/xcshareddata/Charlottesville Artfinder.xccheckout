@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>56D5DF00-BFBA-459B-88E0-58F9CBBD690D</string>
+	<string>F3BBC6F3-BE57-4D01-A24E-0C9EBB87305A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Charlottesville Artfinder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6D3E022F-7FEF-4EF6-A530-6476983F3D45</key>
+		<key>D71779D9556ECEAB7510ADE3194BF442CAB6EADD</key>
 		<string>https://github.com/AlexRamey/CharlottesvilleArtfinder-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Charlottesville Artfinder.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6D3E022F-7FEF-4EF6-A530-6476983F3D45</key>
+		<key>D71779D9556ECEAB7510ADE3194BF442CAB6EADD</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AlexRamey/CharlottesvilleArtfinder-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6D3E022F-7FEF-4EF6-A530-6476983F3D45</string>
+	<string>D71779D9556ECEAB7510ADE3194BF442CAB6EADD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6D3E022F-7FEF-4EF6-A530-6476983F3D45</string>
+			<string>D71779D9556ECEAB7510ADE3194BF442CAB6EADD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CharlottesvilleArtfinder-iOS</string>
 		</dict>
