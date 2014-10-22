@@ -7,7 +7,7 @@
 //
 
 #import "ARTDirectoryDetailButton.h"
-#import "UIColor+THeme.h"
+#import "UIColor+Theme.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation ARTDirectoryDetailButton

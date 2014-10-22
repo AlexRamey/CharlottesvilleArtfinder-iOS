@@ -106,6 +106,10 @@
 
 -(NSString *)title
 {
+    if (self.organizationName.length > 23)
+    {
+        return [NSString stringWithFormat:@"%@...", [self.organizationName substringToIndex:20]];
+    }
     return self.organizationName;
 }
 

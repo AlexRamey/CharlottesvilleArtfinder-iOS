@@ -644,7 +644,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrI-yD-nHq">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrI-yD-nHq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
                                 <connections>
                                     <outlet property="delegate" destination="X95-PC-hJO" id="lMA-ES-K0p"/>
@@ -747,7 +747,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ef7-nb-76J"/>
+        <segue reference="yI1-Ox-t3f"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.19607843137254902" green="0.58823529411764708" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -24,10 +24,6 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     
     if (self)
     {
-        _locationManager = [[CLLocationManager alloc] init];
-        [_locationManager setDelegate:self];
-        [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        
         _store = [ARTObjectStore sharedStore];
         
         jeffersonTheatreCoordinate = CLLocationCoordinate2DMake(38.030662, -78.481200);
@@ -39,9 +35,6 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     
     //NSUserDefaults integerForKey: returns 0 if no value exists
     NSInteger mapTypeValue = [[NSUserDefaults standardUserDefaults]
@@ -56,8 +49,10 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
         [_mapView addAnnotation:venue];
     }
     
-    [_locationManager startUpdatingLocation];
-    [_activityIndicator startAnimating];
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDelegate:self];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [_locationManager requestWhenInUseAuthorization];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -74,16 +69,6 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
         UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Pro Tip" message:@"Use the buttons in the top corners to quickly shift the map's focus to the downtown mall or your location." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [a show];
     }
-}
-
-- (void)appToBackground
-{
-    [_mapView setShowsUserLocation:NO];
-}
-
-- (void)appReturnsActive
-{
-    [_mapView setShowsUserLocation:YES];
 }
 
 -(void)spotlightVenue:(ARTVenue *)venue
@@ -133,7 +118,10 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
 
 -(IBAction)centerMapOnUser:(id)sender
 {
-    [_mapView setCenterCoordinate:[[[_mapView userLocation] location] coordinate] animated:YES];
+    if ([_mapView userLocation])
+    {
+        [_mapView setCenterCoordinate:[[[_mapView userLocation] location] coordinate] animated:YES];
+    }
 }
 
 -(IBAction)centerMapOnCville:(id)sender
@@ -233,8 +221,31 @@ static NSString * const ART_MAP_TYPE_PREF_KEY = @"ART_MAP_TYPE_PREF_KEY";
     [_locationManager stopUpdatingLocation];
     
     //In this case, just zoom the map to the middle of the downtown mall
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(jeffersonTheatreCoordinate, 250, 250);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(jeffersonTheatreCoordinate, 300, 300);
     [_mapView setRegion:region animated:YES];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusDenied)
+    {
+        [_mapView setShowsUserLocation:NO];
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(jeffersonTheatreCoordinate, 300, 300);
+        [_mapView setRegion:region animated:YES];
+        NSLog(@"Denied");
+    }
+    else if (status == kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        [_mapView setShowsUserLocation:YES];
+        [_locationManager startUpdatingLocation];
+        [_activityIndicator startAnimating];
+        NSLog(@"Authorized");
+    }
+    else
+    {
+        //do nothing
+        NSLog(@"Status %d", status);
+    }
 }
 
 #pragma mark - Navigation
